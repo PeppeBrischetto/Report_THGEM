@@ -1,7 +1,7 @@
 \documentclass[a4paper, 11 pt]{article}
 
 \usepackage[latin1]{inputenc}
-\usepackage[italian]{babel	}
+\usepackage[english]{babel}
 \usepackage{indentfirst}
 \usepackage{graphicx}
 \usepackage{subfigure}
@@ -34,6 +34,13 @@
 
 \section{Introduction}
 
+In view of the MAGNEX Focal Plane Detector (FPD) upgrade it is necessary to test the Thick Gas Electron Multipliers (THGEMs).
+This new technology will substitute the present tracker, based on proportional wires.
+It guarantees to cope with rate of the order of MHz/$\mbox{mm}^2$.
+The aim of these tests was to study the THGEM response varying the induction, the THGEM and the drift tensions. 
+In December 2019 two prototypes of THGEM were characterized. Both prototypes are multiple THGEM composed by three layers of GEM, but they show different hole pattern for the multiplication.
+
+
 Due parole sull'obiettivo dei test, caratterizzazione delle THGEM e del prototipo, focalizzandoci sulle risposte del sistema variando le THGEM
 
 Descrivere i due tipi di THGEM: foto, schemi, differenze, tabella FULL THGEM vs. ROW THGEM (indicando pitch, dimensione del foro e rim, spessore totale e spessore della metallizzazione (copper plating) )
@@ -44,8 +51,17 @@ Micro patterned gas detector
 
 \section{Apparato di misura}
 
-In these tests, two kinds of THGEM were employed: in the first one, referred to as FULL THGEM, the holes are uniformly distributed over the active surface; in the second one, called ROW THGEM, the holes are arranged in five rows.
-In the FULL THGEM there were 143 rows of holes 
+In these tests, two kinds of THGEM were employed: in the first one, referred to as FULL THGEM~\ref{fig:full_thgem}, the holes are uniformly distributed over the active surface; in the second one, called ROW THGEM, the holes are arranged in five rows.
+In the FULL THGEM there are 143 rows of holes in horizontal and in vertical direction~\ref{fig:full_thgem_holes}.
+
+\begin{figure}
+	\centering
+		\subfigure[]{\label{fig:full_thgem}\includegraphics[width=0.45\textwidth]{Immagini/full_thgem.JPG}}
+		\hspace{5pt}
+		\subfigure[]{\label{fig:full_thgem_holes}\includegraphics[width=0.45\textwidth]{Immagini/full_thgem_holes.JPG}}
+	\caption{In (a) the FULL THGEM prototype, in (b) its hole pattern.}
+	\label{fig:full_thgem_complessiva}		
+\end{figure}
 
 
 parliamo di CAEN e PICO (non in maniera troppo approfondita)
@@ -55,7 +71,7 @@ diagramma sui canali della lettura della corrente
 
 inserire il plot run190 in cui si vede la misura fatta con PICO e quella con CAEN (per tutti e sei i canali!!)
 
-larghezza delle thgem é 107per107 mm2 e ci sono 143 file di buche -> 20,000 buche
+larghezza delle thgem é 107per107 mm2 e ci sono 143 file di buchi -> 20,000 buchi
 
 gas isobutano
 
