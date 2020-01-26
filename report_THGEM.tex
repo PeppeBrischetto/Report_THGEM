@@ -25,9 +25,9 @@
 	pdfauthor={I. Ciraldo, G.A. Brischetto}
 }
 
-\newcommand{\Vind}{$V_{ind}$}
-\newcommand{\Vthgem}{$V_{THGEM}$}
-\newcommand{\Vdrift}{$V_{drift}$}
+\newcommand{\Vind}{$\Delta V_{ind}$}
+\newcommand{\Vthgem}{$\Delta V_{THGEM}$}
+\newcommand{\Vdrift}{$ \Delta V_{drift}$}
 \newcommand{\ibf}{$I_{bf}$}
 
 \title{\bf {\huge FULL and ROW THGEM characterization} }
@@ -160,8 +160,45 @@ Each run lasted 180 s acquiring anode, bot1, top3 and cathode currents. The firs
 
 %spieghiamo i diversi scan (induzione, thgem e drift)
 
+%In this section the results of 
+
+%For the sake of clarity
 
 \subsection{FULL THGEM}
+
+\subsubsection{Scan on \Vind}
+
+%The scan on \Vind aimed at studying the behaviour of 
+
+A preliminary study of \Vind{} variation effects on the measured currents has been done at several pressure and setting different \Vthgem{} and \Vdrift{} values.
+A summary scheme of the adopted configurations is shown in Table~\ref{tab:FULLTHGEM_vind}.
+\begin{table} [b!]
+	\begin{center}
+		\renewcommand{\arraystretch}{1.2}
+		\begin{tabular} {ccccc}
+			P (mbar) & & \Vthgem{} (V) & & \Vdrift{} (V)\\
+			\toprule[0.1em]
+			%\hline
+			30	& &	220	& &	1000 \\
+			30	& &	200	& &	1000 \\
+			30	& &	230	& &	1000 \\
+			20	& &	200	& & 1000 \\
+			11	& & 170	& & 600 \\
+			
+			\bottomrule[0.1em]
+		\end{tabular}
+	\end{center}
+	\caption{The values of pressure, \Vthgem{} and \Vdrift{} set for the study on \Vind.} \label{tab:FULLTHGEM_vind}
+\end{table}
+The \Vind{} scans have been carried out starting from 0~V and increasing the voltage by 10 or 20~V per run, until the discharge value is reached.
+The result of the scan at 30~mbar and with \Vthgem{}~=~220~V is shown in Figure~\ref{fig:induction_FULLTHGEM_30mbar}: as expected, increasing \Vind{} the anodic current (blue line) goes up, while the top3 current (yellow line) approaches to zero.
+This means that the stronger is the electric field in the induction region, the greater is the fraction of electrons collected at the anode. 
+
+%as expected, increasing \Vind{} the fraction of electrons collected at the anode
+%this plot displays some of the most important features
+
+
+
 
 \subsubsection*{Scan on induction voltage at 30 mbar}
 To find the optimal value for the induction voltage, a scan on this parameter has been done.
