@@ -192,12 +192,30 @@ A summary scheme of the adopted configurations is shown in Table~\ref{tab:FULLTH
 	\end{center}
 	\caption{The values of pressure (P), \Vthgem{} and \Vdrift{} adopted for the study on \Vind.} \label{tab:FULLTHGEM_vind}
 \end{table}
+%\begin{table} [b!]
+%	\begin{center}
+%		\renewcommand{\arraystretch}{1.2}
+%		\begin{tabular} {ccccccc}
+%			P (mbar) & & \Vthgem{} (V) & & \Vdrift{} (V) & & optimal \Vind{} (V) \\
+%			\toprule[0.1em]
+%			%\hline
+%			30	& &	220	& &	1000 & & 120 \\
+%			30	& &	200	& &	1000 & &  \\
+%			30	& &	230	& &	1000 & & \\
+%			20	& &	200	& & 1000 & & \\
+%			11	& & 170	& & 600  & &\\
+%			
+%			\bottomrule[0.1em]
+%		\end{tabular}
+%	\end{center}
+%	\caption{The values of pressure (P), \Vthgem{} and \Vdrift{} adopted for the study on \Vind.} \label{tab:FULLTHGEM_vind}
+%\end{table}
 The \Vind{} scans have been carried out starting from 0~V and increasing the voltage by 10 or 20~V per run, until the discharge value is reached (typically at more than 200~V).
 
 The result of the scan at 30~mbar and with \Vthgem{}~=~220~V is shown in Figure~\ref{fig:induction_FULLTHGEM_30mbar}: by raising the value of \Vind{}, the anodic current (blue line) increases, while the top3 current (yellow line) approaches to zero.
 \begin{figure}[htb]
 	\centering
-	\includegraphics[width=0.9\textwidth]{Immagini/inductionScan_THGEM10_30mbar.pdf}
+	\includegraphics[width=\textwidth]{Immagini/inductionScan_THGEM10_30mbar.pdf}
 	\caption{Currents measured during the scan on the induction voltage at 30~mbar and with \Vthgem{}~=~220~V.}
 	\label{fig:induction_FULLTHGEM_30mbar}
 \end{figure}
@@ -221,16 +239,44 @@ Keeping the pressure at 30~mbar, other two measurements on \Vind~{} were conduct
 The results of these measurements are shown, respectively, in Figure~\ref{fig:induction_FULLTHGEM_30mbar_other_VTHGEM_a} and ~\ref{fig:induction_FULLTHGEM_30mbar_other_VTHGEM_b}.
 \begin{figure}[!htb]
 	\centering
-	\subfigure[]{ \label{fig:induction_FULLTHGEM_30mbar_other_VTHGEM_a} \includegraphics[width=\textwidth]{Immagini/inductionScan_THGEM10_30mbar_bis.pdf}}
-	\subfigure[]{ 	\label{fig:induction_FULLTHGEM_30mbar_other_VTHGEM_b} \includegraphics[width=\textwidth]{Immagini/inductionScan_THGEM10_30mbar_tris.pdf}}
-	\caption{Caption-figura-complessiva}
+	\subfigure[]{ \label{fig:induction_FULLTHGEM_30mbar_other_VTHGEM_a} \includegraphics[width=0.96\textwidth]{Immagini/inductionScan_THGEM10_30mbar_bis.pdf}}
+	\subfigure[]{ 	\label{fig:induction_FULLTHGEM_30mbar_other_VTHGEM_b} \includegraphics[width=0.96\textwidth]{Immagini/inductionScan_THGEM10_30mbar_tris.pdf}}
+	\caption{Currents measured during the scan on the induction voltage at 30~mbar: in (a) for \Vthgem~=~200~V, in (b) for \Vthgem~=~230~V.}
 	\label{fig:induction_FULLTHGEM_30mbar_other_VTHGEM}
 \end{figure}
-Comparing the two figures, The magnitude of the measured currents increases with increasing \Vthgem, because 
+The comparison between these two figures makes apparent that the magnitude of the measured currents increases with increasing \Vthgem, because the multiplication factor goes up.
+Most considerations made in the case with \Vthgem~=~220~V are also valid for these two measurements, except that the plateau region is less evident or absent.
+For \Vthgem~=~200~V the bot1 current fluctuations are due to the lower accuracy of the corresponding PICO channel.
+%Also in these two measurements, when \Vind{} increases, the anodic current increases, while the top3 current decreases. The crossing point of these two currents is still at around 32~V. After a certain value the sum of the anode and top3 current varies rapidly.
+
+%The effects seen for \Vthgem~=~220~V appear as well in these two cases.
+%The magnitude of the measured currents increases with increasing \Vthgem, because
 %For \Vthgem~=~200~V the magnitude of the measured currents is lower than in the previous case, while for \Vthgem~=~230~V it is 
 
 %as expected, increasing \Vind{} the fraction of electrons collected at the anode
 %this plot displays some of the most important features
+
+
+\subsubsection{Scan on \Vthgem}
+
+
+
+\begin{table} [tbh]
+	\begin{center}
+		\renewcommand{\arraystretch}{1.2}
+		\begin{tabular} {ccccc}
+			P (mbar) & & \Vind{} (V) & & \Vdrift{} (V)\\
+			\toprule[0.1em]
+			%\hline
+			30	& &	120	& &	1000 \\
+			20	& &	100	& & 1000 \\
+			11	& & 70	& & 600 \\
+			
+			\bottomrule[0.1em]
+		\end{tabular}
+	\end{center}
+	\caption{The values of pressure, \Vind{} and \Vdrift{} adopted for the study on \Vthgem.} \label{tab:FULLTHGEM_vthgem}
+\end{table}
 
 
 
