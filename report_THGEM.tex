@@ -192,9 +192,15 @@ A summary scheme of the adopted configurations is shown in Table~\ref{tab:FULLTH
 	\end{center}
 	\caption{The values of pressure (P), \Vthgem{} and \Vdrift{} adopted for the study on \Vind.} \label{tab:FULLTHGEM_vind}
 \end{table}
-The \Vind{} scans have been carried out starting from 0~V and increasing the voltage by 10 or 20~V per run, until the discharge value is reached.
+The \Vind{} scans have been carried out starting from 0~V and increasing the voltage by 10 or 20~V per run, until the discharge value is reached (typically at more than 200~V).
 
 The result of the scan at 30~mbar and with \Vthgem{}~=~220~V is shown in Figure~\ref{fig:induction_FULLTHGEM_30mbar}: by raising the value of \Vind{}, the anodic current (blue line) increases, while the top3 current (yellow line) approaches to zero.
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Immagini/inductionScan_THGEM10_30mbar.pdf}
+	\caption{Currents measured during the scan on the induction voltage at 30~mbar and with \Vthgem{}~=~220~V.}
+	\label{fig:induction_FULLTHGEM_30mbar}
+\end{figure}
 Up to 140~V, their change is such that their sum (orange line) is constant.
 % but their change is such that their sum (orange line) is constant.
 %Up to 140~V, when \Vind{} increases, the anodic current (blue line) goes up, the top3 current (yellow line) approaches to zero, and their sum (orange line) is constant.
@@ -211,10 +217,17 @@ For these values of pressure, \Vthgem{} and \Vdrift, a plateau is reached betwee
 In these conditions, the optimal value of \Vind{} is 120~V.
 
 
-Keeping the pressure at 30~mbar, other two measurements on \Vind~{} were conducted varying \Vthgem{}, respectively at 200 and 230~V.
-
-
-
+Keeping the pressure at 30~mbar, other two measurements on \Vind~{} were conducted with \Vthgem{} equal to 200 or 230~V.
+The results of these measurements are shown, respectively, in Figure~\ref{fig:induction_FULLTHGEM_30mbar_other_VTHGEM_a} and ~\ref{fig:induction_FULLTHGEM_30mbar_other_VTHGEM_b}.
+\begin{figure}[!htb]
+	\centering
+	\subfigure[]{ \label{fig:induction_FULLTHGEM_30mbar_other_VTHGEM_a} \includegraphics[width=\textwidth]{Immagini/inductionScan_THGEM10_30mbar_bis.pdf}}
+	\subfigure[]{ 	\label{fig:induction_FULLTHGEM_30mbar_other_VTHGEM_b} \includegraphics[width=\textwidth]{Immagini/inductionScan_THGEM10_30mbar_tris.pdf}}
+	\caption{Caption-figura-complessiva}
+	\label{fig:induction_FULLTHGEM_30mbar_other_VTHGEM}
+\end{figure}
+Comparing the two figures, The magnitude of the measured currents increases with increasing \Vthgem, because 
+%For \Vthgem~=~200~V the magnitude of the measured currents is lower than in the previous case, while for \Vthgem~=~230~V it is 
 
 %as expected, increasing \Vind{} the fraction of electrons collected at the anode
 %this plot displays some of the most important features
@@ -225,12 +238,6 @@ Keeping the pressure at 30~mbar, other two measurements on \Vind~{} were conduct
 \subsubsection*{Scan on induction voltage at 30 mbar}
 To find the optimal value for the induction voltage, a scan on this parameter has been done.
 The measured currents obtained for a pressure of 30~mbar and for \Vthgem~=~220~V and \Vdrift~=~1000~V are shown in Figure~\ref{fig:induction_FULLTHGEM_30mbar}.
-\begin{figure}
-	\centering
-	\includegraphics[width=0.9\textwidth]{Immagini/inductionScan_THGEM10_30mbar.pdf}
-	\caption{The currents measured during the scan on the induction voltage at 30~mbar.}
-	\label{fig:induction_FULLTHGEM_30mbar}
-\end{figure}
 In each plot, bot2/top1 and bot3/top2 currents are not shown because their values do not change during the measurement. 
 In Figure~\ref{fig:induction_FULLTHGEM_30mbar} is shown the sum of the anode and top3 currents.
 This curve has a plateau zone in the range 110$\div$130~V, so the optimal value for the \Vind is 120~V.
