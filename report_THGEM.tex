@@ -171,8 +171,8 @@ Each run lasted 180 s acquiring anode, bot1, top3 and cathode currents. The firs
 %The scan on \Vind aimed at studying the behaviour of 
 
 %A preliminary study of \Vind{} variation effects on the measured currents has been done at several pressure and setting different \Vthgem{} and \Vdrift{} values.
-A series of systematic measurements were conducted to study the effects of the \Vind{} variation on the measured currents.
-These measurements have been done at three different pressure (P) and setting suitable values of \Vthgem{} and \Vdrift.
+A series of systematic measurements were conducted to study the effects of the variation of the potential difference \Vind{} on the measured currents.
+These measurements have been done fixing three different pressure (P) and setting suitable values of \Vthgem{} and \Vdrift.
 A summary scheme of the adopted configurations is shown in Table~\ref{tab:FULLTHGEM_vind}.
 \begin{table} [b!]
 	\begin{center}
@@ -216,7 +216,7 @@ The result of the scan at 30~mbar and with \Vthgem{}~=~220~V is shown in Figure~
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=\textwidth]{Immagini/inductionScan_THGEM10_30mbar.pdf}
-	\caption{Currents measured during the scan on the induction voltage at 30~mbar and with \Vthgem{}~=~220~V.}
+	\caption{Currents measured during the scan on the voltage \Vind{} across the induction region at 30~mbar and with \Vthgem{}~=~220~V.}
 	\label{fig:induction_FULLTHGEM_30mbar}
 \end{figure}
 Up to 140~V, their change is such that their sum (orange line) is constant.
@@ -241,12 +241,14 @@ The results of these measurements are shown, respectively, in Figure~\ref{fig:in
 	\centering
 	\subfigure[]{ \label{fig:induction_FULLTHGEM_30mbar_other_VTHGEM_a} \includegraphics[width=0.96\textwidth]{Immagini/inductionScan_THGEM10_30mbar_bis.pdf}}
 	\subfigure[]{ 	\label{fig:induction_FULLTHGEM_30mbar_other_VTHGEM_b} \includegraphics[width=0.96\textwidth]{Immagini/inductionScan_THGEM10_30mbar_tris.pdf}}
-	\caption{Currents measured during the scan on the induction voltage at 30~mbar: in (a) for \Vthgem~=~200~V, in (b) for \Vthgem~=~230~V.}
+	\caption{Currents measured during the scan on the voltage \Vind{} across the induction region at 30~mbar: in (a) for \Vthgem~=~200~V, in (b) for \Vthgem~=~230~V.}
 	\label{fig:induction_FULLTHGEM_30mbar_other_VTHGEM}
 \end{figure}
 The comparison between these two figures makes apparent that the magnitude of the measured currents increases with increasing \Vthgem, because the multiplication factor goes up.
 Most considerations made in the case with \Vthgem~=~220~V are also valid for these two measurements, except that the plateau region is less evident or absent.
 For \Vthgem~=~200~V the bot1 current fluctuations are due to the lower accuracy of the corresponding PICO channel.
+\textcolor{red}{Mancano i risultati con le altre pressioni}
+
 %Also in these two measurements, when \Vind{} increases, the anodic current increases, while the top3 current decreases. The crossing point of these two currents is still at around 32~V. After a certain value the sum of the anode and top3 current varies rapidly.
 
 %The effects seen for \Vthgem~=~220~V appear as well in these two cases.
@@ -257,11 +259,19 @@ For \Vthgem~=~200~V the bot1 current fluctuations are due to the lower accuracy 
 %this plot displays some of the most important features
 
 
+
+%\subsubsection*{Scan on induction voltage at 30 mbar}
+%To find the optimal value for the induction voltage, a scan on this parameter has been done. The measured currents obtained for a pressure of 30~mbar and for \Vthgem~=~220~V and \Vdrift~=~1000~V are shown in Figure~\ref{fig:induction_FULLTHGEM_30mbar}. In each plot, bot2/top1 and bot3/top2 currents are not shown because their values do not change during the measurement. In Figure~\ref{fig:induction_FULLTHGEM_30mbar} is shown the sum of the anode and top3 currents. This curve has a plateau zone in the range 110$\div$130~V, so the optimal value for the \Vind is 120~V. The induction scan was repeated with \Vthgem~=~200~V and \Vthgem~=~230~V, but there was no visible plateau. In each induction scan, when the set voltage exceeds a certain value (different in the three cases), the sum of anode and top3 currents increases. This behaviour can be explained because the multiplication region extends out of the hole of the THGEM. The electric field gives a further multiplication and some ions reach the THGEM.
+
 \subsubsection{Scan on \Vthgem}
 
+In order to study the multiplication factor in different conditions, a series of measurements was conducted varying the voltage \Vthgem, while pressure, \Vind{} and \Vdrift{} were set to fixed values.
+The variation range of \Vthgem{} was determined in this way: the lower extreme is the minimum value at which a variation of the measured currents is visible, while the higher extreme is the discharge value.
+Clearly, the range depends on the selected pressure, so that for P~=~30 mbar it was from 180 to 235~V, for P~=~20~mbar it was from 150 to 215~V, and for P~=~11~mbar it was from 130 to 210~V.
+The increments were ranging from 5 to 10~V.
+The chosen values of pressure, \Vind{} and \Vdrift{} are shown in Table~\ref{tab:FULLTHGEM_vthgem}.
 
-
-\begin{table} [tbh]
+\begin{table} [!t]
 	\begin{center}
 		\renewcommand{\arraystretch}{1.2}
 		\begin{tabular} {ccccc}
@@ -278,19 +288,18 @@ For \Vthgem~=~200~V the bot1 current fluctuations are due to the lower accuracy 
 	\caption{The values of pressure, \Vind{} and \Vdrift{} adopted for the study on \Vthgem.} \label{tab:FULLTHGEM_vthgem}
 \end{table}
 
+Figure~\ref{fig:thgem_FULLTHGEM_30mbar} displays the result of the measurement at 30~mbar.
+As \Vthgem{} increases, the currents show an exponential growth, typical of gas detectors in avalanche regime.
+In these conditions, the optimal value of \Vthgem is 220~V, because it gives currents 
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Immagini/thgemScan_THGEM10_30mbar.pdf}
+	\caption{Currents measured during the scan on the THGEM voltage at 30~mbar.}
+	\label{fig:thgem_FULLTHGEM_30mbar}
+\end{figure}
 
 
 
-\subsubsection*{Scan on induction voltage at 30 mbar}
-To find the optimal value for the induction voltage, a scan on this parameter has been done.
-The measured currents obtained for a pressure of 30~mbar and for \Vthgem~=~220~V and \Vdrift~=~1000~V are shown in Figure~\ref{fig:induction_FULLTHGEM_30mbar}.
-In each plot, bot2/top1 and bot3/top2 currents are not shown because their values do not change during the measurement. 
-In Figure~\ref{fig:induction_FULLTHGEM_30mbar} is shown the sum of the anode and top3 currents.
-This curve has a plateau zone in the range 110$\div$130~V, so the optimal value for the \Vind is 120~V.
-The induction scan was repeated with \Vthgem~=~200~V and \Vthgem~=~230~V, but there was no visible plateau.
-In each induction scan, when the set voltage exceeds a certain value (different in the three cases), the sum of anode and top3 currents increases.
-This behaviour can be explained because the multiplication region extends out of the hole of the THGEM.
-The electric field gives a further multiplication and some ions reach the THGEM.
 
 
 
@@ -298,12 +307,6 @@ The electric field gives a further multiplication and some ions reach the THGEM.
 To find the optimal value for the THGEM voltage until discharge, a scan on this parameter has been done.
 The measured currents obtained for a pressure of 30~mbar and for \Vind~=~120~V and \Vdrift~=~1000~V are shown in Figure~\ref{fig:thgem_FULLTHGEM_30mbar}.
 
-\begin{figure}
-	\centering
-	\includegraphics[width=0.9\textwidth]{Immagini/thgemScan_THGEM10_30mbar.pdf}
-	\caption{The currents measured during the scan on the THGEM voltage at 30~mbar.}
-	\label{fig:thgem_FULLTHGEM_30mbar}
-\end{figure}
 \Vthgem~=~180~V is the minimum voltage at which anode current is measurable.
 At \Vthgem~=~230~V there was discharges, but we do not know if it came from THGEM.
 
