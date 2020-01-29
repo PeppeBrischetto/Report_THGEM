@@ -210,10 +210,12 @@ A summary scheme of the adopted configurations is shown in Table~\ref{tab:FULLTH
 %	\end{center}
 %	\caption{The values of pressure (P), \Vthgem{} and \Vdrift{} adopted for the study on \Vind.} \label{tab:FULLTHGEM_vind}
 %\end{table}
-The \Vind{} scans have been carried out starting from 0~V and increasing the voltage by 10 or 20~V per run, until the discharge value is reached (typically at more than 200~V).
+The \Vind{} scans were carried out starting from 0~V and increasing the voltage by 10 or 20~V per run, until the discharge value is reached.
+This value is dependent on the gas pressure: for P~=~30~mbar it was 220~V, for P~=~20~mbar it was 200~V, and for P~=~11~mbar it was 150~V.
+
 
 The result of the scan at 30~mbar and with \Vthgem{}~=~220~V is shown in Figure~\ref{fig:induction_FULLTHGEM_30mbar}: by raising the value of \Vind{}, the anodic current (blue line) increases, while the top3 current (yellow line) approaches to zero.
-\begin{figure}[htb]
+\begin{figure}[!t]
 	\centering
 	\includegraphics[width=\textwidth]{Immagini/inductionScan_THGEM10_30mbar.pdf}
 	\caption{Currents measured during the scan on the voltage \Vind{} across the induction region at 30~mbar and with \Vthgem{}~=~220~V.}
@@ -293,7 +295,7 @@ As \Vthgem{} increases, the currents show an exponential growth, typical of gas 
 In these conditions, the optimal value of \Vthgem{} is 220~V.
 \begin{figure}[!t]
 	\centering
-	\includegraphics[width=0.9\textwidth]{Immagini/thgemScan_THGEM10_30mbar.pdf}
+	\includegraphics[width=\textwidth]{Immagini/thgemScan_THGEM10_30mbar.pdf}
 	\caption{Currents measured during the scan on the THGEM voltage at 30~mbar.}
 	\label{fig:thgem_FULLTHGEM_30mbar}
 \end{figure}
@@ -314,9 +316,14 @@ The optimal \Vthgem{} value for P~=~20~mbar is 205~V, while for P~=~11~mbar it i
 %\subsubsection*{Scan on THGEM voltage  at 30 mbar}
 %To find the optimal value for the THGEM voltage until discharge, a scan on this parameter has been done. The measured currents obtained for a pressure of 30~mbar and for \Vind~=~120~V and \Vdrift~=~1000~V are shown in Figure~\ref{fig:thgem_FULLTHGEM_30mbar}. \Vthgem~=~180~V is the minimum voltage at which anode current is measurable. At \Vthgem~=~230~V there was discharges, but we do not know if it came from THGEM. The anode current has the typical exponential behaviour.
 
+\clearpage
 
 \subsubsection{Scan on \Vdrift}
 
+To fully characterize the tracker response, a study was conducted varying the potential difference \Vdrift{} across the drift region, while pressure, \Vind{} and \Vthgem{} were kept fixed.
+The explored range goes from 0~V (or 100~V in the case with P~=~20~mbar) to the discharge voltage, which depends on the gas pressure: for P~=~30~mbar it was 1500~V, for P~=~20~mbar it was 1200~V, and for P~=~11~mbar it was 800~V.
+The increments were of 50~V for P~=~11~mbar, while in the other two cases it was of 100~V.
+In Table~\ref{tab:FULLTHGEM_vdrift} the adopted value of pressure, \Vind{} and \Vthgem{} are shown.
 
 \begin{table} [b!]
 	\begin{center}
