@@ -249,7 +249,23 @@ The results of these measurements are shown, respectively, in Figure~\ref{fig:in
 The comparison between these two figures makes apparent that the magnitude of the measured currents increases with increasing \Vthgem, because the multiplication factor goes up.
 Most considerations made in the case with \Vthgem~=~220~V are also valid for these two measurements, except that the plateau region is less evident or absent.
 For \Vthgem~=~200~V the bot1 current fluctuations are due to the lower accuracy of the corresponding PICO channel.
-\textcolor{red}{Mancano i risultati con le altre pressioni}
+
+
+The result of the tests at 20 and 11~mbar are, respectively, shown in Figure~\ref{fig:induction_FULLTHGEM_20mbar} and~\ref{fig:induction_FULLTHGEM_11mbar}.
+In the former case there is not a clear plateau region, but the suggested operative voltage range is between 90 and 120~V.
+For P~=~20~mbar the optimal \Vind{} value is 100~V.
+In the latter case a plateau region is visible from 0 to 80~V, so the optimal \Vind{} value is 70~V.
+In both cases the cross point between the anode and the top3 currents is at about 30~V and the top3 current becomes positive for high \Vind{} values.
+
+
+
+\begin{figure}[!htb]
+	\centering
+	\subfigure[]{ \label{fig:induction_FULLTHGEM_20mbar} \includegraphics[width=0.97\textwidth]{Immagini/inductionScan_THGEM10_20mbar.pdf}}
+	\subfigure[]{ 	\label{fig:induction_FULLTHGEM_11mbar} \includegraphics[width=0.97\textwidth]{Immagini/inductionScan_THGEM10_10mbar_tris.pdf}}
+	\caption{Currents measured during the scan on the voltage \Vind{} across the induction region: in (a) at 20~mbar, in (b) at 11~mbar.}
+	\label{fig:induction_FULLTHGEM_other_pressure}
+\end{figure}
 
 %Also in these two measurements, when \Vind{} increases, the anodic current increases, while the top3 current decreases. The crossing point of these two currents is still at around 32~V. After a certain value the sum of the anode and top3 current varies rapidly.
 
@@ -265,6 +281,8 @@ For \Vthgem~=~200~V the bot1 current fluctuations are due to the lower accuracy 
 %\subsubsection*{Scan on induction voltage at 30 mbar}
 %To find the optimal value for the induction voltage, a scan on this parameter has been done. The measured currents obtained for a pressure of 30~mbar and for \Vthgem~=~220~V and \Vdrift~=~1000~V are shown in Figure~\ref{fig:induction_FULLTHGEM_30mbar}. In each plot, bot2/top1 and bot3/top2 currents are not shown because their values do not change during the measurement. In Figure~\ref{fig:induction_FULLTHGEM_30mbar} is shown the sum of the anode and top3 currents. This curve has a plateau zone in the range 110$\div$130~V, so the optimal value for the \Vind is 120~V. The induction scan was repeated with \Vthgem~=~200~V and \Vthgem~=~230~V, but there was no visible plateau. In each induction scan, when the set voltage exceeds a certain value (different in the three cases), the sum of anode and top3 currents increases. This behaviour can be explained because the multiplication region extends out of the hole of the THGEM. The electric field gives a further multiplication and some ions reach the THGEM.
 
+\clearpage
+
 \subsubsection{Scan on \Vthgem}
 
 In order to study the multiplication factor in different conditions, a series of measurements was conducted varying the voltage \Vthgem, while pressure, \Vind{} and \Vdrift{} were set to fixed values.
@@ -273,7 +291,7 @@ Clearly, the range depends on the selected pressure, so that for P~=~30 mbar it 
 The increments were ranging from 5 to 10~V.
 The chosen values of pressure, \Vind{} and \Vdrift{} are shown in Table~\ref{tab:FULLTHGEM_vthgem}.
 
-\begin{table} [!t]
+\begin{table} [!b]
 	\begin{center}
 		\renewcommand{\arraystretch}{1.2}
 		\begin{tabular} {ccccc}
@@ -300,16 +318,16 @@ In these conditions, the optimal value of \Vthgem{} is 220~V.
 	\label{fig:thgem_FULLTHGEM_30mbar}
 \end{figure}
 
-The results for P~=~20~mbar and P~=~11~mbar are respectively shown in Figure~\ref{fig:thgem_FULLTHGEM_30mbar_other_pressure_a} and~\ref{fig:thgem_FULLTHGEM_30mbar_other_pressure_b}.
+The results for P~=~20~mbar and P~=~11~mbar are respectively shown in Figure~\ref{fig:thgem_FULLTHGEM_20mbar} and~\ref{fig:thgem_FULLTHGEM_11mbar}.
 In both cases, the measured currents exhibit an exponential behaviour.
 The optimal \Vthgem{} value for P~=~20~mbar is 205~V, while for P~=~11~mbar it is 190~V.
 
 \begin{figure}[!htb]
 	\centering
-	\subfigure[]{ \label{fig:thgem_FULLTHGEM_30mbar_other_pressure_a} \includegraphics[width=0.96\textwidth]{Immagini/thgemScan_THGEM10_20mbar.pdf}}
-	\subfigure[]{ 	\label{fig:thgem_FULLTHGEM_30mbar_other_pressure_b} \includegraphics[width=0.96\textwidth]{Immagini/thgemScan_THGEM10_10mbar.pdf}}
+	\subfigure[]{ \label{fig:thgem_FULLTHGEM_20mbar} \includegraphics[width=0.96\textwidth]{Immagini/thgemScan_THGEM10_20mbar.pdf}}
+	\subfigure[]{ 	\label{fig:thgem_FULLTHGEM_11mbar} \includegraphics[width=0.96\textwidth]{Immagini/thgemScan_THGEM10_10mbar.pdf}}
 	\caption{Currents measured during the scan on the voltage \Vthgem{} across each THGEM: in (a) at 20~mbar, in (b) at 11~mbar.}
-	\label{fig:thgem_FULLTHGEM_30mbar_other_pressure}
+	\label{fig:thgem_FULLTHGEM_other_pressure}
 \end{figure}
 
 \textcolor{red}{Aggiungere qui il discorso sul fattore di moltiplicazione?}
@@ -321,11 +339,11 @@ The optimal \Vthgem{} value for P~=~20~mbar is 205~V, while for P~=~11~mbar it i
 \subsubsection{Scan on \Vdrift}
 
 To fully characterize the tracker response, a study was conducted varying the potential difference \Vdrift{} across the drift region, while pressure, \Vind{} and \Vthgem{} were kept fixed.
-The explored range goes from 0~V (or 100~V in the case with P~=~20~mbar) to the discharge voltage, which depends on the gas pressure: for P~=~30~mbar it was 1500~V, for P~=~20~mbar it was 1200~V, and for P~=~11~mbar it was 800~V.
+The explored range goes from 0~V (or 100~V in the case with P~=~20~mbar) to the discharge voltage, which depends on the gas pressure: for P~=~30~mbar it was 1600~V, for P~=~20~mbar it was 1200~V, and for P~=~11~mbar it was 800~V.
 The increments were of 50~V for P~=~11~mbar, while in the other two cases it was of 100~V.
 In Table~\ref{tab:FULLTHGEM_vdrift} the adopted value of pressure, \Vind{} and \Vthgem{} are shown.
 
-\begin{table} [b!]
+\begin{table} [!b]
 	\begin{center}
 		\renewcommand{\arraystretch}{1.2}
 		\begin{tabular} {ccccc}
@@ -344,40 +362,40 @@ In Table~\ref{tab:FULLTHGEM_vdrift} the adopted value of pressure, \Vind{} and \
 \end{table}
 
 The result of the scan at 30~mbar is displayed in Figure~\ref{fig:drift_FULLTHGEM_30mbar}. 
-All the measured currents are saturated already at 100~V.
-
-At \Vdrift~=~5~V the anodic current is saturated. 
-This means that the magnitude of the electric field at \Vdrift~=~0~V is much lower than $5/20\; \mbox{(V/cm)}= 250 \; \mbox{(mV/cm)}$ or the value measured by PICO is actually not zero.
-
-\begin{figure}
+All the measured currents are saturated at 100~V.
+In order to better understand the THGEM response at low drift voltage, further measurements were done with \Vdrift~=~5~V, 10~V, 20~V, and 30~V.
+The result of this measurement, shown in Figure~\textcolor{red}{aggiungere la figura zoomata}, is that currents are saturated already at 5~V.
+This means that either the magnitude of the electric field at \Vdrift~=~0~V is much lower than $5/20\; \mbox{(V/cm)}= 250 \; \mbox{(mV/cm)}$ or the value measured by PICO actually is not zero.
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=\textwidth]{Immagini/driftScan_THGEM10_30mbar.pdf}
 	\caption{Currents measured during the scan on the voltage \Vdrift{} across the drift region at 30~mbar.}
 	\label{fig:drift_FULLTHGEM_30mbar}
 \end{figure}
 
+In Figure~\ref{fig:drift_FULLTHGEM_30mbar} the orange line represents, in this case, the sum of the cathode and bot1 currents.
+This quantity is important to estimate the ion backflow. \textcolor{red}{Aggiungere spiegazione ion backflow}.
+\textcolor{red}{Fare un grafico con l'ion backflow o inserire dei valori di riferimento?}
+
+
+
+The results of the tests at 20 and 11~mbar are shown, respectively, in Figure~\ref{fig:drift_FULLTHGEM_20mbar} and~\ref{fig:drift_FULLTHGEM_11mbar}.
+Also in these cases the saturation voltage is 100~V.
+\textcolor{red}{Aggiungere plot sul backflow}
+
+\begin{figure}[!htb]
+	\centering
+	\subfigure[]{ \label{fig:drift_FULLTHGEM_20mbar} \includegraphics[width=0.96\textwidth]{Immagini/driftScan_THGEM10_20mbar.pdf}}
+	\subfigure[]{ 	\label{fig:drift_FULLTHGEM_11mbar} \includegraphics[width=0.96\textwidth]{Immagini/driftScan_THGEM10_10mbar.pdf}}
+	\caption{Currents measured during the scan on the voltage \Vdrift{} across the drift region: in (a) at 20~mbar, in (b) at 11~mbar.}
+	\label{fig:drift_FULLTHGEM_other_pressure}
+\end{figure}
 
 
 
 
-
-
-
-
-
-
-
-
-\subsubsection*{Scan on drift voltage  at 30 mbar}
-To find the optimal value for the drift voltage until discharge, a scan on this parameter has been done.
-The measured currents obtained for a pressure of 30~mbar and for \Vind~=~120~V and \Vthgem~=~220~V are shown in Figure~\ref{fig:drift_FULLTHGEM_30mbar}.
-
-
-
-At \Vdrift~=~5~V the anodic current is saturated. 
-This means that the magnitude of the electric field at \Vdrift~=~0~V is much lower than $\frac{5~V}{20~cm}= 250 mV/cm$ or the value measured by PICO is actually not zero.
-At \Vdrift~=~1200~V ion backflow~(\ibf) is equal to 18.9\%, while at \Vdrift~=~1500~V \ibf~is equal to 24.7\%.
-Dischages appeared at \Vdrift~=~1600~V.
+%\subsubsection*{Scan on drift voltage  at 30 mbar}
+%To find the optimal value for the drift voltage until discharge, a scan on this parameter has been done. The measured currents obtained for a pressure of 30~mbar and for \Vind~=~120~V and \Vthgem~=~220~V are shown in Figure~\ref{fig:drift_FULLTHGEM_30mbar}. At \Vdrift~=~5~V the anodic current is saturated. This means that the magnitude of the electric field at \Vdrift~=~0~V is much lower than $\frac{5~V}{20~cm}= 250 mV/cm$ or the value measured by PICO is actually not zero. At \Vdrift~=~1200~V ion backflow~(\ibf) is equal to 18.9\%, while at \Vdrift~=~1500~V \ibf~is equal to 24.7\%. Dischages appeared at \Vdrift~=~1600~V.
 
 
 
@@ -385,22 +403,8 @@ Dischages appeared at \Vdrift~=~1600~V.
 %The induction, THGEM and drift scan where repeated at 20~mbar and the currents curve show the same behaviour. In \Vind~scan, \Vthgem~=~200~V and \Vdrift~=~1000~V and the plateau was in the range 90$\div$120~V. The optimal value is 100~V. In \Vthgem~scan, \Vind~=~100~V and \Vdrift~=~1000~V and the last measurable signal was at 150~V. At 220~V there were discharges, so the optimal \Vthgem~value is 205~V. During \Vdrift~scan, \Vind~=~100~V and \Vthgem~=~205~V and there were discharges at 1100~V. At \Vdrift~=~700~V, the estimated value of \ibf is 13.2\%, whilst at \Vdrift~=~1000~V  \ibf is 17.3\%.
 
 
-\subsubsection*{Scan at 10 mbar}
-The induction, THGEM and drift scan where repeated at 10~mbar and the currents curve show the same behaviour.
-
-In \Vind~scan, setting \Vthgem~=~180~V and \Vdrift~=~800~V, discharges appear at 60~V.
-Setting \Vthgem~=~170~V and \Vdrift~=~800~V, there were discharges mainly in bot1 and cathode currents at 60~V.
-So the chosen configuration is \Vthgem~=~170~V and \Vdrift~=~600~V. 
-In this way, no discharges were visible.
-The highest \Vind~value explored was 150~V.
-Also for this pressure, a plateau was found in the range 60$\div$80~V.
-The optimal value is 70~V.
-
-In \Vthgem~scan, \Vind~=~70~V and \Vdrift~=~600~V and the last measurable signal was at 130~V.
-At 210~V there were discharges, so the optimal \Vthgem~value is 190~V.
-
-During \Vdrift~scan, \Vind~=~70~V and \Vthgem~=~190~V and there were discharges at 800~V.
-At \Vdrift~=~450~V, the estimated value of \ibf is 10.9\%, whilst at \Vdrift~=~750~V  \ibf is 16.2\%.
+%\subsubsection*{Scan at 10 mbar}
+%The induction, THGEM and drift scan where repeated at 10~mbar and the currents curve show the same behaviour. In \Vind~scan, setting \Vthgem~=~180~V and \Vdrift~=~800~V, discharges appear at 60~V. Setting \Vthgem~=~170~V and \Vdrift~=~800~V, there were discharges mainly in bot1 and cathode currents at 60~V. So the chosen configuration is \Vthgem~=~170~V and \Vdrift~=~600~V. In this way, no discharges were visible.The highest \Vind~value explored was 150~V. Also for this pressure, a plateau was found in the range 60$\div$80~V. The optimal value is 70~V. In \Vthgem~scan, \Vind~=~70~V and \Vdrift~=~600~V and the last measurable signal was at 130~V. At 210~V there were discharges, so the optimal \Vthgem~value is 190~V. During \Vdrift~scan, \Vind~=~70~V and \Vthgem~=~190~V and there were discharges at 800~V. At \Vdrift~=~450~V, the estimated value of \ibf is 10.9\%, whilst at \Vdrift~=~750~V  \ibf is 16.2\%.
 
 \clearpage
 
@@ -411,7 +415,7 @@ The induction and THGEM scan where repeated at 20~mbar for ROW THGEM and the cur
 
 In \Vind~scan, \Vthgem~=~220~V and \Vdrift~=~800~V but plateau is absent. Little discharges were visible up to \Vind~50V while big discharges in the range 60-110V affected bot1 and top3 currents. The optimal value is 50V.
 
-\begin{figure}
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.9\textwidth]{Immagini/InductionScan_ROW_THGEM_20mbar.pdf}
 	\caption{The currents measured during the scan on the induction voltage at 20~mbar.}
