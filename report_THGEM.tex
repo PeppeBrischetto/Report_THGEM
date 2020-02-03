@@ -38,30 +38,45 @@
 
 \maketitle
 
-\section{Introduction}
+\section*{Abstract}
 
-In view of the upgrade of the MAGNEX Focal Plane Detector (FPD) it is necessary to test the Thick Gas Electron Multipliers (THGEMs).
-This new technology will substitute the present tracker, based on proportional wires.
-It guarantees to cope with rate of the order of MHz/$\mbox{mm}^2$.
-The aim of these tests was to study the THGEM response varying the induction, the THGEM and the drift tensions. 
-In December 2019 two prototypes of THGEM were characterized. Both prototypes are multiple THGEM composed by three layers of GEM, but they show different hole pattern for the multiplication.
-
-
-%Due parole sull'obiettivo dei test, caratterizzazione delle THGEM e del prototipo, focalizzandoci sulle risposte del sistema variando le THGEM
-
-%Descrivere i due tipi di THGEM: foto, schemi, differenze, tabella FULL THGEM vs. ROW THGEM (indicando pitch, dimensione del foro e rim, spessore totale e spessore della metallizzazione (copper plating) )
-
-
-%Micro patterned gas detector
-
+In December 2019 two prototypes of THGEM were tested to study their response varying the induction, the THGEM and the drift tensions. 
 
 \section{Experimental setup}
 
-In these tests, two kinds of THGEM were employed: in the first one, referred to as FULL THGEM (Figure~\ref{fig:full_thgem}), the holes are uniformly distributed over the active surface; in the second one, called ROW THGEM (Figure~\ref{fig:row_thgem}), the holes are arranged in five rows.
-In the FULL THGEM there are 143 rows of holes in horizontal and in vertical direction (Figure~\ref{fig:full_thgem_holes}), giving a total of 20449 holes.
-In the ROW THGEM (Figure~\ref{fig:row_thgem_holes}) for each of the five rows there are 143 holes.
-The main characteristics of the two prototypes are shown in Table~\ref{tab:thgem}.
-The two THGEMs have the same dimensions: 107$\times$107~$\mbox{mm}^2$.
+\subsection{THGEM}
+
+The two THGEM prototypes are both multiple THGEM, composed by three layers of GEM, but they show different hole pattern for the multiplication.\\
+In the first one, referred to as FULL THGEM \textit{F10} (Figure~\ref{fig:full_thgem}), the holes are uniformly distributed over the active surface; in the second one, called ROW THGEM \textit{R1} (Figure~\ref{fig:row_thgem}), the holes are arranged in five rows.\\
+The main characteristics of the two prototypes are shown in Table~\ref{tab:thgem}.\\
+
+\begin{table} [b!]
+	\begin{center}
+		\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{|c|c|c|}
+\hline 
+\textbf{Name} & \textbf{F10} & \textbf{R1} \\ 
+\hline 
+Substrate material & Ceramic SD103K & PCB  \\ 
+\hline 
+Finish board thickness [mm] & 1.4 $\pm$ 0.1 & 1.28 \\ 
+\hline 
+Dimension [$\mbox{mm}^2$] & 107$\times$107 & 107$\times$107 \\ 
+\hline 
+Rim size [mm] & 0.1 & 0.2  \\ 
+\hline  
+Rows & 143$\times$143 & 5 \\ 
+\hline 
+Holes & 20449 & 143 \\ 
+\hline 
+Hole diameter [mm] & 0.30 $\pm$ 0.05 & 0.280 \\ 
+\hline
+Hole spacing & 0.75 & 0.75 \\ 
+\hline
+\end{tabular} 
+	\end{center}
+	\caption{The main characteristics of the two type of THGEM tested.} \label{tab:thgem}
+\end{table}
 
 \begin{figure}
 	\centering
@@ -81,23 +96,9 @@ The two THGEMs have the same dimensions: 107$\times$107~$\mbox{mm}^2$.
 	\label{fig:row_thgem_complessiva}		
 \end{figure}
 
-\begin{table} [b!]
-	\begin{center}
-		\renewcommand{\arraystretch}{1.2}
-		\begin{tabular} {ccccc}
-			Substrate &  Finish board   &  Hole diameter & Rim size  & Hole spacing \\
-			material  &  thickness (mm) &      (mm)      &   (mm)    &   (mm)       \\
-			
-			\toprule[0.1em]
-			%\hline
-			Ceramic SD103K &  1.4 $\pm$ 0.1 & 0.30 $\pm$ 0.05 & 0.1 & 0.75 \\
-			PCB 		   &  1.28 		 & 0.280		  & 0.2 & 0.75 \\
-			
-			\bottomrule[0.1em]
-		\end{tabular}
-	\end{center}
-	\caption{The main characteristics of the two type of THGEM tested.} \label{tab:thgem}
-\end{table}
+\newpage
+
+\subsection{Vacuum system}
 
 The experimental apparatus used in the tests is composed by a gas chamber with inside the tracker prototype, an alpha source and a shutter. 
 A scheme of the setup is shown in Figure~\ref{fig:schema_apparato}.
