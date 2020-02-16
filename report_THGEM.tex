@@ -282,13 +282,13 @@ The chosen values of pressure, \Vind{} and \Vdrift{} are shown in Table~\ref{tab
 \begin{table} [!h]
 	\begin{center}
 		\renewcommand{\arraystretch}{1.2}
-		\begin{tabular} {ccccc}
-			P (mbar) & & \Vind{} (V) & & \Vdrift{} (V)\\
+		\begin{tabular} {ccccccc}
+			P (mbar) & & \Vind{} (V) & & \Vdrift{} (V) & & \Vthgem{} range (V)\\
 			\toprule[0.1em]
 			%\hline
-			30	& &	120	& &	1000 \\
-			20	& &	100	& & 1000 \\
-			11	& & 70	& & 600 \\
+			30	& &	120	& &	1000	& & 180$\div$235 \\
+			20	& &	100	& & 1000	& & 150$\div$215 \\
+			11	& & 70	& & 600		& & 130$\div$210 \\
 			
 			\bottomrule[0.1em]
 		\end{tabular}
@@ -320,13 +320,13 @@ The optimal \Vthgem{} value for P~=~20~mbar is 205~V, while for P~=~11~mbar it i
 
 %\textcolor{red}{Aggiungere qui il discorso sul fattore di moltiplicazione?}
 
-From these measurements, the multiplication factors were evaluated as a function of \Vthgem.
+From these measurements, the multiplication factors were evaluated as a function of \Vthgem{} and pressure.
 The results of the calculations are shown in Figure~\ref{fig:multiplication_factor_FULL}: in the three cases the growth of the electron number in the avalanche follows an exponential behaviour.
 
 \begin{figure}[!t]
 	\centering
 	\includegraphics[width=\textwidth]{Immagini/MFvsTHGEM_FULL.pdf}
-	\caption{The multiplication factors evaluated for the FULL THGEM as a function of \Vthgem.}
+	\caption{The multiplication factors evaluated for the FULL THGEM as a function of \Vthgem{} and pressure.}
 	\label{fig:multiplication_factor_FULL}
 \end{figure}
 
@@ -395,7 +395,7 @@ Also in these cases the saturation voltage is 100~V.
 
 
 %\textcolor{red}{Aggiungere plot sul backflow}
-From these measurements, the ion backflow of the FULL THGEM was evaluated as a function of \Vdrift.
+From these measurements, the ion backflow of the FULL THGEM was evaluated as a function of \Vdrift{} and pressure.
 The results of the calculation are shown in Figure~\ref{fig:ion_backflow_FULL}: the ion backflow linearly increases at increasing \Vdrift{} and is almost the same for the three studied pressures.
 
 \begin{figure}[htbp]
@@ -450,7 +450,7 @@ A summary scheme of the adopted configurations is shown in Table~\ref{tab:ROWTHG
 	\caption{The values of pressure (P), \Vthgem{} and \Vdrift{} adopted for the study on \Vind.} \label{tab:ROWTHGEM_vind}
 \end{table}
 The \Vind{} scans were carried out starting from 0~V and increasing the voltage by 10 or 20~V per run, until the discharge value is reached.
-This value is dependent on the gas pressure and the values set for \Vthgem{} and \Vdrift: for P~=~20~mbar it was 110~V, for P~=~30~mbar it was 110~V, and for P~=~40~mbar it was 180~V.
+This value is dependent on the gas pressure and on the values set for \Vthgem{} and \Vdrift: for P~=~20~mbar it was 110~V, for P~=~30~mbar it was 110~V, and for P~=~40~mbar it was 180~V.
 
 
 
@@ -467,15 +467,21 @@ The result of the two scans at 20~mbar are shown, respectively, in Figure~\ref{f
 	\subfigure[]{ \label{fig:induction_ROWTHGEM_20mbar} \includegraphics[width=0.96\textwidth]{Immagini/InductionScan_ROW_THGEM_20mbar.pdf}}
 	\subfigure[]{ 	\label{fig:induction_ROWTHGEM_20mbar_bis} \includegraphics[width=0.96\textwidth]{Immagini/InductionScan_ROW_THGEM_20mbar_bis.pdf}}
 	\caption{Currents measured during the scan on the voltage \Vind{} across the induction region at 20~mbar: in (a) \Vthgem{} is at 220~V, in (b) it is at 210~V.}
-	\label{fig:induction_ROWTHGEM_20mbar_total}
+	\label{fig:induction_ROWTHGEM_20mbar_both}
 \end{figure}
 Little discharges were observed up to 50~V, while in the range 60$\div$110~V big discharges affected bot1 and top3 currents.
-With this configuration there is a plateau region from 30 to 70~V \textcolor{red}{giusto?}.
-The optimal value is 50~V.
+In the case with \Vthgem~=~220~V there is a plateau region from 30 to 70~V, while in that with \Vthgem~=~210~V it is from 30 to 80~V.
+\textcolor{red}{giusto?}.
+In the former case the optimal value is 50~V, in the latter it is 60~V.
 
 
 
 The result of the tests at 30 and 40~mbar are, respectively, shown in Figure~\ref{fig:induction_ROWTHGEM_30mbar} and~\ref{fig:induction_ROWTHGEM_40mbar}.
+In the former case the plateau region is clearly visible from 10 to 100~V, so the optimal value is 90~V.
+For P~=~40~mbar the plateau region ranges from 20 to 70~V, so the optimal value is 60~V.
+
+%In all the cases the phenomenon of the multiplication 
+As for the FULL THGEM, when \Vind{} reaches sufficiently high values, the sum of anode and top3 currents increases, so that the phenomenon of the extension of the multiplication region out of the THGEM holes appears also for the ROW THGEM.
 
 \begin{figure}[!htb]
 	\centering
@@ -514,12 +520,13 @@ The increments were ranging from 5 to 10~V.
 			P (mbar) & & \Vind{} (V) & & \Vdrift{} (V) & & \Vthgem{} range (V)\\
 			\toprule[0.1em]
 			%\hline
-			20	& &	50	& &	800 & & 180$\div$225 \\
-			30	& &	70	& & 800 & & 180$\div$240 \\
-			42	& & 80	& & 700 & & 220$\div$270 \\
-			32	& & 70	& &	400	& & 170$\div$245 \\
-			22	& & 80	& & 300	& & 120$\div$220 \\
 			10	& & 50	& & 200	& & 140$\div$205 \\
+			20	& &	50	& &	800 & & 180$\div$225 \\
+			22	& & 80	& & 300	& & 120$\div$220 \\
+			30	& &	70	& & 800 & & 180$\div$240 \\
+			32	& & 70	& &	400	& & 170$\div$245 \\
+			42	& & 80	& & 700 & & 220$\div$270 \\
+
 			
 			\bottomrule[0.1em]
 		\end{tabular}
@@ -527,7 +534,37 @@ The increments were ranging from 5 to 10~V.
 	\caption{The values of pressure, \Vind{} and \Vdrift{} adopted for the study on \Vthgem.} \label{tab:ROWTHGEM_vthgem}
 \end{table}
 
-\textcolor{red}{Visto che i grafici sarebbero tanti, sarebbe meglio metterne soltanto due o tre più esemplificativi?}
+%\textcolor{red}{Visto che i grafici sarebbero tanti, sarebbe meglio metterne soltanto due o tre più esemplificativi?}
+
+The results of the scans at 10 and 32~mbar are shown, respectively, in Figure~\ref{fig:thgem_ROWTHGEM_10mbar} and~\ref{fig:thgem_ROWTHGEM_30mbar_bis}: the typical exponential growth of the currents is verified also for the ROW THGEM.
+ 
+
+\begin{figure}[!htb]
+	\centering
+	\subfigure[]{ \label{fig:thgem_ROWTHGEM_10mbar} \includegraphics[width=0.96\textwidth]{Immagini/thgemScan_ROW_THGEM_10mbar.pdf}}
+	\subfigure[]{ 	\label{fig:thgem_ROWTHGEM_30mbar_bis} \includegraphics[width=0.96\textwidth]{Immagini/thgemScan_ROW_THGEM_30mbar_bis.pdf}}
+	\caption{Currents measured during the scan on the voltage \Vthgem{} across each ROW THGEM: in (a) at 10~mbar, in (b) at 32~mbar.}
+	\label{fig:thgem_ROWTHGEM}
+\end{figure}
+
+
+From these measurements, the multiplication factors of the ROW THGEM were evaluated as a function of \Vthgem{} and pressure. 
+
+
+
+
+\begin{figure}[!t]
+	\centering
+	\includegraphics[width=\textwidth]{Immagini/MFvsTHGEM_FULLandROW_bis.pdf}
+	\caption{Comparison between the multiplication factors evaluated for the ROW THGEM (square) and those for the FULL THGEM (circle) as a function of \Vthgem{} and pressure.}
+	\label{fig:multiplication_factor_FULLandROW}
+\end{figure}
+
+
+
+
+
+
 
 
 
@@ -536,21 +573,77 @@ The increments were ranging from 5 to 10~V.
 
 \subsubsection{Scan on \Vdrift}
 
+To fully characterize the tracker response, a study was conducted varying the potential difference \Vdrift{} across the drift region, while pressure, \Vind{} and \Vthgem{} were kept fixed.
+The explored range goes from 0~V (or 100~V in the case with P~=~20~mbar) to the discharge voltage, which depends on the gas pressure: for P~=~30~mbar it was 1400~V, for P~=~20~mbar it was 1000~V, and for P~=~11~mbar it was 800~V.
+The increments were of 100~V for all the cases, but for P~=~11~mbar the first 400~V were scanned in step of 30~V.
+In Table~\ref{tab:ROWTHGEM_vdrift} the adopted value of pressure, \Vind{} and \Vthgem{} are shown.
+
+
+\begin{table} [!h]
+	\begin{center}
+		\renewcommand{\arraystretch}{1.2}
+		\begin{tabular} {ccccc}
+			P (mbar) & & \Vind{} (V) & & \Vthgem{} (V)\\
+			\toprule[0.1em]
+			%\hline
+			30	& &	70	& &	240 \\
+			30	& &	70	& & 230 \\
+			20	& & 80	& & 210 \\
+			10	& & 50	& & 180 \\
+			
+			\bottomrule[0.1em]
+		\end{tabular}
+	\end{center}
+	\caption{The values of pressure (P), \Vind{} and \Vthgem{} adopted for the study on \Vdrift.} \label{tab:ROWTHGEM_vdrift}
+\end{table}
+
+
+The result of the two scans at 30~mbar are shown in Figure~\ref{fig:drift_ROWTHGEM_30mbar_both}: in both cases the measured currents increase rapidly up to 200~V, then they decrease and reach a saturation value. 
+\textcolor{red}{Perché?}
+
+
+\begin{figure}[!htb]
+	\centering
+	\subfigure[]{ \label{fig:drift_ROWTHGEM_30mbar} \includegraphics[width=0.96\textwidth]{Immagini/DriftScan_ROW_THGEM_30mbar.pdf}}
+	\subfigure[]{ 	\label{fig:drift_ROWTHGEM_30mbar_bis} \includegraphics[width=0.96\textwidth]{Immagini/DriftScan_ROW_THGEM_30mbar_bis.pdf}}
+	\caption{Currents measured during the scan on the voltage \Vdrift{} across the drift region at 20~mbar: in (a) \Vthgem{} is at 240~V, in (b) it is at 230~V.}
+	\label{fig:drift_ROWTHGEM_30mbar_both}
+\end{figure}
+
+The same phenomenon appears also in the scans at 20 and 10~mbar, respectively shown in Figure~\ref{fig:drift_ROWTHGEM_20mbar} and~\ref{fig:drift_ROWTHGEM_10mbar}.
+
+\begin{figure}[!htb]
+	\centering
+	\subfigure[]{ \label{fig:drift_ROWTHGEM_20mbar} \includegraphics[width=0.96\textwidth]{Immagini/DriftScan_ROW_THGEM_10mbar.pdf}}
+	\subfigure[]{ 	\label{fig:drift_ROWTHGEM_10mbar} \includegraphics[width=0.96\textwidth]{Immagini/DriftScan_ROW_THGEM_10mbar.pdf}}
+	\caption{Currents measured during the scan on the voltage \Vdrift{} across the drift region: in (a) at 20~mbar, in (b) at 10~mbar.}
+	\label{fig:drift_ROWTHGEM_20and10_mbar}
+\end{figure}
+
+
+
+From these measurements, the ion backflow of the ROW THGEM was evaluated as a function of \Vdrift{} and pressure.
+The results of the calculation are shown in Figure~\ref{fig:ion_backflow_FULLandROW}: the ion backflow rapidly increases at increasing \Vdrift{} and is much bigger than that of the FULL THGEM.
+
+
+
+
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{Immagini/IBFvsDrift_FULLandROW.pdf}
+	\caption{Comparison between the ion backflows evaluated for the ROW THGEM (square) and those for the FULL THGEM (circle) as a function of \Vdrift{} and pressure.}
+	\label{fig:ion_backflow_FULLandROW}
+\end{figure}
 
 
 
 
 
 
+%\clearpage
 
-
-
-
-
-
-\clearpage
-
-\section*{Notes}
+%\section*{Notes}
 
 %partiamo dalle full thgem:
 
@@ -565,23 +658,23 @@ The increments were ranging from 5 to 10~V.
 %sulla parte di drift: variare la corrente tra catodo e bottom1; a 0 volt abbiamo una misura: o lo strumento segna zero ma non è zerp 
 
 
-descrizione delle varie pressioni: un grafico tenendo soltanto anodo a diverse pressioni, questo grafico non varia drammaticamente al variare della pressione; un altro grafico con l'induzione al variare della tensione delle thgem e/o del drift.
+%%descrizione delle varie pressioni: un grafico tenendo soltanto anodo a diverse pressioni, questo grafico non varia drammaticamente al variare della pressione; un altro grafico con l'induzione al variare della tensione delle thgem e/o del drift.
 
 
 
-ion backflow: calcolare direttamente il valore in percentuale; unico grafico al variare delle pressioni; esso non dipende molto dall'induzione; esso dipende anche delle thgem (configurazione delle linee di forza); conclusione: 
+%%ion backflow: calcolare direttamente il valore in percentuale; unico grafico al variare delle pressioni; esso non dipende molto dall'induzione; esso dipende anche delle thgem (configurazione delle linee di forza); conclusione: 
 
-fattore di moltiplicazione: inizialmente solo con le thgem piene;
-poi thgem row e mostrare i tre grafici esemplificativi
-induzione delle row thgem a 20 mbar è più bello;
+%%fattore di moltiplicazione: inizialmente solo con le thgem piene;
+%%poi thgem row e mostrare i tre grafici esemplificativi
+%%induzione delle row thgem a 20 mbar è più bello;
 
 %\subsection{ROW THGEM}
 
-la drift è da discutere: la loro geometria è diversa: 5 fila isolate e proviamo a spiegare che a basse tensioni della drift, il campo elettrico delle thgem forma un imbuto più largo, se vdrift aumenta la regione da cui le thgem raccolgono carica diminuisce
+%%la drift è da discutere: la loro geometria è diversa: 5 fila isolate e proviamo a spiegare che a basse tensioni della drift, il campo elettrico delle thgem forma un imbuto più largo, se vdrift aumenta la regione da cui le thgem raccolgono carica diminuisce
 
-dalle row thgem ci aspettiamo meno corrente perché hanno meno buchi: invece di 143 file, ne hanno 5, quindi hanno il 3.5\% dei buchi rispetto a quelle piene. In prima approssimazione potremmo aspettarci che il valore della corrente scali allo stesso modo. 
+%%dalle row thgem ci aspettiamo meno corrente perché hanno meno buchi: invece di 143 file, ne hanno 5, quindi hanno il 3.5\% dei buchi rispetto a quelle piene. In prima approssimazione potremmo aspettarci che il valore della corrente scali allo stesso modo. 
 
-ion backflow nelle row è sistematicamente più alto; vediamo se l'andamento è simile; al variare dell'induzione diminuzione dell'IBF; 
+%%ion backflow nelle row è sistematicamente più alto; vediamo se l'andamento è simile; al variare dell'induzione diminuzione dell'IBF; 
 
 %ricordarsi di fare la misura del drift delle row a 20 mbar
 %ATTENZIONE: altri test tenendo i campi elettrici fissi
@@ -589,7 +682,7 @@ ion backflow nelle row è sistematicamente più alto; vediamo se l'andamento è sim
 
 
 
-\section{Conclusioni}
+%\section{Conclusioni}
 
 
 
