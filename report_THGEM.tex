@@ -180,7 +180,7 @@ dark current is due to the X-ray produced by the $\alpha$-source that are not st
 
 \section{Measurements}
 
-%i canali 3 e 4 possono essere ignorati perché non danno mai segnale
+%i canali 3 e 4 possono essere ignorati perche non danno mai segnale
 
 %spieghiamo i diversi scan (induzione, thgem e drift)
 
@@ -570,7 +570,7 @@ The increments were ranging from 5 to 10~V.
 	\caption{The values of pressure, \Vind{} and \Vdrift{} adopted for the study on \Vthgem.} \label{tab:ROWTHGEM_vthgem}
 \end{table}
 
-%\textcolor{red}{Visto che i grafici sarebbero tanti, sarebbe meglio metterne soltanto due o tre più esemplificativi?}
+%\textcolor{red}{Visto che i grafici sarebbero tanti, sarebbe meglio metterne soltanto due o tre pi\F9 esemplificativi?}
 
 The results of the scans at 10 and 32~mbar are shown, respectively, in Figure~\ref{fig:thgem_ROWTHGEM_10mbar} and~\ref{fig:thgem_ROWTHGEM_30mbar_bis}: the typical exponential growth of the currents is verified also for the ROW THGEM.
  
@@ -635,7 +635,7 @@ In Table~\ref{tab:ROWTHGEM_vdrift} the adopted value of pressure, \Vind{} and \V
 
 
 The result of the two scans at 30~mbar are shown in Figure~\ref{fig:drift_ROWTHGEM_30mbar_both}: in both cases the measured currents increase rapidly up to 200~V, then they decrease and reach a saturation value. 
-\textcolor{red}{Perché?}
+\textcolor{red}{Perch\E9?}
 
 
 \begin{figure}[!htb]
@@ -677,7 +677,37 @@ The results of the calculation are shown in Figure~\ref{fig:ion_backflow_FULLand
 
 
 
-%\clearpage
+
+\clearpage
+
+
+\subsection{First test with beam}
+
+The first test with beam was on February 19 2020. We tested FULL THGEM \textit{F10} at 60 pA, 400 pA, 1 nA and 1.8 nA of beam current. The pressure was 9.4 mbar.
+
+\subsubsection{Scan on \Vthgem}
+
+The measurement was made fixing \Vind{} = 50 V and \Vdrift{} = 400. The currents have the same behaviour of the scan on \Vthgem{} with alpha source ~\ref{fig:thgem_FULLTHGEM_10mbar_bis}. The discharge was at \Vthgem{} = 190 V with beam instead of \Vthgem{} = 210 V with alpha source. Another important difference is the maximum anodic achievable current: ~20 nA with alpha souce, ~120 nA with 60 pA and ~280 nA with 400 pA of beam current ~\ref{fig:thgemScan_THGEM10_beam_10mbar}.
+
+\begin{figure}[!htb]
+	\centering
+	\subfigure[]{ \label{fig:thgemScan_THGEM10_60pA_10mbar} \includegraphics[width=0.96\textwidth]{Immagini/thgemScan_THGEM10_60pA_10mbar.pdf}}
+	\subfigure[]{ 	\label{fig:thgemScan_THGEM10_400pA_10mbar} \includegraphics[width=0.96\textwidth]{Immagini/thgemScan_THGEM10_10mbar.pdf}}
+	\caption{Currents measured during the scan on the voltage \Vthgem{} across each FULL THGEM: in (a) at 60 pA, in (b) at 400 pA.}
+	\label{fig:thgemScan_THGEM10_beam_10mbar}
+\end{figure}
+
+\subsubsection{Scan on \Vdrift}
+
+The measurement was made fixing \Vind{} = 50 V and \Vthgem{} = 160. The currents have the same behaviour of the scan on \Vdrift{} with alpha source ~\ref{fig:drift_FULLTHGEM_10mbar_bis}. The discharge was at \Vdrift{} = 800 V with beam instead of more than \Vdrift{} = 700 V with alpha source. Another important difference is the maximum anodic achievable current: ~-0.5 nA with alpha souce, ~-20 nA with 60 pA and ~-55 nA with 400 pA of beam current.
+
+\begin{figure}[!htb]
+	\centering
+	\subfigure[]{ \label{fig:driftScan_THGEM10_60pA_10mbar} \includegraphics[width=0.96\textwidth]{Immagini/driftScan_THGEM10_60pA_10mbar.pdf}}
+	\subfigure[]{ 	\label{fig:thgemScan_THGEM10_400pA_10mbar} \includegraphics[width=0.96\textwidth]{Immagini/driftScan_THGEM10_10mbar.pdf}}
+	\caption{Currents measured during the scan on the voltage \Vdrift{} across each FULL THGEM: in (a) at 60 pA, in (b) at 400 pA.}
+	\label{fig:driftScan_THGEM10_beam_10mbar}
+\end{figure}
 
 %\section*{Notes}
 
@@ -687,11 +717,11 @@ The results of the calculation are shown in Figure~\ref{fig:ion_backflow_FULLand
 
 
 
-%sulla parte delle thgem: andamento esponenziale, si raggiunge il limite di scarica, non sappiamo se la scarica è nelle thgem
+%sulla parte delle thgem: andamento esponenziale, si raggiunge il limite di scarica, non sappiamo se la scarica \E8 nelle thgem
 
 
 
-%sulla parte di drift: variare la corrente tra catodo e bottom1; a 0 volt abbiamo una misura: o lo strumento segna zero ma non è zerp 
+%sulla parte di drift: variare la corrente tra catodo e bottom1; a 0 volt abbiamo una misura: o lo strumento segna zero ma non \E8 zerp 
 
 
 %%descrizione delle varie pressioni: un grafico tenendo soltanto anodo a diverse pressioni, questo grafico non varia drammaticamente al variare della pressione; un altro grafico con l'induzione al variare della tensione delle thgem e/o del drift.
@@ -702,15 +732,15 @@ The results of the calculation are shown in Figure~\ref{fig:ion_backflow_FULLand
 
 %%fattore di moltiplicazione: inizialmente solo con le thgem piene;
 %%poi thgem row e mostrare i tre grafici esemplificativi
-%%induzione delle row thgem a 20 mbar è più bello;
+%%induzione delle row thgem a 20 mbar \E8 pi\F9 bello;
 
 %\subsection{ROW THGEM}
 
-%%la drift è da discutere: la loro geometria è diversa: 5 fila isolate e proviamo a spiegare che a basse tensioni della drift, il campo elettrico delle thgem forma un imbuto più largo, se vdrift aumenta la regione da cui le thgem raccolgono carica diminuisce
+%%la drift \E8 da discutere: la loro geometria \E8 diversa: 5 fila isolate e proviamo a spiegare che a basse tensioni della drift, il campo elettrico delle thgem forma un imbuto pi\F9 largo, se vdrift aumenta la regione da cui le thgem raccolgono carica diminuisce
 
-%%dalle row thgem ci aspettiamo meno corrente perché hanno meno buchi: invece di 143 file, ne hanno 5, quindi hanno il 3.5\% dei buchi rispetto a quelle piene. In prima approssimazione potremmo aspettarci che il valore della corrente scali allo stesso modo. 
+%%dalle row thgem ci aspettiamo meno corrente perch\E9 hanno meno buchi: invece di 143 file, ne hanno 5, quindi hanno il 3.5\% dei buchi rispetto a quelle piene. In prima approssimazione potremmo aspettarci che il valore della corrente scali allo stesso modo. 
 
-%%ion backflow nelle row è sistematicamente più alto; vediamo se l'andamento è simile; al variare dell'induzione diminuzione dell'IBF; 
+%%ion backflow nelle row \E8 sistematicamente pi\F9 alto; vediamo se l'andamento \E8 simile; al variare dell'induzione diminuzione dell'IBF; 
 
 %ricordarsi di fare la misura del drift delle row a 20 mbar
 %ATTENZIONE: altri test tenendo i campi elettrici fissi
