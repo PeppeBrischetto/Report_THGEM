@@ -357,7 +357,7 @@ The optimal \Vthgem{} value for P~=~20~mbar is 205~V, while for P~=~11~mbar it i
 %\textcolor{red}{Aggiungere qui il discorso sul fattore di moltiplicazione?}
 
 From these measurements, the multiplication factors were evaluated as a function of \Vthgem{} and pressure.
-The results of the calculations are shown in Figure~\ref{fig:multiplication_factor_FULL}: in the three cases the growth of the electron number in the avalanche follows an exponential behaviour.
+The results of the calculations are shown in Figure~\ref{fig:multiplication_factor_FULL}: in the three cases the growth of the electron number in the avalanche follows an exponential behaviour.\\
 
 \begin{figure}[!t]
 	\centering
@@ -365,6 +365,14 @@ The results of the calculations are shown in Figure~\ref{fig:multiplication_fact
 	\caption{The multiplication factors evaluated for the FULL THGEM as a function of \Vthgem{} and pressure.}
 	\label{fig:multiplication_factor_FULL}
 \end{figure}
+
+On February 20 2020 another test with alpha source was done in the same condition of test with beam. The currents measured during \Vthgem{} scan have the same behavior of previous test. The difference is the maximum anodic achievable current: ~20 nA fixing \Vind{} = 50 V and \Vdrift{} = 400 V and ~40 nA fixing \Vind{} = 70 V and \Vdrift{} = 600 V.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{Immagini/thgemScan_FULLTHGEM_10mbar_bis.pdf}
+	\caption{Currents measured during the scan on the voltage \Vthgem{} across the drift region at 10~mbar fixing \Vind{} = 50 V and \Vdrift{} = 400 V.}
+	\label{fig:thgem_FULLTHGEM_10mbar_bis}
 
 %\subsubsection*{Scan on THGEM voltage  at 30 mbar}
 %To find the optimal value for the THGEM voltage until discharge, a scan on this parameter has been done. The measured currents obtained for a pressure of 30~mbar and for \Vind~=~120~V and \Vdrift~=~1000~V are shown in Figure~\ref{fig:thgem_FULLTHGEM_30mbar}. \Vthgem~=~180~V is the minimum voltage at which anode current is measurable. At \Vthgem~=~230~V there was discharges, but we do not know if it came from THGEM. The anode current has the typical exponential behaviour.
@@ -440,6 +448,16 @@ The results of the calculation are shown in Figure~\ref{fig:ion_backflow_FULL}: 
 	\caption{The ion backflow as a function of \Vdrift{} for the three examined pressures.}
 	\label{fig:ion_backflow_FULL}
 \end{figure}
+
+On February 20 2020 another test with alpha source was done in the same condition of test with beam. The currents measured during \Vdrift{} scan have the same behavior (almost constant) of previous test. The difference is the current values, a clear example can be anodic current: ~0.5 nA fixing \Vind{} = 50 V and \Vthgem{} = 160 V and ~11 nA fixing \Vind{} = 70 V and \Vthgem{} = 190 V.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{Immagini/driftScan_THGEM10_alpha_10mbar.pdf}
+	\caption{Currents measured during the scan on the voltage \Vdrift{} across the drift region at 10~mbar.}
+	\label{fig:driftScan_THGEM10_alpha_10mbar}
+
+
 %\subsubsection*{Scan on drift voltage  at 30 mbar}
 %To find the optimal value for the drift voltage until discharge, a scan on this parameter has been done. The measured currents obtained for a pressure of 30~mbar and for \Vind~=~120~V and \Vthgem~=~220~V are shown in Figure~\ref{fig:drift_FULLTHGEM_30mbar}. At \Vdrift~=~5~V the anodic current is saturated. This means that the magnitude of the electric field at \Vdrift~=~0~V is much lower than $\frac{5~V}{20~cm}= 250 mV/cm$ or the value measured by PICO is actually not zero. At \Vdrift~=~1200~V ion backflow~(\ibf) is equal to 18.9\%, while at \Vdrift~=~1500~V \ibf~is equal to 24.7\%. Dischages appeared at \Vdrift~=~1600~V.
 
@@ -687,26 +705,83 @@ The first test with beam was on February 19 2020. We tested FULL THGEM \textit{F
 
 \subsubsection{Scan on \Vthgem}
 
-The measurement was made fixing \Vind{} = 50 V and \Vdrift{} = 400. The currents have the same behaviour of the scan on \Vthgem{} with alpha source ~\ref{fig:thgem_FULLTHGEM_10mbar_bis}. The discharge was at \Vthgem{} = 190 V with beam instead of \Vthgem{} = 210 V with alpha source. Another important difference is the maximum anodic achievable current: ~20 nA with alpha souce, ~120 nA with 60 pA and ~280 nA with 400 pA of beam current ~\ref{fig:thgemScan_THGEM10_beam_10mbar}.
+The measurement was made fixing \Vind{} = 50 V and \Vdrift{} = 400 V. The currents have the same behaviour of the scan on \Vthgem{} with alpha source ~\ref{fig:thgem_FULLTHGEM_10mbar_bis}. The discharge was at \Vthgem{} = 190 V with beam instead of \Vthgem{} = 210 V with alpha source. Another important difference is the maximum anodic achievable current: ~20 nA with alpha souce, ~120 nA with 60 pA and ~280 nA with 400 pA of beam current ~\ref{fig:thgemScan_THGEM10_beam_10mbar}.
 
 \begin{figure}[!htb]
 	\centering
 	\subfigure[]{ \label{fig:thgemScan_THGEM10_60pA_10mbar} \includegraphics[width=0.96\textwidth]{Immagini/thgemScan_THGEM10_60pA_10mbar.pdf}}
-	\subfigure[]{ 	\label{fig:thgemScan_THGEM10_400pA_10mbar} \includegraphics[width=0.96\textwidth]{Immagini/thgemScan_THGEM10_10mbar.pdf}}
-	\caption{Currents measured during the scan on the voltage \Vthgem{} across each FULL THGEM: in (a) at 60 pA, in (b) at 400 pA.}
+	\subfigure[]{ 	\label{fig:thgemScan_THGEM10_400pA_10mbar} \includegraphics[width=0.96\textwidth]{Immagini/thgemScan_THGEM10_400pA_10mbar.pdf}}
+	\caption{Currents measured during the scan on the voltage \Vthgem{} across each FULL THGEM fixing \Vind{} = 50 V and \Vdrift{} = 400 V: in (a) at 60 pA, in (b) at 400 pA.}
 	\label{fig:thgemScan_THGEM10_beam_10mbar}
 \end{figure}
 
 \subsubsection{Scan on \Vdrift}
 
-The measurement was made fixing \Vind{} = 50 V and \Vthgem{} = 160. The currents have the same behaviour of the scan on \Vdrift{} with alpha source ~\ref{fig:drift_FULLTHGEM_10mbar_bis}. The discharge was at \Vdrift{} = 800 V with beam instead of more than \Vdrift{} = 700 V with alpha source. Another important difference is the maximum anodic achievable current: ~-0.5 nA with alpha souce, ~-20 nA with 60 pA and ~-55 nA with 400 pA of beam current.
+The measurement was made fixing \Vind{} = 50 V and \Vthgem{} = 160 V. The currents have the same behaviour of the scan on \Vdrift{} with alpha source ~\ref{fig:driftScan_THGEM10_alpha_10mbar}. The discharge was at \Vdrift{} = 800 V with beam instead of more than \Vdrift{} = 700 V with alpha source. Another important difference is the maximum anodic achievable current: ~-0.5 nA with alpha souce, ~-20 nA with 60 pA and ~-55 nA with 400 pA of beam current.
 
 \begin{figure}[!htb]
 	\centering
 	\subfigure[]{ \label{fig:driftScan_THGEM10_60pA_10mbar} \includegraphics[width=0.96\textwidth]{Immagini/driftScan_THGEM10_60pA_10mbar.pdf}}
-	\subfigure[]{ 	\label{fig:thgemScan_THGEM10_400pA_10mbar} \includegraphics[width=0.96\textwidth]{Immagini/driftScan_THGEM10_10mbar.pdf}}
-	\caption{Currents measured during the scan on the voltage \Vdrift{} across each FULL THGEM: in (a) at 60 pA, in (b) at 400 pA.}
+	\subfigure[]{ 	\label{fig:driftScan_THGEM10_400pA_10mbar} \includegraphics[width=0.96\textwidth]{Immagini/driftScan_THGEM10_400pA_10mbar.pdf}}
+	\caption{Currents measured during the scan on the voltage \Vdrift{} across each FULL THGEM fixing \Vind{} = 50 V and \Vthgem{} = 160 V: in (a) at 60 pA, in (b) at 400 pA.}
 	\label{fig:driftScan_THGEM10_beam_10mbar}
+\end{figure}
+
+\subsubsection{Ion Backflows (IBF)}
+
+Looking at figure~\ref{fig:IBFvsDrift_withBeam} we can evaluate IBF behavior increasing \Vdrift{}. IBF increase linear until \Vdrift{} = 600 V. After this point it seems to get a plateau but to be sure it is needed to encrease \Vdrift{}in next measurement.\\
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{Immagini/IBFvsDrift_withBeam.pdf}
+	\caption{Ion backflows evaluated for FULL THGEM as a function of \Vdrift{} at 60 pA and 400 pA fixing \Vind{} = 50 V and \Vthgem{} = 160 V.}
+	\label{fig:IBFvsDrift_withBeam}
+\end{figure}
+
+
+
+In figure~\ref{fig:IBFvsDrift_beam_alpha_average} IBF was setted as a function of \Vdrift{}. The IBF behaviour for 60 pA, 400 pA at \Vthgem{} = 160 V and alpha source at \Vthgem{} = 190 V with a maximum IBF = 17\%. When \Vthgem{} is less than 190 V the catode current is so small that IBF estimate is not reliable. IBF as a function of \Vdrift{} is not sensible to the rate because it has a costant rise with aplha source and with beam. From the circle points it seems that increasing the beam current (fixed \Vthgem{} = 150 V) the IBF decrease, this behavior cannot be explained. Looking at the blue and red circle points IBF decrease increasing \Vthgem{} with the same beam current.\\
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{Immagini/IBFvsDrift_beam_alpha_average.pdf}
+	\caption{Ion backflows evaluated for FULL THGEM as a function of \Vdrift{} at 60 pA, 400 pA, 1 nA, 1.8 nA and with alpha source.}
+	\label{fig:IBFvsDrift_beam_alpha_average}
+\end{figure}
+
+
+From \Vthgem{} = 100 V to \Vthgem{} = 140 V IBF decrease rapidly, between \Vthgem{} = 140 V and \Vthgem{} = 205 V IBF is nearly constant as visible in figure~\ref{fig:IBFvsTHGEM_beam_alpha}. The best condition to have IBF as less as possible is to work near \Vthgem{} = 200 V but as far as possible from discharge.\\
+
+
+\begin{figure}[!htb]
+	\centering
+	\subfigure[]{ \label{fig:IBFvsTHGEM_beam_alpha} \includegraphics[width=0.96\textwidth]{Immagini/IBFvsTHGEM_beam_alpha.pdf}}
+	\subfigure[]{ 	\label{fig:IBFvsTHGEM_beam_alpha_zoom} \includegraphics[width=0.96\textwidth]{Immagini/IBFvsTHGEM_beam_alpha_zoom.pdf}}
+	\caption{Ion backflows evaluated for FULL THGEM as a function of \Vthgem{} at 60 pA, 400 pA, 1 nA, 1.8 and with alpha source.}
+	\label{fig:IBFvsTHGEM_beam_alpha}
+\end{figure}
+
+
+
+In figure~\ref{fig:IBFvsInd_beam.pdf} it is visible as IBF value is very different in FULL and ROW THGEM, respectly 20\% and 60\%. Another difference is IBF behavoir, IBF is constant for FULL THGEM and it decrease for ROW THGEM. IBF as a function of \Vind{} is not dependent from pressure and it decrease increasing beam current.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{Immagini/IBFvsInd_beam.pdf}
+	\caption{Ion backflows evaluated for FULL THGEM as a function of \Vind{} at 60 pA, 400 pA, 1 nA, 1.8 nA and with alpha source.}
+	\label{fig:IBFvsInd_beam.pdf}
+\end{figure}
+
+
+\subsubsection{Beam Scan}
+
+In figure~\ref{fig:IbeamScan_THGEM10_10mbar_average} the measured currents were plotted at the increasing of beam current. We expected a linear behavior instead we found an exponential one. This behavior can be explained because the point at 60 pA and 400 pA have different conditions from tre others. To measure at 1 nA and 1.8 nA a collimator was removed from beam line so the beam spot and its distribution i different.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{Immagini/IbeamScan_THGEM10_10mbar_average.pdf}
+	\caption{Currents measured during the beam scan on the voltage across each FULL THGEM at 60 pA, at 400 pA, at 1 nA, at 1.8 nA.}
+	\label{fig:IbeamScan_THGEM10_10mbar_average}
 \end{figure}
 
 %\section*{Notes}
