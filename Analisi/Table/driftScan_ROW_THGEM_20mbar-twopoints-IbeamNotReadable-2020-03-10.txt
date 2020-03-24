@@ -1,0 +1,9 @@
+V	CH1		Ch2		 Ch5		Ch6
+400	-0.0100186	-0.00748869	0.26933	0.0561084
+1000	-0.0160658	-0.0070671	0.358313	-0.123722
+
+
+**********************
+Scan on Vdrift with ROW THGEM 2020-03-10
+Ibeam not readable	Target=0.972 mg/cm^2	<Rate>=0.2 Hz
+P=20.7 mbar	Vind=50 V	VTHGEM=190 V

@@ -1,0 +1,9 @@
+V	CH1		Ch2		 Ch5		Ch6
+400	-3.98351	-0.756621	3.06131	1.82568
+1000	-2.00363	-0.394344	0.540687	1.59001
+
+
+**********************
+Scan on Vdrift with ROW THGEM 2020-03-10
+Ibeam~280 pA	Target=9.6 mg/cm^2	<Rate>=8.9 Hz
+P=20.7 mbar	Vind=50 V	VTHGEM=190 V
