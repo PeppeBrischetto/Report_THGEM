@@ -1,6 +1,6 @@
 void plotTable_Rate(char* filename)
 {
-   double R, a, b, c, d;
+   double V, a, b, c, d;
    char buffer[200];
    
    ifstream in;
@@ -15,26 +15,17 @@ void plotTable_Rate(char* filename)
    
    TGraph *gr5=new TGraph(0); 
    
-   for(int i=0; i<6; i++){
-      in>>R>>a>>b>>c>>d;
-      cout<<R<<"\t"<<a<<"\t"<<b<<"\t"<<c<<"\t"<<d<<endl;
+   for(int i=0; i<7; i++){
+      in>>V>>a>>b>>c>>d;
+      cout<<V<<"\t"<<a<<"\t"<<b<<"\t"<<c<<"\t"<<d<<endl;
       
-      gr1->SetPoint(i, R, a); 
-      gr2->SetPoint(i, R, b); 
-      gr3->SetPoint(i, R, c); 
-      gr4->SetPoint(i, R, d);
+      gr1->SetPoint(i, V, a); 
+      gr2->SetPoint(i, V, b); 
+      gr3->SetPoint(i, V, c); 
+      gr4->SetPoint(i, V, d);
       
-      gr5->SetPoint(i, R, c+d);  //cathode + bot1
-      //gr5->SetPoint(i, R, a+b);  	//anode + top3
-/*      
-      gr1->SetPoint(i, R, TMath::Abs(a*1000)); 
-      gr2->SetPoint(i, R, TMath::Abs(b*1000)); 
-      gr3->SetPoint(i, R, TMath::Abs(c*1000)); 
-      gr4->SetPoint(i, R, TMath::Abs(d*1000));
-      
-      //gr5->SetPoint(i, R, c+d);  //cathode + bot1
-      gr5->SetPoint(i, R, TMath::Abs(a+b)*1000);  //anode + top3 
-*/
+      //gr5->SetPoint(i, V, c+d);  //cathode + bot1
+      gr5->SetPoint(i, V, a+b);  	//anode + top3
    }
 
    
@@ -70,19 +61,13 @@ void plotTable_Rate(char* filename)
    gr5->SetLineWidth(1);
    gr5->SetLineColor(kOrange +5);
 
-   TCanvas *c2a=new TCanvas("C2a");
+   TCanvas *c2a=new TCanvas("C2a");  
    c2a->SetGrid();
-   //c2a->SetLogy();  
-   TH2F *bga=new TH2F("bga","",1000,0,1500,500,-1,1);
+   TH2F *bga=new TH2F("bga","",1000,0,5000,1000,-80.,80.);
    bga->SetStats(0);
    bga->GetXaxis()->SetTitle("Rate (pps)");
-   bga->GetXaxis()->SetTitleSize(0.05);
-   bga->GetXaxis()->SetTitleOffset(0.85);
    bga->GetYaxis()->SetTitle("I (nA)");
-   bga->GetYaxis()->SetTitleSize(0.05);
-   bga->GetYaxis()->SetTitleOffset(0.85);
    bga->Draw();
-
    gr1->Draw("PL ");
    gr2->Draw("PL");
    gr3->Draw("PL");
@@ -95,17 +80,11 @@ void plotTable_Rate(char* filename)
   leg->AddEntry(gr3,"bot1", "P");
   leg->AddEntry(gr4,"cathode", "P");
   //leg->AddEntry(gr5,"sum cathode+bot1", "P");
-  //leg->AddEntry(gr5,"sum anode+top3", "P");
+  leg->AddEntry(gr5,"sum anode+top3", "P");
    
   leg->Draw();
   
-   //tex = new TLatex(1000,.5,"V_{drift}=400V");
-   tex = new TLatex(1000,.5,"V_{drift}=1000V");
-   tex->SetLineWidth(2);
-   tex->Draw();
-
-
   TLine *zero=new TLine(170,0,250,0);
   zero->SetLineStyle(2);
-  //zero->Draw();
+//  zero->Draw();
 }
