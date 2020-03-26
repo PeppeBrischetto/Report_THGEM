@@ -15,52 +15,52 @@ void plotTable_MF_THGEM_test()
    
    TGraph *gr6=new TGraph(0);
    TGraph *gr7=new TGraph(0);
-   TGraph *gr8=new TGraph(0);        
+   TGraph *gr8=new TGraph(0);
    TGraph *gr9=new TGraph(0);  // Fino a qui i grafici per la FULL
 
    TGraph *gr10=new TGraph(0);
-   TGraph *gr11=new TGraph(0);     
-   TGraph *gr12=new TGraph(0);  
-   TGraph *gr13=new TGraph(0);  
-   TGraph *gr14=new TGraph(0);  
+   TGraph *gr11=new TGraph(0);
+   TGraph *gr12=new TGraph(0);
+   TGraph *gr13=new TGraph(0);
+   TGraph *gr14=new TGraph(0);
    TGraph *gr15=new TGraph(0);  // Fino a qui i grafici per la ROW
          
    ifstream in1, in2, in3, in4, in5;
    ifstream in6, in7, in8, in9, in10;
 
-   in1.open("thgemScan_ROW_THGEM_20mbar.txt");
+   in1.open("thgemScan_THGEM10_20mbar.txt");
    in1.getline(buffer,200);
       
-   for(int i=0; i<5; i++){
+   for(int i=0; i<9; i++){
       in1>>V>>a>>b>>c>>d;
       cout<<V<<"\t"<<a<<"\t"<<b<<"\t"<<c<<"\t"<<d<<"\t"<<-a/fac2<<endl;
       
-      gr6->SetPoint(i, V, -a/fac2);  	//anode + top3
+      gr6->SetPoint(i, V, -a/fac2);      //anode + top3
    }
    
    cout << "-------------------" << endl;
 
-   in2.open("thgemScan_ROW_THGEM_20mbar-Ibeam400pA-2020-03-10.txt");
+   in2.open("thgemScan_THGEM10_20mbar-Vdrift1000V-2020-03-09.txt");
    in2.getline(buffer,200);
 
-   for(int i=0; i<6; i++){
+   for(int i=0; i<11; i++){
       in2>>V>>a>>b>>c>>d;
       cout<<V<<"\t"<<a<<"\t"<<b<<"\t"<<c<<"\t"<<d<<"\t"<<-a/fac_test<<endl;
       
-      gr7->SetPoint(i, V, -a/fac_test);  	//anode + top3
+      gr7->SetPoint(i, V, -a/fac_test);      //anode + top3
    }
  
    cout << "-------------------" << endl;
 
 
-   in3.open("thgemScan_ROW_THGEM_20mbar-Ibeam160pA-2020-03-10.txt");
+   in3.open("thgemScan_THGEM10_20mbar_109pA-Vdrift1000V-2020-03-09.txt");
    in3.getline(buffer,200);
 
-   for(int i=0; i<8; i++){
+   for(int i=0; i<9; i++){
       in3>>V>>a>>b>>c>>d;
       cout<<V<<"\t"<<a<<"\t"<<b<<"\t"<<c<<"\t"<<d<<"\t"<<-a/fac_test<<endl;
       
-      gr8->SetPoint(i, V, -a/fac_test);  	//anode + top3
+      gr8->SetPoint(i, V, -a/fac_test);      //anode + top3
    }
 
 
@@ -69,12 +69,11 @@ void plotTable_MF_THGEM_test()
 /*
    in4.open("thgemScan_THGEM10_10mbar_bis.txt");
    in4.getline(buffer,200);
-
    for(int i=0; i<9; i++){
       in4>>V>>a>>b>>c>>d;
       cout<<V<<"\t"<<a<<"\t"<<b<<"\t"<<c<<"\t"<<d<<endl;
       
-      gr9->SetPoint(i, V, -a/fac1);  	//anode + top3
+      gr9->SetPoint(i, V, -a/fac1);      //anode + top3
    }
  
    in5.open("thgemScan_ROW_THGEM_20mbar.txt");  // Vdrift=800V
@@ -85,7 +84,7 @@ void plotTable_MF_THGEM_test()
       in5>>V>>a>>b>>c>>d;
       cout<<V<<"\t"<<a<<"\t"<<b<<"\t"<<c<<"\t"<<d<<endl;
       
-      gr10->SetPoint(i, V, -a/fac2);  	//anode + top3
+      gr10->SetPoint(i, V, -a/fac2);      //anode + top3
    }
  
    in6.open("thgemScan_ROW_THGEM_30mbar.txt");  // Vdrift=800V
@@ -95,9 +94,8 @@ void plotTable_MF_THGEM_test()
       in6>>V>>a>>b>>c>>d;
       cout<<V<<"\t"<<a<<"\t"<<b<<"\t"<<c<<"\t"<<d<<endl;
       
-      gr11->SetPoint(i, V, -a/fac3);  	//anode + top3
+      gr11->SetPoint(i, V, -a/fac3);      //anode + top3
    }
-
    
    in7.open("thgemScan_ROW_THGEM_40mbar.txt");
    in7.getline(buffer,200);
@@ -106,7 +104,7 @@ void plotTable_MF_THGEM_test()
       in7>>V>>a>>b>>c>>d;
       cout<<V<<"\t"<<a<<"\t"<<b<<"\t"<<c<<"\t"<<d<<endl;
       
-      gr12->SetPoint(i, V, -a/fac4);  	//anode + top3
+      gr12->SetPoint(i, V, -a/fac4);      //anode + top3
    }
    
    in8.open("thgemScan_ROW_THGEM_30mbar_bis.txt");  // Vdrift=400V
@@ -116,8 +114,8 @@ void plotTable_MF_THGEM_test()
       in8>>V>>a>>b>>c>>d;
       cout<<V<<"\t"<<a<<"\t"<<b<<"\t"<<c<<"\t"<<d<<endl;
       
-      gr13->SetPoint(i, V, -a/fac3);  	//anode + top3
-   } 
+      gr13->SetPoint(i, V, -a/fac3);      //anode + top3
+   }
    
    
    in9.open("thgemScan_ROW_THGEM_20mbar_bis.txt");  // Vdrift=300V
@@ -131,9 +129,8 @@ void plotTable_MF_THGEM_test()
       in9>>V>>a>>b>>c>>d;
       cout<<V<<"\t"<<a<<"\t"<<b<<"\t"<<c<<"\t"<<d<<endl;
       
-      gr14->SetPoint(i, V, -a/fac2);  	//anode + top3
+      gr14->SetPoint(i, V, -a/fac2);      //anode + top3
    }
-
    in10.open("thgemScan_ROW_THGEM_10mbar.txt");
    in10.getline(buffer,200);
  
@@ -141,17 +138,17 @@ void plotTable_MF_THGEM_test()
       in10>>V>>a>>b>>c>>d;
       cout<<V<<"\t"<<a<<"\t"<<b<<"\t"<<c<<"\t"<<d<<endl;
       
-      gr15->SetPoint(i, V, -a/fac1);  	//anode + top3
+      gr15->SetPoint(i, V, -a/fac1);      //anode + top3
    }
 */
    
   TLegend *leg=new TLegend(0.1,0.6, 0.4,0.9);
   leg->AddEntry(gr6,"#alpha", "P");
-  leg->AddEntry(gr7,"R=3400pps", "P");
-  leg->AddEntry(gr8,"R~130pps", "P");
+  leg->AddEntry(gr7,"R=3200 pps", "P");
+  leg->AddEntry(gr8,"R=87 pps", "P");
   //leg->AddEntry(gr7,"FULL, 30 mbar", "P");
-  //leg->AddEntry(gr15,"ROW, 10 mbar", "P");            
-  //leg->AddEntry(gr10,"ROW, 20 mbar, V_{drift}=800V", "P");            
+  //leg->AddEntry(gr15,"ROW, 10 mbar", "P");
+  //leg->AddEntry(gr10,"ROW, 20 mbar, V_{drift}=800V", "P");
   //leg->AddEntry(gr14,"ROW, 20 mbar, V_{drift}=300V", "P");
   //leg->AddEntry(gr11,"ROW, 30 mbar, V_{drift}=800V", "P");
   //leg->AddEntry(gr13,"ROW, 30 mbar, V_{drift}=400V", "P");
@@ -161,7 +158,7 @@ void plotTable_MF_THGEM_test()
   c3a->SetGrid();
   //c3a->SetLogy();
   
-  TH2F *bga=new TH2F("bga1","",1000,130.,280.,1000,0.,500000.);
+  TH2F *bga=new TH2F("bga1","",1000,130.,240.,1000,0.,500000000000.);
    bga->SetStats(0);
    bga->GetXaxis()->SetTitle("V_{THGEM} (V)");
    bga->GetXaxis()->SetTitleSize(0.05);
@@ -183,9 +180,9 @@ void plotTable_MF_THGEM_test()
   gr6->SetMarkerColor(kAzure+7);
   gr6->SetLineWidth(1);
   gr6->SetLineColor(kAzure+7);
-  gr6->GetYaxis()->SetRangeUser(0., 100000.);
-  auto Xaxis = gr6->GetXaxis();
-  Xaxis->SetLimits(140., 260.);
+//  gr6->GetYaxis()->SetRangeUser(0., 100000.);
+//  auto Xaxis = gr6->GetXaxis();
+//  Xaxis->SetLimits(140., 260.);
   gr6->GetHistogram()->SetMinimum(1.);
   gr6->Draw("APL");
   
@@ -204,7 +201,7 @@ void plotTable_MF_THGEM_test()
   gr8->SetLineWidth(1);
   gr8->SetLineColor(kBlue-1);
   gr8->Draw("PL");
-
+/* 
   gr9->SetTitle("ch6");
   gr9->SetMarkerStyle(20);
   gr9->SetMarkerSize(1);
@@ -214,7 +211,7 @@ void plotTable_MF_THGEM_test()
   //gr9->Draw("PL");
 
   // Fino a qui per la FULL
-    
+   
   gr10->SetTitle("ch6");
   gr10->SetMarkerStyle(21);
   gr10->SetMarkerSize(1);
@@ -262,6 +259,6 @@ void plotTable_MF_THGEM_test()
   gr15->SetLineWidth(1);
   gr15->SetLineColor(kOrange +5);
   //gr15->Draw("PL");
-
-  leg->Draw();  
+*/
+  leg->Draw();
 }
