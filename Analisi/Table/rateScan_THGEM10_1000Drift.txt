@@ -9,4 +9,4 @@ R	CH1		Ch2		 Ch5		Ch6
 
 
 *********************
-Vind = 100, Vthgem = 205, Vdrift = 400
+Vind = 100, Vthgem = 205, Vdrift = 1000
