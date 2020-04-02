@@ -221,7 +221,7 @@ Figure~\ref{fig:schema_canali}. For the sake of clarity we underline that top 3 
 top layer of the 3-layers stack of THGEM, i.e. that one looking to the anode while bot 1 is the 
 bottom layer of the stack, i.e. that one looking to the cathode. Bot3/top2 as well bot2/top1 
 refers to the metallic layers embedded in the THGEM stack. In no case currents in these two 
-electrodes have been observed.\\
+electrodes have been observed.
 
 The current read with PICO for bot 1 has usually a worse accuracy. This is due to the fact that 
 PICO has two dynamical ranges with two related accuracy. Since in bot1 flow a large current due to 
@@ -781,7 +781,7 @@ values above 70\%.
 
 
 
-\subsubsection{Scan on \Vthgem}
+%\subsubsection{Scan on \Vthgem}
 %
 %The new scan on \Vthgem{} was conducted fixing P~=~9.3~mbar, \Vind{} = 50 V and \Vdrift{} = 400 V.
 %The measured currents have the same behaviour of the previous tests. Comparing this scan with a 
@@ -874,7 +874,7 @@ Unfortunately such uncertainty are not easy to extimate.
 
 \subsection{Scan on \Vthgem}
 The measurement was done at \Vind{} = 50~V and \Vdrift{} = 400~V with I$_{beam}$ 60 and 400 pA. 
-The plots of the currents vs \Vthgem are shown in Figure~\ref{fig:thgemScan_THGEM10_beam_10mbar}.
+The plots of the currents vs \Vthgem{} are shown in Figure~\ref{fig:thgemScan_THGEM10_beam_10mbar}.
 The plots show have the same behaviour of the scan on \Vthgem{} with $\alpha$ source (see Figure~\ref{fig:thgem_FULLTHGEM_10mbar_bis}). 
 
 The discharge occurred at \Vthgem{} = 190 V with both beam intensities, to be compared with 
@@ -973,7 +973,7 @@ pressure and it maybe decreases with increasing beam current.
 
 \subsection{Scan on the rate}
 
-\textcolor{red}{Ha senso mettere questa parte?}\\
+%\textcolor{red}{Ha senso mettere questa parte?}\\
 In Figure~\ref{fig:IbeamScan_THGEM10_10mbar_average} the measured currents were plotted as a function of the beam current (\ibeam). 
 %We expected a linear behaviour, but instead we found an exponential one. This behaviour can be explained because the point at 60 pA and 400 pA have different conditions from the others. 
 It is important to remember the discussion done at the beginnign of the section
@@ -1011,7 +1011,31 @@ in same case the current read by TBFC2 was below the its sensitivity the faraday
 TBFC1 was used t stmate the current on the target after a scaling.}; 
 scaling the counting rate in the photodiode to the solid angle of the tracker prototype.
 
-In Table \ref{} a scheme of the currents and relative rates used in the test.
+In Table \ref{tab:current_rate} a scheme of the currents and relative rates used in the test.
+
+\begin{table} [!h]
+	\begin{center}
+		\renewcommand{\arraystretch}{1.2}
+		\begin{tabular} {ccccccccccc}
+			MXFC1   & & TeBeFC  & & $I_{beam}^{estim}$ & & Target thick.	& & $R_{calc}$ & & $R_{pd}$ \\
+			(pA)  	& &   (pA)  & &       (pA)		   & &  (mg/$\mbox{cm}^2$)&&  (pps)   & &   (pps)   \\
+			\toprule[0.1em]
+			%\hline
+			900	& & 400	& &	-		& & 9.6		& & 3400	& & 13.4		\\
+			680	& &	280	& & -		& & 9.6		& &	2400	& & 8.8			\\
+			220	& & 100	& & - 		& & 9.6		& & 850		& & 2.5			\\
+			100	& & 60	& & - 		& & 9.6		& & 500 	& & 1.6			\\
+			100	& & NR	& & 45 		& & 0.972	& & 40  	& & $\sim$0.2	\\
+			250	& & NR	& & 110		& & 0.972	& & 90  	& & $\sim$0.3	\\
+			680	& &	300	& & -		& & 0.972	& &	240		& & $\sim$1		\\
+			250	& & 150	& & - 		& & 9.6		& & 1300	& & 3.4			\\
+			250	& & 160	& & - 		& & 0.972	& & 130 	& & 0.3			\\
+			\bottomrule[0.1em]
+		\end{tabular}
+	\end{center}
+	\caption{The values of beam currents, measured by MXFC1 and TeBeFC; the beam current estimated ($I_{beam}^{estim}$) when TeBeFC was not able to read the current; the target thickness; the calculated rate ($R_{calc}$) of particles impinging on the tracker and the rate ($R_{pd}$) of particles measured by the photodiode detector.} \label{tab:current_rate}
+\end{table}
+
 
 \clearpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1019,8 +1043,7 @@ In Table \ref{} a scheme of the currents and relative rates used in the test.
 \subsection{FULL THGEM}
 
   \subsubsection{THGEM scan}
-  The two scans of the \Vthgem{} done at low rate 90 pps and high rate 3400 pps are shown in Fig.
-  \ref{fig:driftScan_withBeam_H} and \ref{fig:driftScan_withBeam_L}.
+  The two scans of the \Vthgem{} done at low rate 90 pps and high rate 3400 pps are shown in Fig. \ref{fig:driftScan_withBeam_H} and \ref{fig:driftScan_withBeam_L}.
   \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=\textwidth]
@@ -1162,7 +1185,7 @@ In Table \ref{} a scheme of the currents and relative rates used in the test.
   \begin{figure}[htbp]
 	\centering						  
 	\includegraphics[width=\textwidth]{Immagini/MF_ROW_THGEM_withBeam_F.pdf}
-	\caption{MF for the ROW THGEM as a function of the reduced electric field\Vthgem{}. Run with 
+	\caption{MF for the ROW THGEM as a function of the reduced electric field \Vthgem{}. Run with 
 	$\alpha$-source	and $^{18}$O beam are compared. }
 	\label{fig:MF_ALL_beam}
   \end{figure}
