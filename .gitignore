@@ -2,6 +2,9 @@ report_THGEM.*
 
 !report_THGEM.tex
 
+report_THGEM_v2.*
+!report_THGEM_v2.tex
+
 ~$Caratterizzazione_THGEM.xlsx
 
 *.sty
