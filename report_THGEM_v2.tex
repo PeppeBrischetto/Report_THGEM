@@ -1,5 +1,6 @@
 \documentclass[a4paper, 11 pt]{report}
 
+\usepackage{makeidx}
 \usepackage[latin1]{inputenc}
 \usepackage[english]{babel}
 \usepackage{indentfirst}
@@ -39,15 +40,17 @@
 \author{G.A. Brischetto, I. Ciraldo, D. Torresi}
 \date{26 March 2020}
 
+
+
 \begin{document}
 
 \maketitle
 
 \section*{Abstract}
-
 In the present report the characterization of the tracker prototype using different kind of THGEM is 
 described. The main parameters that have been explored are: the THGEM voltage, the drift voltage,
 the induction voltage, the gas pressure and the rate of the incident particles.
+\tableofcontents
 
 \chapter{Experimental setup}
 
@@ -1127,7 +1130,7 @@ In Table \ref{tab:current_rate} a scheme of the currents and relative rates used
 
   \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.95\textwidth]{Immagini/driftScan_FULL_20mbar_comp.pdf}
+	\includegraphics[width=0.95\textwidth]{Immagini/driftScan_FULL_20mbar_Comparison_F.pdf}
 	\caption{Comparisn of the behaviour of the anodic current (a.u.) as a function of the \Edrift 
 	after a normalization in y of the different curves.}
 	\label{fig:DriftScan_FULL_beam}
@@ -1284,14 +1287,14 @@ In Table \ref{tab:current_rate} a scheme of the currents and relative rates used
   \Vdrift{} and \Edrift{} respectively.  
   \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=\textwidth]{Immagini/IBF_ROW_Comparison_1.pdf}
+	\includegraphics[width=\textwidth]{Immagini/IBF_ROW_Comparison.pdf}
 	\caption{IBF for the ROW THGEM as a function of the \Vdrift. Run with 
 	$\alpha$-source	and $^{18}$O beam are compared.}
 	\label{fig:IBF_ROW_beam}
   \end{figure}
   \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=\textwidth]{Immagini/IBF_ROW_Comparison_F_1.pdf}
+	\includegraphics[width=\textwidth]{Immagini/IBF_ROW_Comparison_F.pdf}
 	\caption{IBF for the ROW THGEM as a function of the reduced electric field. Run with 
 	$\alpha$-source	and $^{18}$O beam are compared.}
 	\label{fig:IBF_ROW_beam_F}
