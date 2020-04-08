@@ -221,7 +221,7 @@ Figure~\ref{fig:schema_canali}. For the sake of clarity we underline that top 3 
 top layer of the 3-layers stack of THGEM, i.e. that one looking to the anode while bot 1 is the 
 bottom layer of the stack, i.e. that one looking to the cathode. Bot3/top2 as well bot2/top1 
 refers to the metallic layers embedded in the THGEM stack. In no case currents in these two 
-electrodes have been observed.
+electrodes have been observed.\\
 
 The current read with PICO for bot 1 has usually a worse accuracy. This is due to the fact that 
 PICO has two dynamical ranges with two related accuracy. Since in bot1 flow a large current due to 
@@ -352,9 +352,11 @@ An operational value of \Vind{}=120~V have been choosen, this value ensure that 
 the electron is collected on the anode and that the multiplication is mainly confined on the THGEM 
 holes.
 
-The scan was repeated for two different values of \Vthgem{}: namely 200 and 230 V (see 
-Fig~\ref{fig:induction_FULLTHGEM_30mbar_other_VTHGEM}) and for two different pressures 10 and 20 
-mbar Fig.~\ref{fig:induction_FULLTHGEM_other_pressure}.
+The scan was repeated for two different values of \Vthgem{}: namely 200 and 230 V 
+%(see Fig~\ref{fig:induction_FULLTHGEM_30mbar_other_VTHGEM}) 
+and for two different pressures 10 and 20 mbar 
+Fig.~\ref{fig:induction_FULLTHGEM_other_pressure}. In all cases the behaviour of the
+curves is the same.
 
 \begin{figure}[!htb]
 	\centering
@@ -370,19 +372,18 @@ mbar Fig.~\ref{fig:induction_FULLTHGEM_other_pressure}.
 	\label{fig:induction_FULLTHGEM_30mbar_other_VTHGEM}
 \end{figure}
 
-\begin{figure}[!htb]
-	\centering
-	\subfigure[]{ 
-	  \label{fig:induction_FULLTHGEM_20mbar} 
-	  \includegraphics[width=0.97\textwidth]{Immagini/inductionScan_THGEM10_20mbar.pdf}}
-	\subfigure[]{ 
-	  \label{fig:induction_FULLTHGEM_11mbar} 
-	  \includegraphics[width=0.97\textwidth]{Immagini/InductionScan_THGEM10_10mbar_tris.pdf}}
-	\caption{Currents measured during the scan on the voltage \Vind{} across the induction region: in 
-	(a) at 20~mbar, in (b) at 11~mbar.}
-	\label{fig:induction_FULLTHGEM_other_pressure}
-\end{figure}
-
+%\begin{figure}[!htb]
+%	\centering
+%	\subfigure[]{ 
+%	  \label{fig:induction_FULLTHGEM_20mbar} 
+%	  \includegraphics[width=0.97\textwidth]{Immagini/inductionScan_THGEM10_20mbar.pdf}}
+%	\subfigure[]{ 
+%	  \label{fig:induction_FULLTHGEM_11mbar} 
+%	  \includegraphics[width=0.97\textwidth]{Immagini/InductionScan_THGEM10_10mbar_tris.pdf}}
+%	\caption{Currents measured during the scan on the voltage \Vind{} across the induction region: in 
+%	(a) at 20~mbar, in (b) at 11~mbar.}
+%	\label{fig:induction_FULLTHGEM_other_pressure}
+%\end{figure}
 
 A comparison of anode and top3 current at three different pressures are shown in Fig. 
 \ref{fig:induction_pressure_comp}.
@@ -390,7 +391,7 @@ A comparison of anode and top3 current at three different pressures are shown in
 	\centering
 	  \includegraphics[width=0.97\textwidth]{Immagini/InductionScan_FULL_AnodeComp_2.pdf}
 	\caption{Comparison of the anode and top3 currents at pressure of 10, 20, 30 mbar.}
-	\label{fig:induction_FULLTHGEM_other_pressure}
+	\label{fig:induction_pressure_comps}
 \end{figure}
 
 \clearpage
@@ -525,8 +526,8 @@ electron\footnote{Some simulation could be very usefull to understand such pheno
 	\label{fig:drift_FULLTHGEM_30mbar_mag}
 \end{figure}
 
-In Figure~\ref{fig:drift_FULLTHGEM_30mbar} the orange line represents, in this case, the sum of the cathode 
-and bot1 currents. This quantity is important to estimate the Ion Backflow (IB). 
+In Figure~\ref{fig:drift_FULLTHGEM_30mbar} the orange line represents, in this case, the sum of the
+cathode and bot1 currents. This quantity is important to estimate the Ion Backflow (IB). 
 
 The scans at 20 and 11~mbar are shown, respectively, in Figure~\ref{fig:drift_FULLTHGEM_20mbar} and~\ref{fig:drift_FULLTHGEM_11mbar}.
 \begin{figure}[!htb]
@@ -626,6 +627,18 @@ we choose operational values of \Vind= 90 and 60 respectively.
 	\label{fig:induction_ROWTHGEM_other_pressures}
 \end{figure}
 \clearpage
+
+
+In Fig. \ref{fig:IBF_ALL_induction} the IBF as a function of \Vdrift is shown.
+\begin{figure}[!htb]
+	\centering
+    \includegraphics[width=0.96\textwidth]{Immagini/IBF_ALL_induction.pdf}
+	\caption{IBF as a function of the voltage \Vind{} for FULL and ROW THGEM at different pressures.}
+	\label{fig:IBF_ALL_induction}
+\end{figure}
+
+
+
 
 \subsubsection{Scan on \Vthgem}
 The scan of \Vthgem have been done at fixed values of pressure, \Vind{} and \Vdrift{} and 
@@ -780,7 +793,6 @@ values above 70\%.
 \clearpage
 
 
-
 %\subsubsection{Scan on \Vthgem}
 %
 %The new scan on \Vthgem{} was conducted fixing P~=~9.3~mbar, \Vind{} = 50 V and \Vdrift{} = 400 V.
@@ -822,172 +834,172 @@ values above 70\%.
 \clearpage
 
 
-\section{First test with beam} \label{sec:test_beam}
-
-A first test with beam was performed on 19/02/2020. 
-
-A beam of $^{18}$O at an energy of 16.5 AMeV have been sent on a target of $^{116}$Cd xxx $\mu$
-The reaction products enter the scattering chamber housing the prototype that is located at an 
-angle of 30$^{\circ}$ respect to the beam direction. The pressure of isobutane inside the gas
- chamber was 9.4 mbar.
-Since at this energy the elastic cross section for the tracker prototype is not Rutherford It is 
-not possible to know the number and the kind of particles entering the prototype. The only 
-information on the flux comes from the faraday cup FC4 that is placed along the TeBe beam line 
-before the beam line gate valve. Therefore we have relative just relative information
-that allows to compare run with different beam currents but is not possible to extract
-absolute information on the particle rate entering the prototype, or make a comparison with
-$\alpha$ run.\\
-One possible way to compare such results with the alpha's is to compare directly the 
-anodic current even if it is not fully correct.
-Being equal all the parameters of the tracker (that is: P, \Vthgem{}, \Vind{}, \Vdrift{}),
-it should manifest the same behaviour if the total charge produced is the same, even if the 
-rate of particles entering the tracker is different.
-In fact even if the same current on the anode can be generate by a very different rates 
-of particles or heavy ions\footnote{Ion with different Z, M and energies loose quite different
-amount of energy\ldots} the effects on the tracker are mainly linked to the total amount of 
-charge produced and not on the rate of the particle\footnote{This is just partially thru. In fact 
-this is valid because we are measuring currents, it is no more if we study the signal on the 
-single strip of the anode. Moreover it is no strictly thru because there is a difference if
-the total primary charge is produced at very low rate with event that generate a lot of charge
-ore if the same total charge is produced at very high rate in events where a very small amount of 
-charge is produced}.
-
-Firstly the tracker was tested  at two values of the beam current 60 pA and 400 pA.
-In order to increase the beam current a collimator was remove from the beam line. In this way 
-we reached much higher values of the beam current: 1, 1.8 nA. Anyway since the 
-optic of the beam is not the same, that is the beam could reach the target with a different 
-emittance, is not correct to compare the first two beam currents
-with the second two\footnote{For example if the emittance of the beam was the same we can
-assert that with a beam of 1 nA we had a rate on the tracker that i s 2.5 times ahigher,
-since the emittance is not the same is not correct to affirm this, moreover also 
-the energy and Z of the particle reaching the tracker could be different.}
-
-An important difference respect to the case of the $\alpha$-source test is that the rate
-of the $\alpha$ particles is constant with a good approximation, the rate of the
-particle reaching the tracker in the in-beam test is not constant but fluctuate
-as the beam intensity.
-The fluctuation occur during the measurements of the currents, that is during the 1-2 minutes
-during which we take the average of the current and among one measurements and the others.
-Therefore the plot with beam are less precise and suffers the effect of the fluctuation.
-Unfortunately such uncertainty are not easy to extimate.
-
-
-\subsection{Scan on \Vthgem}
-The measurement was done at \Vind{} = 50~V and \Vdrift{} = 400~V with I$_{beam}$ 60 and 400 pA. 
-The plots of the currents vs \Vthgem{} are shown in Figure~\ref{fig:thgemScan_THGEM10_beam_10mbar}.
-The plots show have the same behaviour of the scan on \Vthgem{} with $\alpha$ source (see Figure~\ref{fig:thgem_FULLTHGEM_10mbar_bis}). 
-
-The discharge occurred at \Vthgem{} = 190 V with both beam intensities, to be compared with 
-\Vthgem{} = 210~V for the $\alpha$ case. 
-\begin{figure}[!htb]
-	\centering
-	\subfigure[]{ \label{fig:thgemScan_THGEM10_60pA_10mbar} 
-	\includegraphics[width=0.96\textwidth]{Immagini/thgemScan_THGEM10_60pA_10mbar.pdf}}
-	\subfigure[]{ 	\label{fig:thgemScan_THGEM10_400pA_10mbar} 
-	\includegraphics[width=0.96\textwidth]{Immagini/thgemScan_THGEM10_400pA_10mbar.pdf}}
-	\caption{Currents measured during the scan on the voltage \Vthgem{} across each FULL THGEM fixing 
-	\Vind{} = 50 V and \Vdrift{} = 400 V: in (a) at 60 pA, in (b) at 400 pA.}
-	\label{fig:thgemScan_THGEM10_beam_10mbar}
-\end{figure}
-\clearpage
-
-\subsection{Scan on \Vdrift}
-
-The measurement was done fixing \Vind{} = 50~V and \Vthgem{} = 160~V. 
-The plots of the currents vs \Vthgem are shown in Figure~\ref{fig:driftScan_THGEM10_beam_10mbar}.
-The currents have the same behaviour of the scan on \Vdrift{} with $\alpha$ source (see Figure~\ref{fig:driftScan_THGEM10_alpha_10mbar}). 
-The discharge voltage was 800 V with both beam intensities to be compared with about 750~V for the $\alpha$ source. Therefore, apparently there is no difference on the discharge voltage between the two cases
-$\alpha$-spurce, beam.
-%Another important difference is the maximum anodic achievable current: $\sim - $0.5 nA with $\alpha$ source, $\sim - $20~nA with \ibeam = 60~pA and $\sim - $55~nA with \ibeam = 400 pA.
-
-\begin{figure}[!htb]
-	\centering
-	\subfigure[]{ \label{fig:driftScan_THGEM10_60pA_10mbar} \includegraphics[width=0.96\textwidth]{Immagini/driftScan_THGEM10_60pA_10mbar.pdf}}
-	\subfigure[]{ 	\label{fig:driftScan_THGEM10_400pA_10mbar} \includegraphics[width=0.96\textwidth]{Immagini/driftScan_THGEM10_400pA_10mbar.pdf}}
-	\caption{Currents measured during the scan on the voltage \Vdrift{} across each FULL THGEM fixing \Vind{} = 50 V and \Vthgem{} = 160 V: in (a) at 60 pA, in (b) at 400 pA.}
-	\label{fig:driftScan_THGEM10_beam_10mbar}
-\end{figure}
-
-
+%\section{First test with beam} \label{sec:test_beam}
+%
+%A first test with beam was performed on 19/02/2020. 
+%
+%A beam of $^{18}$O at an energy of 16.5 AMeV have been sent on a target of $^{116}$Cd xxx $\mu$
+%The reaction products enter the scattering chamber housing the prototype that is located at an 
+%angle of 30$^{\circ}$ respect to the beam direction. The pressure of isobutane inside the gas
+% chamber was 9.4 mbar.
+%Since at this energy the elastic cross section for the tracker prototype is not Rutherford It is 
+%not possible to know the number and the kind of particles entering the prototype. The only 
+%information on the flux comes from the faraday cup FC4 that is placed along the TeBe beam line 
+%before the beam line gate valve. Therefore we have relative just relative information
+%that allows to compare run with different beam currents but is not possible to extract
+%absolute information on the particle rate entering the prototype, or make a comparison with
+%$\alpha$ run.\\
+%One possible way to compare such results with the alpha's is to compare directly the 
+%anodic current even if it is not fully correct.
+%Being equal all the parameters of the tracker (that is: P, \Vthgem{}, \Vind{}, \Vdrift{}),
+%it should manifest the same behaviour if the total charge produced is the same, even if the 
+%rate of particles entering the tracker is different.
+%In fact even if the same current on the anode can be generate by a very different rates 
+%of particles or heavy ions\footnote{Ion with different Z, M and energies loose quite different
+%amount of energy\ldots} the effects on the tracker are mainly linked to the total amount of 
+%charge produced and not on the rate of the particle\footnote{This is just partially thru. In fact 
+%this is valid because we are measuring currents, it is no more if we study the signal on the 
+%single strip of the anode. Moreover it is no strictly thru because there is a difference if
+%the total primary charge is produced at very low rate with event that generate a lot of charge
+%ore if the same total charge is produced at very high rate in events where a very small amount of 
+%charge is produced}.
+%
+%Firstly the tracker was tested  at two values of the beam current 60 pA and 400 pA.
+%In order to increase the beam current a collimator was remove from the beam line. In this way 
+%we reached much higher values of the beam current: 1, 1.8 nA. Anyway since the 
+%optic of the beam is not the same, that is the beam could reach the target with a different 
+%emittance, is not correct to compare the first two beam currents
+%with the second two\footnote{For example if the emittance of the beam was the same we can
+%assert that with a beam of 1 nA we had a rate on the tracker that i s 2.5 times ahigher,
+%since the emittance is not the same is not correct to affirm this, moreover also 
+%the energy and Z of the particle reaching the tracker could be different.}
+%
+%An important difference respect to the case of the $\alpha$-source test is that the rate
+%of the $\alpha$ particles is constant with a good approximation, the rate of the
+%particle reaching the tracker in the in-beam test is not constant but fluctuate
+%as the beam intensity.
+%The fluctuation occur during the measurements of the currents, that is during the 1-2 minutes
+%during which we take the average of the current and among one measurements and the others.
+%Therefore the plot with beam are less precise and suffers the effect of the fluctuation.
+%Unfortunately such uncertainty are not easy to extimate.
+%
+%
+%\subsection{Scan on \Vthgem}
+%The measurement was done at \Vind{} = 50~V and \Vdrift{} = 400~V with I$_{beam}$ 60 and 400 pA. 
+%The plots of the currents vs \Vthgem are shown in Figure~\ref{fig:thgemScan_THGEM10_beam_10mbar}.
+%The plots show have the same behaviour of the scan on \Vthgem{} with $\alpha$ source (see Figure~\ref{fig:thgem_FULLTHGEM_10mbar_bis}). 
+%
+%The discharge occurred at \Vthgem{} = 190 V with both beam intensities, to be compared with 
+%\Vthgem{} = 210~V for the $\alpha$ case. 
+%\begin{figure}[!htb]
+%	\centering
+%	\subfigure[]{ \label{fig:thgemScan_THGEM10_60pA_10mbar} 
+%	\includegraphics[width=0.96\textwidth]{Immagini/thgemScan_THGEM10_60pA_10mbar.pdf}}
+%	\subfigure[]{ 	\label{fig:thgemScan_THGEM10_400pA_10mbar} 
+%	\includegraphics[width=0.96\textwidth]{Immagini/thgemScan_THGEM10_400pA_10mbar.pdf}}
+%	\caption{Currents measured during the scan on the voltage \Vthgem{} across each FULL THGEM fixing 
+%	\Vind{} = 50 V and \Vdrift{} = 400 V: in (a) at 60 pA, in (b) at 400 pA.}
+%	\label{fig:thgemScan_THGEM10_beam_10mbar}
+%\end{figure}
 %\clearpage
-
-\subsection{Ion Backflow  (IBF)}
-Figure~\ref{fig:IBFvsDrift_withBeam} shows the IBF calculations as a function of \Vdrift{} for \ibeam{} equal to 60 and 400~pA. 
-Comparing the two curves we can affirm that there are no significant differences of the
-IBF for the two beam currents. 
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=\textwidth]{Immagini/IBFvsDrift_withBeam.pdf}
-	\caption{Ion backflow evaluated for FULL THGEM as a function of \Vdrift{} at 60 pA and 400 pA fixing \Vind{} = 50 V and \Vthgem{} = 160 V.}
-	\label{fig:IBFvsDrift_withBeam}
-\end{figure}
-
-%In Figure~\ref{fig:IBFvsDrift_beam_alpha_average}, IBF was studied as a function of \Vdrift{}. 
-Figure~\ref{fig:IBFvsDrift_beam_alpha_average} shows a comparison between the IBFs with $\alpha$ 
-source and those with beam. 
-%The IBF for 60 pA, 400 pA at \Vthgem{} = 160 V and $\alpha$ source  at \Vthgem{} = 190 V has a maximum IBF of 17\%. 
-%In the test with $\alpha$ source, when \Vthgem{} is less than 190 V the cathode current is so small 
-%that IBF estimate is not reliable. 
-IBF as a function of \Vdrift{} seems not sensible to the rate because the curves are basically the same
-for beam and alpha-source.
-%This is not well understood.
-There are also few points taken at different value of beam currents but at a single value of \Vdrift.
-The trnd seems that increasing the beam current and fixing all the other parameters, the IBF decreases. 
-This effect anyway is not so clear and could be simply due to the large uncertainties of the 
-measurements.
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=\textwidth]{Immagini/IBFvsDrift_beam_alpha_average.pdf}
-	\caption{Ion backflow evaluated for FULL THGEM as a function of \Vdrift{} at 60 pA, 400 pA, 1 nA, 1.8 nA and with $\alpha$ source.}
-	\label{fig:IBFvsDrift_beam_alpha_average}
-\end{figure}
-
-IBF was studied also as a function of \Vthgem: the results are shown in 
-Figure~\ref{fig:IBFvsTHGEM_beam_alpha}. IBF is nearly constant with varying \Vthgem. The best 
-condition to have IBF as less as possible is to work near \Vthgem{} = 200 V but as far as possible 
-from discharge.\\
-
-\begin{figure}[!p]
-	\centering
-    \includegraphics[width=1.\textwidth]{Immagini/IBFvsTHGEM_beam_alpha_zoom.pdf}
-	\caption{Ion backflow evaluated for FULL THGEM as a function of \Vthgem{} at 60 pA, 400 pA, 1 nA, 
-	1.8 and with $\alpha$ source.}
-	\label{fig:IBFvsTHGEM_beam_alpha}
-\end{figure}
-
-IBF was studied also as a function of \Vind: the results are shown in Figure~\ref{fig:IBFvsInd_beam}. 
-As already said, IBF for ROW THGEM is much bigger than that for FULL THGEM. Another difference is 
-that IBF is constant for FULL THGEM and it decreases for ROW THGEM. IBF is not dependent on 
-pressure and it maybe decreases with increasing beam current.
-
-\begin{figure}[!t]
-	\centering
-	\includegraphics[width=\textwidth]{Immagini/IBFvsInd_beam.pdf}
-	\caption{Ion backflow evaluated for FULL THGEM as a function of \Vind{} at 60 pA, 400 pA, 1 nA, 
-	1.8 nA and with $\alpha$ source.}
-	\label{fig:IBFvsInd_beam}
-\end{figure}
-
-
-\subsection{Scan on the rate}
-
+%
+%\subsection{Scan on \Vdrift}
+%
+%The measurement was done fixing \Vind{} = 50~V and \Vthgem{} = 160~V. 
+%The plots of the currents vs \Vthgem are shown in Figure~\ref{fig:driftScan_THGEM10_beam_10mbar}.
+%The currents have the same behaviour of the scan on \Vdrift{} with $\alpha$ source (see Figure~\ref{fig:driftScan_THGEM10_alpha_10mbar}). 
+%The discharge voltage was 800 V with both beam intensities to be compared with about 750~V for the $\alpha$ source. Therefore, apparently there is no difference on the discharge voltage between the two cases
+%$\alpha$-spurce, beam.
+%%Another important difference is the maximum anodic achievable current: $\sim - $0.5 nA with $\alpha$ source, $\sim - $20~nA with \ibeam = 60~pA and $\sim - $55~nA with \ibeam = 400 pA.
+%
+%\begin{figure}[!htb]
+%	\centering
+%	\subfigure[]{ \label{fig:driftScan_THGEM10_60pA_10mbar} \includegraphics[width=0.96\textwidth]{Immagini/driftScan_THGEM10_60pA_10mbar.pdf}}
+%	\subfigure[]{ 	\label{fig:driftScan_THGEM10_400pA_10mbar} \includegraphics[width=0.96\textwidth]{Immagini/driftScan_THGEM10_400pA_10mbar.pdf}}
+%	\caption{Currents measured during the scan on the voltage \Vdrift{} across each FULL THGEM fixing \Vind{} = 50 V and \Vthgem{} = 160 V: in (a) at 60 pA, in (b) at 400 pA.}
+%	\label{fig:driftScan_THGEM10_beam_10mbar}
+%\end{figure}
+%
+%
+%%\clearpage
+%
+%\subsection{Ion Backflow  (IBF)}
+%Figure~\ref{fig:IBFvsDrift_withBeam} shows the IBF calculations as a function of \Vdrift{} for \ibeam{} equal to 60 and 400~pA. 
+%Comparing the two curves we can affirm that there are no significant differences of the
+%IBF for the two beam currents. 
+%
+%\begin{figure}[htbp]
+%	\centering
+%	\includegraphics[width=\textwidth]{Immagini/IBFvsDrift_withBeam.pdf}
+%	\caption{Ion backflow evaluated for FULL THGEM as a function of \Vdrift{} at 60 pA and 400 pA fixing \Vind{} = 50 V and \Vthgem{} = 160 V.}
+%	\label{fig:IBFvsDrift_withBeam}
+%\end{figure}
+%
+%%In Figure~\ref{fig:IBFvsDrift_beam_alpha_average}, IBF was studied as a function of \Vdrift{}. 
+%Figure~\ref{fig:IBFvsDrift_beam_alpha_average} shows a comparison between the IBFs with $\alpha$ 
+%source and those with beam. 
+%%The IBF for 60 pA, 400 pA at \Vthgem{} = 160 V and $\alpha$ source  at \Vthgem{} = 190 V has a maximum IBF of 17\%. 
+%%In the test with $\alpha$ source, when \Vthgem{} is less than 190 V the cathode current is so small 
+%%that IBF estimate is not reliable. 
+%IBF as a function of \Vdrift{} seems not sensible to the rate because the curves are basically the same
+%for beam and alpha-source.
+%%This is not well understood.
+%There are also few points taken at different value of beam currents but at a single value of \Vdrift.
+%The trnd seems that increasing the beam current and fixing all the other parameters, the IBF decreases. 
+%This effect anyway is not so clear and could be simply due to the large uncertainties of the 
+%measurements.
+%
+%\begin{figure}[htbp]
+%	\centering
+%	\includegraphics[width=\textwidth]{Immagini/IBFvsDrift_beam_alpha_average.pdf}
+%	\caption{Ion backflow evaluated for FULL THGEM as a function of \Vdrift{} at 60 pA, 400 pA, 1 nA, 1.8 nA and with $\alpha$ source.}
+%	\label{fig:IBFvsDrift_beam_alpha_average}
+%\end{figure}
+%
+%IBF was studied also as a function of \Vthgem: the results are shown in 
+%Figure~\ref{fig:IBFvsTHGEM_beam_alpha}. IBF is nearly constant with varying \Vthgem. The best 
+%condition to have IBF as less as possible is to work near \Vthgem{} = 200 V but as far as possible 
+%from discharge.\\
+%
+%\begin{figure}[!p]
+%	\centering
+%    \includegraphics[width=1.\textwidth]{Immagini/IBFvsTHGEM_beam_alpha_zoom.pdf}
+%	\caption{Ion backflow evaluated for FULL THGEM as a function of \Vthgem{} at 60 pA, 400 pA, 1 nA, 
+%	1.8 and with $\alpha$ source.}
+%	\label{fig:IBFvsTHGEM_beam_alpha}
+%\end{figure}
+%
+%IBF was studied also as a function of \Vind: the results are shown in Figure~\ref{fig:IBFvsInd_beam}. 
+%As already said, IBF for ROW THGEM is much bigger than that for FULL THGEM. Another difference is 
+%that IBF is constant for FULL THGEM and it decreases for ROW THGEM. IBF is not dependent on 
+%pressure and it maybe decreases with increasing beam current.
+%
+%\begin{figure}[!t]
+%	\centering
+%	\includegraphics[width=\textwidth]{Immagini/IBFvsInd_beam.pdf}
+%	\caption{Ion backflow evaluated for FULL THGEM as a function of \Vind{} at 60 pA, 400 pA, 1 nA, 
+%	1.8 nA and with $\alpha$ source.}
+%	\label{fig:IBFvsInd_beam}
+%\end{figure}
+%
+%
+%\subsection{Scan on the rate}
+%
 %\textcolor{red}{Ha senso mettere questa parte?}\\
-In Figure~\ref{fig:IbeamScan_THGEM10_10mbar_average} the measured currents were plotted as a function of the beam current (\ibeam). 
-%We expected a linear behaviour, but instead we found an exponential one. This behaviour can be explained because the point at 60 pA and 400 pA have different conditions from the others. 
-It is important to remember the discussion done at the beginnign of the section
-that is that the points at 1 and 1.8 nA where obtained with a beam that had
-a difference emittance respect to the point at 60 and 400 pA.
-Therefore the scaling of the rate from the first tow points to the second two is not correct.
-
-
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=\textwidth]{Immagini/IbeamScan_THGEM10_10mbar_average.pdf}
-	\caption{Currents measured with varying \ibeam.}
-	\label{fig:IbeamScan_THGEM10_10mbar_average}
-\end{figure}
+%In Figure~\ref{fig:IbeamScan_THGEM10_10mbar_average} the measured currents were plotted as a function of the beam current (\ibeam). 
+%%We expected a linear behaviour, but instead we found an exponential one. This behaviour can be explained because the point at 60 pA and 400 pA have different conditions from the others. 
+%It is important to remember the discussion done at the beginnign of the section
+%that is that the points at 1 and 1.8 nA where obtained with a beam that had
+%a difference emittance respect to the point at 60 and 400 pA.
+%Therefore the scaling of the rate from the first tow points to the second two is not correct.
+%
+%
+%\begin{figure}[htbp]
+%	\centering
+%	\includegraphics[width=\textwidth]{Immagini/IbeamScan_THGEM10_10mbar_average.pdf}
+%	\caption{Currents measured with varying \ibeam.}
+%	\label{fig:IbeamScan_THGEM10_10mbar_average}
+%\end{figure}
 
 \clearpage
 \section{Second test with beam} 
@@ -1006,10 +1018,16 @@ prototype. It was a silicon photodiode 1$\times$1cm$^2$ covering a solid angle\f
 from the target 470+130mm} of 3$\cdot$10$^{-4}$, while the anglar range covered is 30$^{\circ} \pm$ 0.47$^{\circ}$.
 
 The rate of particle entering the prototype was estimated when possible in two independent
-ways: Assuming Rutherford scattering knowing target thickness and beam current\footnote{Since,
+ways: Assuming a Rutherford scattering, knowing target thickness and beam current\footnote{Since,
 in same case the current read by TBFC2 was below the its sensitivity the faraday cup 
-TBFC1 was used t stmate the current on the target after a scaling.}; 
-scaling the counting rate in the photodiode to the solid angle of the tracker prototype.
+TBFC1 was used to estimate the current on the target after a scaling.}; 
+scaling the counting rate in the photodiode to the solid angle of the tracker 
+prototype\footnote{The scaling factor is 129.6=12*10.8.}.
+
+The energy lost by $^{18}$O in 10 mbar of C$_4$H$_{10}$ is about one forth of those of the
+$\alpha$ used in previous tests, i.e. 1 MeV to be compared with the 270keV lost by $\alpha$
+at 5.485 MeV.
+
 
 In Table \ref{tab:current_rate} a scheme of the currents and relative rates used in the test.
 
@@ -1036,14 +1054,14 @@ In Table \ref{tab:current_rate} a scheme of the currents and relative rates used
 	\caption{The values of beam currents, measured by MXFC1 and TeBeFC; the beam current estimated ($I_{beam}^{estim}$) when TeBeFC was not able to read the current; the target thickness; the calculated rate ($R_{calc}$) of particles impinging on the tracker and the rate ($R_{pd}$) of particles measured by the photodiode detector.} \label{tab:current_rate}
 \end{table}
 
-
 \clearpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{FULL THGEM}
 
   \subsubsection{THGEM scan}
-  The two scans of the \Vthgem{} done at low rate 90 pps and high rate 3400 pps are shown in Fig. \ref{fig:driftScan_withBeam_H} and \ref{fig:driftScan_withBeam_L}.
+  The two scans of the \Vthgem{} done at low rate 90 pps and high rate 3400 pps are shown in Fig.
+  \ref{fig:driftScan_withBeam_H} and \ref{fig:driftScan_withBeam_L}.
   \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=\textwidth]
@@ -1068,7 +1086,7 @@ In Table \ref{tab:current_rate} a scheme of the currents and relative rates used
 	\label{fig:MF_FULL_beam}
   \end{figure}
   In Fig. \ref{fig:MF_FULL_beam_F} same data of Fig. \ref{fig:MF_FULL_beam} but plotted as a 
-  function of the redced elctric field of the THEGEM. Some clarification on how the reduced 
+  function of the reduced electric field of the THEGEM. Some clarification on how the reduced 
   electric field was calculated is necessary. Obviously make no sense to speak about a value of 
   the electric field inside the THGEM since the electric field is not uniform there. We make a very
   strong approximation that is calculate the electric field as it was uniform that is V/d.
@@ -1079,13 +1097,26 @@ In Table \ref{tab:current_rate} a scheme of the currents and relative rates used
 	with $\alpha$-source and $^{18}$O beam are compared.}
 	\label{fig:MF_FULL_beam_F}
   \end{figure}
+
+
+  In Fig. \ref{fig:IBF_FULL_thegem_beam} A comparison of the IBF for FULL THGEM including
+  run with $\alpha$-source and with beam.
+  \begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{Immagini/IBF_FULL_THGEM.pdf}
+	\caption{ibf for FULL THGEM as a function of the \Vthgem{}. Run with $\alpha$-source
+	and $^{18}$O beam are compared. }
+	\label{fig:IBF_FULL_thegem_beam}
+  \end{figure}
   
   \clearpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  \subsubsection{Drift scan}
 
-  In fig. \ref{fig:DriftScan_FULL_beam} the scan of the \Vdrift{} is shown. No significative
-  difference respect to those obtained with $\alpha$ are present.
+  In fig. \ref{fig:DriftScan_FULL_beam} the scan of the \Vdrift{} is shown. A difference respect
+  to the $\alpha$ case is the fact that in the present case the anodic current is increasing up to
+  about 600 V and after is constant, while with $\alpha$ the anodic current is almost
+  constant at all the \Vdrift values.
   \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.95\textwidth]{Immagini/driftScan_THGEM10_20mbar-Vthgem205V-2020-03-09.pdf}
@@ -1094,6 +1125,15 @@ In Table \ref{tab:current_rate} a scheme of the currents and relative rates used
 	\label{fig:DriftScan_FULL_beam}
   \end{figure}
 
+  \begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.95\textwidth]{Immagini/driftScan_FULL_20mbar_comp.pdf}
+	\caption{Comparisn of the behaviour of the anodic current (a.u.) as a function of the \Edrift 
+	after a normalization in y of the different curves.}
+	\label{fig:DriftScan_FULL_beam}
+  \end{figure}
+
+  \clearpage
 
   The ion back flow for the FULL THGEM as a function of the \Vdrift{} and the \Edrift is shown in 
   Fig. \ref{fig:IBF_FULL_beam_F}. 
@@ -1116,23 +1156,26 @@ In Table \ref{tab:current_rate} a scheme of the currents and relative rates used
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \subsubsection{Rate scan}
 
-
+  A scan on the rate, i.e. a plot of currents of the tracker as a function of the 
+  rate keeping fix all the other parameter was also done.
+  The measurements of the beam current was done by mean of faraday cup, therefore
+  the uncertainty in that value is quite large and was estimated as $\pm$10\%.
+  The behaviour of the anodic current as a function of rate is compatible with
+  a linear one.
+  \begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.90\textwidth]{Immagini/Rate_FULL_1000V.pdf}
+	\caption{Currents measured by Pico for different value of the beam current at
+	\Vdrift=1000.}
+	\label{fig:Rate_allcurrents_FULL}
+  \end{figure}
 
   \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.95\textwidth]{Immagini/IBF_FULL_Comparison_F.pdf}
-	\caption{Currents measured by Pico for different value of the beam current at
-	\Vdrift=.}
-	\label{fig:Rate_FULL_beam_H}
+	\includegraphics[width=0.90\textwidth]{Immagini/RateScan_FULL.pdf}
+	\caption{Anodic currents as a function of the beam rate for \Vdrift=400,1000V.}
+	\label{fig:Rate_anodic_cuurent_FULL}
   \end{figure}
-  \begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.95\textwidth]{Immagini/IBF_FULL_Comparison_F.pdf}
-	\caption{Currents measured by Pico for different value of the beam current at
-	\Vdrift=.}
-	\label{fig:Rate_FULL_beam_L}
-  \end{figure}
-
 
   \clearpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1167,6 +1210,19 @@ In Table \ref{tab:current_rate} a scheme of the currents and relative rates used
 	and $^{18}$O beam are compared. }
 	\label{fig:MF_ROW_beam}
   \end{figure}
+  In Fig. \ref{fig:MF_ROW_beam} a comparison of the multiplication factors obtained with
+  $\alpha$ source at different pressures and those with the beam at 20 mbar is shown. Also in this
+  cas as for the FULL THGEM there is a mismatch between data with $\alpha$ source and
+  beam at same values of the pressure.
+  \begin{figure}[htbp]
+	\centering						  
+	\includegraphics[width=\textwidth]{Immagini/MF_ROW_THGEM_withBeam_F.pdf}
+	\caption{MF for the ROW THGEM as a function of the reduced electric field\Vthgem{}. Run with 
+	$\alpha$-source	and $^{18}$O beam are compared. }
+	\label{fig:MF_ALL_beam}
+  \end{figure}
+
+
   In Fig. \ref{fig:MF_ALL_beam} A comparison of all the MF for ROW and FULL THGEM including
   run with $\alpha$-source and with beam.
   \begin{figure}[htbp]
@@ -1177,23 +1233,22 @@ In Table \ref{tab:current_rate} a scheme of the currents and relative rates used
 	\label{fig:MF_ALL_beam}
   \end{figure}
 
-  In Fig. \ref{fig:MF_ROW_beam} a comparison of the multiplication factors obtained with
-  $\alpha$ source at different pressures and those with the beam at 20 mbar is shown. Also in this
-  cas as for the FULL THGEM there is a mismatch between data with $\alpha$ source and
-  beam at same values of the pressure.
-
+  In Fig. \ref{fig:IBF_ROW_THEGEM_beam} A comparison of the IBF for ROW THGEM including
+  run with $\alpha$-source and with beam.
   \begin{figure}[htbp]
-	\centering						  
-	\includegraphics[width=\textwidth]{Immagini/MF_ROW_THGEM_withBeam_F.pdf}
-	\caption{MF for the ROW THGEM as a function of the reduced electric field \Vthgem{}. Run with 
-	$\alpha$-source	and $^{18}$O beam are compared. }
-	\label{fig:MF_ALL_beam}
+	\centering
+	\includegraphics[width=\textwidth]{Immagini/IBF_ROW_THGEM.pdf}
+	\caption{ibf for FULL THGEM as a function of the \Vthgem{}. Run with $\alpha$-source
+	and $^{18}$O beam are compared. }
+	\label{fig:IBF_ROW_THEGEM_beam}
   \end{figure}
+
+
+
 
   \clearpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \subsubsection{Drift scan}
-
   In Fig. \ref{fig:driftScan_ROW_beam} an example of scan of \Vdrift{} with the beam.
   The behaviour of the curve is similar to that obtained with an $\alpha$-source.
   \begin{figure}[htbp]
@@ -1218,7 +1273,6 @@ In Table \ref{tab:current_rate} a scheme of the currents and relative rates used
 	THGEM. }
 	\label{fig:driftScan_withbeam}
   \end{figure}
-  
   \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.8\textwidth]{Immagini/driftScan_ROW_THGEM_comp_F.pdf}
@@ -1226,9 +1280,8 @@ In Table \ref{tab:current_rate} a scheme of the currents and relative rates used
 	ROW THGEM.}
 	\label{fig:driftScan_withbeam_F}
   \end{figure}
-
   In Fig. \ref{fig:IBF_ROW_beam} \ref{fig:IBF_ROW_beam_F} the IBF is plotted a s a function of the
-  \Vdrift and \Edrift respectively.  
+  \Vdrift{} and \Edrift{} respectively.  
   \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=\textwidth]{Immagini/IBF_ROW_Comparison_1.pdf}
@@ -1248,18 +1301,26 @@ In Table \ref{tab:current_rate} a scheme of the currents and relative rates used
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
   \subsubsection{Rate scan}  
 
+  A scan on the rate, i.e. a plot of currents of the tracker as a function of the 
+  rate keeping fix all the other parameter was also done.
+  The measurements of the beam current was done by mean of faraday cup, therefore
+  the uncertainty in that value is quite large and was estimated as $\pm$10\%.
+  The behaviour of the anodic current as a function of rate is compatible with
+  a linear one.
+
   \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=\textwidth]{Immagini/rateScan_ROW_THGEM_Vdrift1000_2020-03-10.pdf}
-	\caption{.}
-	\label{fig:Rate_ROW_beam_H}
+	\includegraphics[width=\textwidth]{Immagini/Rate_ROW_1000V.pdf}
+	\caption{The current of all the elctrodes is shown as a function of the rate 
+	for \Vdrift.}
+	\label{fig:Rate_allcurrent_ROW}
   \end{figure}
   
   \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=\textwidth]{Immagini/rateScan_ROW_THGEM_Vdrift400_2020-03-10.pdf}
-	\caption{.}
-	\label{fig:Rate_ROW_beam_L}
+	\includegraphics[width=\textwidth]{Immagini/RateScan_ROW.pdf}
+	\caption{The anodic current as a function of the rate for two value of \Vdrift.}
+	\label{fig:Rate_anodic_current_ROW}
   \end{figure}
   
 %\section*{Notes}
@@ -1313,7 +1374,19 @@ $\alpha$-particles energy: 5.485 MeV (84.8\%); 5.443 MeV (13.1\%); 5.338 (2\%)\\
 $\gamma$-ray 59.5 () 26.3 keV\\
 X-ray (L  X-rays  from  Np) 20.7,  17.7,  16.9  and  13.9  keV\\
 
-\section{Geometria del rivelatore}
+
+\section{Primary charge}
+
+$\alpha$-particles of 5.485 MeV loss in 10 mbar of H$_{10}$C$_4$ 270 keV.\\
+Corresponding to 11739 e-ion pairs per $\alpha$.\\
+The rate of $\alpha$ is ~140 pps, the current of primary electrons is 1.6e6 e/sec$^-$=263fA.\\
+
+$^{18}$O at 145 MeV loss in 10 mbar of H$_{10}$C$_4$ 1 MeV.\\
+Corresponding to 43478 e-ion pairs per ion.\\
+With a rate of ~100 pps the current of primary electrons is  4.3e6 e/sec$^-$=697fA.\\
+
+
+%\section{Geometria del rivelatore}
 
 
 
