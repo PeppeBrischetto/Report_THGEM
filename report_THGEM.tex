@@ -26,14 +26,14 @@
 }
 
 \newcommand{\Vind}{$\Delta V_{ind}$}
-\newcommand{\Vthgem}{$\Delta V_{THGEM}$}
+\newcommand{\Vthgem}{$\Delta V_{TH}$}
 \newcommand{\Vdrift}{$ \Delta V_{drift}$}
 \newcommand{\ibf}{$I_{bf}$}
 \newcommand{\ibeam}{$I_{beam}$}
 
 \title{\bf {\huge FULL and ROW THGEM characterization} }
 \author{G.A. Brischetto, I. Ciraldo, D. Torresi}
-\date{16 Dicembre 2019}
+\date{26 March 2020}
 
 \begin{document}
 
@@ -47,138 +47,198 @@ the induction voltage, the gas pressure and the rate of the incident particles.
 
 \section{Experimental setup}
 
-The experimental apparatus used in the tests is composed by a gas chamber where is housed the tracker 
-prototype, an alpha source and a shutter.\\
-The gas chamber was filled with isobutane ($\mbox{C}_4\mbox{H}_{10}$) and its flow was of 
-145~sccm\footnote{Standard Cubic Centimeter per Minute.}. 
-The tests were performed at four different pressure: 10, 20, 30 and 40~mbar.\\
-The alpha source is a 55 kBq $^{241}Am$. A shutter remotelly controlled is used to allow (open) or 
-prevent (close) alpha particles from enter the tracker.\\
-The rate of $\alpha$-particles entering the tracker after the shutter is 140 pps (particles per second).
-
-To supply the required voltages a CAEN system is used. This system allows also the measurements 
-of the currents flowing in each the power unit.\\
-The currents are read also by a more precise pico-amperometer: PICO.
-It is capable to measure the same currents with a better accuracy, of the order of tenth of pA
-while the integrated CAEN ammeter has an accuracy of about 2 nA.
+The gas tracker have been tested in a gas chamber located along the TeBe beam line that is shown in Fig. 
+\ref{fig:TeBeline}.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.9\textwidth]{Immagini/TeBe_scheme.jpg}
+	\caption{Sketch of the TeBe beam line.}
+	\label{fig:TeBeline}
+\end{figure}
+The gas chamber is isolated from the high vacuum beam line by mean of a thin Mylar window (2.5 or 6 
+$\mu m$ thick) or by a few mm thick aluminum plate. This last is used just during the test with 
+$\alpha$-source that is located inside the gas chamber itself. The gas chamber is located at an 
+angle of 30$^{\circ}$ respect to the beam direction. The window is located at about 47 cm from the 
+target position. The window is \textcolor{red}{ 120 mm large and 100 mm high}.\\
 
 %aggiungere sezione sul sistema da vuoto
+ 
+A slow control system allow to fill the gas chamber with at a given pressure with a constant
+flux of gas up to 145 sccm\footnote{Standard Cubic Centimeter per Minute.}.  
+Up to now all the test have been performed using isobutane ($\mbox{C}_4\mbox{H}_{10}$) with a 
+purity of 99.95\% at four different pressure: 10, 20, 30 and 40~mbar and with the maximum 
+available flux, i.e. 145~sccm.\\
+
+The alpha source used during the test is the is a 55 kBq $^{241}Am$ source. A shutter remotely 
+controlled is used to allow (open) or prevent (close) $\alpha$-particles from enter the tracker.\\
+The rate of $\alpha$-particles entering the tracker after the shutter is 140 pps (particles per 
+second), the shutter cut a solid angle of $3.2\cdot10^{-2}$ sr corresponding to a cone with
+an opening angle\footnote{It is the angle betweenthe axis and the boreder.} of $\theta/2=7.26^{\circ}$.\\
+% http://goldbook.iupac.org/terms/view/S05971         sradiante ->sr
+
+To supply the required voltages a CAEN system on a CAEN SY5527 mainframe with an A1515 board 
+is used (see Sec. \ref{sec:bias}). This system allows also the measurements of the currents flowing in each the power unit.\\
+
+Due to the low sensitivity of the ammeter integrated in the CAEN power supply a more sensitive 
+picoammeter have been used, it is called PICO and it was designed and built at INFN-NA.
+It is capable to measure the currents with an accuracy of the order of tenth of pA
+while the integrated CAEN ammeter has an accuracy of about 2 nA.
+
 
 \subsection{Tracker prototype}
+\label{sec:prototype}
+The tracker prototype consists in one module (one of the 8 final modules) that has the same 
+structure as the final FPD but is smaller in the dispersive direction.\\
+The active volume of the detector is 107$\times$107$\times$185 mm$^{3}$. While the full size 
+nothing excluded is of about 180$\times$200$\times$215 mm$^{3}$. 
 
-The tracker prototype consists in one module (one of the 8 final modules) with a size of 
-100$\times$185$\times$108 mm$^{3}$. This prototype has the same structure as the final FPD but is 
-smaller in the dispersive direction.\\
-A scheme of the prototype is shown in Figure~\ref{fig:schema_apparato_2}.\\
-The {\bf drift region}, delimited by the cathode and the multiplication stage, is designed to set a 
-uniform electric field. The drift region is filled with gas at low pressure 
-(10-100 mbar). The gas filling the drift region should have a high drift velocity in order to 
-guarantee a fast collection of the charge and should manifest a saturation of the drift velocity 
-with the electrical field applied.\\
-The {\bf multiplication stage} is based on THGEM foils, described in the next subsection.\\
-The {\bf induction region} is delimited by the top of the THGEM and the anode. The electron cloud 
-emerging from the multiplication region foil are directed towards a segmented anode made of
-144 strips 750 um large\footnote{The capacitance of a single strip is roughly 22 pF.}. 
-
-
+An electric scheme of the prototype is shown in Figure~\ref{fig:schema_apparato_2}.\\ 
+The {\bf drift region}, delimited by the cathode and the multiplication stage, is 185 mm deep, it is
+designed to set a uniform electric field. A partition made of 35 double rings of wires connect 
+the edge of the cathode with the edge of the multiplication region. The rings are 5 mm distant and 
+in between there are four 10 M$\Omega$ resistors connected in parallel so the resistance is 
+2.5~M$\Omega$. The total resistance of the partition is 87.5 M$\Omega$. The presence of this 
+partition generate a current of several $\mu$A in the chatode and in the bottom of the THGEM also 
+in steady condition (i.e. no particles crossing the drift region). The drift region is filled with 
+gas at low pressure (10-100 mbar). The gas filling the drift region should have a high drift 
+velocity in order to guarantee a fast collection of the charge and should manifest a saturation of 
+the drift velocity with the electrical field applied.\\
+The {\bf multiplication stage} is based on multiple THGEM, described in the next subsection.\\
+The {\bf induction region} is delimited by the top of the THGEM and the anode and is 1 mm deep. 
+The electrons emerging from the multiplication region are directed towards a segmented anode made 
+of 144 strips 750 $\mu$m large\footnote{The capacitance of a single strip is roughly 22 pF.}. 
+Anyway during the test with ammeter the segmented anode was replaced by an not-segmented anode, 
+that is a whole metallized layer with the same mechanical size of the segmented anode.
 \begin{figure}
 	\centering
 	\includegraphics[width=0.9\textwidth]{Immagini/schema_apparato_2.png}
 	\caption{Sketch of the Prototype.}
 	\label{fig:schema_apparato_2}
 \end{figure}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth]{Immagini/THGEMScheme.pdf}
+	\caption{Cartoon of the flows of positive ions and electrons in the tracker prototype.}
+	\label{fig:THGEMscheme}
+\end{figure}
 
 \subsection{THGEM}
-
 Two multiple THGEM have been used in the test. Both of them are made of three layers, but they show 
-different hole pattern and have been produced by two different manufacturers.\\
+different hole pattern and also different executive details since have been produced by two 
+different manufacturers.\\
 In the first one, referred to as FULL THGEM \textbf{F10} (Figure~\ref{fig:full_thgem}), the holes 
 are uniformly distributed over the active surface; in the second one, called ROW THGEM \textbf{R1} 
 (Figure~\ref{fig:row_thgem}), the holes are arranged in five rows.\\
 The main characteristics of the two prototypes are shown in Table~\ref{tab:thgem}.\\
-
-{\it Some comment on the differences of the two THGEM used for the test}.
-
+The main difference are: the hole pattern, the thickness of the board, the size of the 
+rim and the diameter of the hole.
 \begin{table} [h!]
-	\begin{center}
-		\renewcommand{\arraystretch}{1.2}
-\begin{tabular}{|c|c|c|}
-\hline 
-							& \textbf{F10} 		& \textbf{R1} \\ 
-\hline 
-Substrate material 			& Ceramic SD103K 	& PCB  \\ 
-\hline 
-Finish board thickness [mm] & 1.4 $\pm$ 0.1 	& 1.28 \\ 
-\hline 
-Dimension [$\mbox{mm}^2$] 	& 107$\times$107 	& 107$\times$107 \\ 
-\hline 
-Rim size [mm] 				& 0.1 				& 0.2  \\ 
-\hline  
-Rows 						& 143$\times$143 	& 5 \\ 
-\hline 
-Holes 						& 20449 			& 143 \\ 
-\hline 
-Hole diameter [mm] 			& 0.30 $\pm$ 0.05 	& 0.280 \\ 
-\hline
-Hole spacing 				& 0.75 				& 0.75 \\ 
-\hline
-\end{tabular} 
-	\end{center}
-	\caption{The main characteristics of the two type of THGEM tested.} \label{tab:thgem}
+   \begin{center}
+   \renewcommand{\arraystretch}{1.2}
+      \begin{tabular}{|c|c|c|}
+        \hline 
+		& \textbf{F10} 	& \textbf{R1} \\ 
+        \hline 
+        Substrate material*			 & Ceramic SD103K 	& PCB  \\ 
+        \hline 
+        Finish board thickness* [mm] & 1.4 $\pm$ 0.1 	& 1.28 \\ 
+        \hline 
+        Dimension [$\mbox{mm}^2$] 	 & 107$\times$107 	& 107$\times$107 \\ 
+        \hline 
+        Rim size* [mm] 				 & 0.1 				& 0.2  \\ 
+        \hline  
+        Rows 						 & 143$\times$143 	& 5 \\ 
+        \hline 
+        Holes 						 & 20449 			& 143 \\ 
+        \hline 
+        Hole diameter* [mm] 		 & 0.30 $\pm$ 0.05 	& 0.280 \\ 
+        \hline
+        Hole spacing 				 & 0.75 			& 0.75 \\ 
+        \hline
+      \end{tabular} 
+   \end{center}
+   \caption{The main characteristics of the two type of THGEM tested. The star highlights
+   the characteristics that are different between the two THGEM.} \label{tab:thgem}
 \end{table}
 
 \begin{figure}
 	\centering
-		\subfigure[]{\label{fig:full_thgem}\includegraphics[width=0.45\textwidth]{Immagini/full_thgem.JPG}}
+		\subfigure[]{
+		 \label{fig:full_thgem}
+		 \includegraphics[width=0.45\textwidth]{Immagini/full_thgem.JPG}}
 		\hspace{5pt}
-		\subfigure[]{\label{fig:full_thgem_holes}\includegraphics[width=0.45\textwidth]{Immagini/full_thgem_holes.JPG}}
-	\caption{In (a) the FULL THGEM prototype, in (b) its hole pattern.}
-	\label{fig:full_thgem_complessiva}		
-\end{figure}
-
-\begin{figure}
-	\centering
-	\subfigure[]{\label{fig:row_thgem}\includegraphics[width=0.45\textwidth]{Immagini/row_thgem.JPG}}
+		\subfigure[]{
+		 \label{fig:full_thgem_holes}
+		 \includegraphics[width=0.45\textwidth]{Immagini/row_thgem.JPG}}
+	\caption{Pictures of the FULL THGEM (a) and the ROW THGEM (b).}
+%	\label{fig:full_thgem_complessiva}		
+%\end{figure}
+%\begin{figure}
+%	\centering
+	\subfigure[]{
+	  \label{fig:row_thgem}
+	  \includegraphics[width=0.45\textwidth]{Immagini/full_thgem_holes.JPG}}
 	\hspace{5pt}
-	\subfigure[]{\label{fig:row_thgem_holes}\includegraphics[width=0.45\textwidth]{Immagini/row_thgem_holes.JPG}}
-	\caption{In (a) the ROW THGEM prototype, in (b) its hole pattern.}
+	\subfigure[]{
+	 \label{fig:row_thgem_holes}
+	 \includegraphics[width=0.45\textwidth]{Immagini/row_thgem_holes.JPG}}
+	\caption{A magnification of the THGEM that show the different hole patterns: 
+	(a) FULL THGEM, (b) ROW THGEM.}
 	\label{fig:row_thgem_complessiva}		
 \end{figure}
 
 \subsection{The CAEN bias Supply and PICO}
-
-The bias supply of the prototype is the CAEN SY5527 mainframe with an A1515 board.
-A scheme of the bias is shown in Fig.~\ref{fig:
-
+\label{sec:bias}
+The power supply of the prototype is based on a {\it Universal Multichannel Power Supply System 
+SY5527LC}\footnote{https://www.caen.it/products/sy5527lc/} and an {\it Individual Floating Channel 
+Dual Range Boards for Quadruple and Triple GEM detectors 
+A1515}\footnote{https://www.caen.it/products/a1515/}. A scheme of the bias is shown in 
+Fig.~\ref{fig:biasScheme1}. In Fig. \ref{fig:schema_apparato_2} a very simple scheme of the flows 
+of positive ions and electrons is shown.
 \begin{figure}[!htb]
 	\centering
-	\subfigure[]{ \label{fig:biasScheme1} \includegraphics[width=0.97\textwidth]{Immagini/
-THGEM_Bias.pdf}}
-	\subfigure[]{ \label{fig:biasScheme2} \includegraphics[width=0.97\textwidth]{Immagini/
-THGEM_Bias_2.pdf}}
-	\caption{Scheme of the Bias supply during the meausurements with electronics a) and for the current measurements b).}
+	\subfigure[]{ 
+	 \label{fig:biasScheme1} 
+	 \includegraphics[width=0.8\textwidth]{Immagini/THGEM_Bias.pdf}}
+	\subfigure[]{ 
+	 \label{fig:biasScheme2} 
+	 \includegraphics[width=0.8\textwidth]{Immagini/THGEM_Bias_2.pdf}}
+	\caption{Scheme of the Bias supply during the meausurements with electronics a) and for the 
+	 current measurements b).}
 	\label{fig:induction_FULLTHGEM_other_pressure}
 \end{figure}
+The two ammeters: the CAEN ammeter integrated in the power supply (in the following just CAEN 
+ammeter) and PICO do not measure exactly the same currents as illustrated in Fig. 
+\ref{fig:run190_CAEN_pico}. In fact the 
+CAEN ammeter measures the currents that flows in the branch where is the power supply while the 
+PICO ammeter measures the current flowing in the branch where are the electrodes. The six measured
+currents are: anode, top3, bot3/top2, bot2/top1, bot1 and cathode as shown in 
+Figure~\ref{fig:schema_canali}. For the sake of clarity we underline that top 3 corresponds to the 
+top layer of the 3-layers stack of THGEM, i.e. that one looking to the anode while bot 1 is the 
+bottom layer of the stack, i.e. that one looking to the cathode. Bot3/top2 as well bot2/top1 
+refers to the metallic layers embedded in the THGEM stack. In no case currents in these two 
+electrodes have been observed.\\
 
-
-
-In in Figure~\ref{fig:run190_CAEN_pico} a comparison between the two ammeter is shown.  Both CAEN and PICO 
-ammeter measure at the same time six currents: anode, top3, bot3/top2, bot2/top1, bot1 and cathode as shown in Figure~\ref{fig:schema_canali}. Top3 current is referred to the current value of THGEM electrode in front of the anode. Bot3/top2 current is related to the current collected between the third and the second THGEM of the Triple THGEM while bot2/top1 is referred to the current collected between the first and the second THGEM. Bot1 current is related to the current value of the THGEM electrode in front of the cathode.\\
-The bot1 current measurement is less accurate than the other current measurements because the 
-current flowing is larger than the other channels. Therefore the pico-ammeter PICO works with
-a different dinamical range that has a lower accuracy.
-
+The current read with PICO for bot 1 has usually a worse accuracy. This is due to the fact that 
+PICO has two dynamical ranges with two related accuracy. Since in bot1 flow a large current due to 
+the partition wires (see \ref{sec:prototype}) the dynamical range of PICO is the largest for such 
+electrode and therefore the accuracy is worse\footnote{Also in cathode flows a current equal to 
+bot1 but with an opposite charge but the two dynamical ranges are different for positive and 
+negative currents. Therefore the current flowing in the bot1 is enough to switch the dynamical 
+range for the bot1 channel but not enough to switch the dynamical range for the cathode channel.
+This is why the bot 1 and cathode measure the same current in absolute value but have different
+accuracies.}.
 \begin{figure}
 	\centering
-	\includegraphics[width=1\textwidth]{Immagini/run190_CAEN_pico.pdf}
-	\caption{Anode, Top3, Bot1 and Cathode currents measured with CAEN system a) and PICO b).}
-	\label{fig:run190_CAEN_pico}
+	\includegraphics[width=0.5\textwidth]{Immagini/schema_canali_2.pdf}
+	\caption{Current reading scheme for the two ammeters.}
+	\label{fig:schema_canali}
 \end{figure}
 \begin{figure}
 	\centering
-	\includegraphics[width=0.8\textwidth]{Immagini/schema_canali_2.pdf}
-	\caption{Current reading scheme for the two ammeters.}
-	\label{fig:schema_canali}
+	\includegraphics[width=0.7\textwidth]{Immagini/run190_CAEN_pico.pdf}
+	\caption{Anode, Top3, Bot1 and Cathode currents measured with CAEN ammeter a) and PICO b).}
+	\label{fig:run190_CAEN_pico}
 \end{figure}
 
 \section{Method}
@@ -186,50 +246,55 @@ a different dinamical range that has a lower accuracy.
 The main parameters that determine the behaviour of the detector are: gas pressure, voltage of the 
 THGEM (V$_{THGEM}$), voltage of the induction region (V$_{ind}$) and voltage of the drift region 
 (V$_{drift}$).
+The cathode cannot be kept connectd at ground if we want to measire the current flowing on it,
+therefore the anode was kept at voltage fixed to an arbitrary value of 20~V (see Fig. 
+\ref{Immagini/THGEM_Bias_2.pdf}). This value should not affect the measurements of the currents of 
+any electrodes.\\
 
 The method consists in keeping fix all the parameter but one and to measure all the currents of 
-all the electrodes varying just the parameters let free to change.
-For example we keep fix the gas pressure the V$_{drift}$, V$_{ind}$, while the V$_{THGEM}$) was
-changed a small step. In this way we get 6 plot currents as a function of V$_{THGEM}$).
-
-In order to measure the current of the anode, this last cannot be kept at ground therefore the 
-anode was kept at voltage fixed to an arbitrary value of 20~V that should not affect the 
-measurements of the currents of any electrodes. 
-For example, during the $\Delta V_{ind}$ scan, the $\Delta V_{THGEM}$ and $\Delta_{drift}$ were fixed and 
-anode, bot1, top3 and cathode currents were MEASURED (see Figure~\ref{fig:schema_canali}).\\
-A run lasts usually 180 s (see Fig. \ref{fig:fig:run190_CAEN_pico}):\\
+all the electrodes varying just the parameters let free to change. For example we keep fix the gas 
+pressure the V$_{drift}$, V$_{ind}$, while the V$_{THGEM}$ was changed a small step. In this way 
+we get 6 plots as a function of V$_{THGEM}$, one for each current i.e. anode, bot1, bot2/top1, 
+bot3/top2, top3 and cathode.
+%For example, during the $\Delta V_{ind}$ scan, the $\Delta V_{THGEM}$ and $\Delta_{drift}$ were 
+%fixed and anode, bot1, top3 and cathode currents were measured (see 
+%Figure~\ref{fig:schema_canali}).\\
+A run lasts usually 180 s (see Fig. \ref{fig:run190_CAEN_pico}):\\
 60 s with shutter closed;\\
 90 s with shutter open;\\
 30 s with shutter closed.\\
 An average of the current flowing during the first 60 s (shutter closed) and an average during
-the 90 s with shutter open is performed.
-The difference between the two measurements with shutter open and closed give
- the actual current associated to the $\alpha$-particles entering the detector.
-In this way any dark current coming from the detector or from the ammeter is subtracted\footnote{A possible source of
-dark current is due to the X-ray produced by the $\alpha$-source that are not stopped by the shutter.}.\\
+the 90 s with shutter open is performed. The difference between the two measurements with shutter 
+open and closed gives the actual current associated to the $\alpha$-particles entering the 
+detector. In this way any dark current coming from the detector or from the ammeter is 
+subtracted\footnote{A possible source of dark current is due to the X-ray produced by the 
+$\alpha$-source that are not stopped by the shutter.}.\\
+
+In Figure~\ref{fig:run190_CAEN_pico} a comparison of the same run measured using the two 
+ammeters is shown. It is eveident the better accuracy of PICO.
 
 \clearpage
 
 \section{Measurements}
-
 %i canali 3 e 4 possono essere ignorati perche non danno mai segnale
 
 %spieghiamo i diversi scan (induzione, thgem e drift)
 
-%In this section the results of 
-
-%For the sake of clarity
+This section contain a description of the current measurements that was performed. It  is
+organized as follow. First are presented the measurements with the Full THGEM and after those with 
+the Row THGEM. For each THGEM are presented in the following order the scan of the induction The 
+scan of the THGEM and eventually the scan of the Drift.\\
+A separate section is devoted to the study of the in-beam test.
 
 \subsection{FULL THGEM}
+The FULL THGEM was made by the xxx manufacturer. Their characterstics are summarized in Tab.
+\ref{tab:thgem}.
 
 \subsubsection{Scan on \Vind}
-
-%The scan on \Vind aimed at studying the behaviour of 
-
-%A preliminary study of \Vind{} variation effects on the measured currents has been done at several pressure and setting different \Vthgem{} and \Vdrift{} values.
-A series of systematic measurements were performed to study the effects of the variation of the potential difference \Vind{} on all the measured currents.
-These measurements were done at different pressures (P) and values of \Vthgem{} and \Vdrift{},
-a summary scheme of the configurations is shown in Table~\ref{tab:FULLTHGEM_vind}.
+In this subsection a series of systematic measurements were performed to study the effects of the 
+variation of the voltage \Vind{} on all the measured currents. These measurements were 
+done at different pressures (P) and values of \Vthgem{} and \Vdrift{}, a summary scheme of the 
+configurations is shown in Table~\ref{tab:FULLTHGEM_vind}.
 \begin{table} [b!]
 	\begin{center}
 		\renewcommand{\arraystretch}{1.2}
@@ -242,31 +307,14 @@ a summary scheme of the configurations is shown in Table~\ref{tab:FULLTHGEM_vind
 			30	& &	230	& &	1000 \\
 			20	& &	200	& & 1000 \\
 			11	& & 170	& & 600 \\
-			
-			\bottomrule[0.1em]
+     		\bottomrule[0.1em]
 		\end{tabular}
 	\end{center}
-	\caption{The values of pressure (P), \Vthgem{} and \Vdrift{} adopted for the study on \Vind.} \label{tab:FULLTHGEM_vind}
+	\caption{The values of pressure (P), \Vthgem{} and \Vdrift{} adopted for the study on \Vind.} 
+	\label{tab:FULLTHGEM_vind}
 \end{table}
-%\begin{table} [b!]
-%	\begin{center}
-%		\renewcommand{\arraystretch}{1.2}
-%		\begin{tabular} {ccccccc}
-%			P (mbar) & & \Vthgem{} (V) & & \Vdrift{} (V) & & optimal \Vind{} (V) \\
-%			\toprule[0.1em]
-%			%\hline
-%			30	& &	220	& &	1000 & & 120 \\
-%			30	& &	200	& &	1000 & &  \\
-%			30	& &	230	& &	1000 & & \\
-%			20	& &	200	& & 1000 & & \\
-%			11	& & 170	& & 600  & &\\
-%			
-%			\bottomrule[0.1em]
-%		\end{tabular}
-%	\end{center}
-%	\caption{The values of pressure (P), \Vthgem{} and \Vdrift{} adopted for the study on \Vind.} \label{tab:FULLTHGEM_vind}
-%\end{table}
-The \Vind{} scans were carried out starting from 0~V and increasing the voltage by 10 or 20~V per run, until the discharge value is reached.
+The \Vind{} scans were carried out starting from 0~V and increasing the voltage by 10 or 20~V per run, 
+until the discharge value is reached.
 This value is dependent on the gas pressure and possibly on the values set for \Vthgem{} and \Vdrift.
 The values at which discharge occurs are 220, 200 and 150 V for 30, 20 and 11 mbar respectively.\\
 
@@ -281,47 +329,71 @@ increases, while the top3 current (yellow line) decreases approaching zero.
 	\label{fig:induction_FULLTHGEM_30mbar}
 \end{figure}
 The orange points corresponds to the sum of the currents read in top3 and anode, that is to the total 
-negative charge (TNC) produced by the THEGEM. Up to 140~V, The TNC is approximately constant.
+negative charge (TNC) produced by the THGEM. Up to 140~V, The TNC is approximately constant, 
+for values higher than 140 V the TNC increases.
 % but their change is such that their sum (orange line) is constant.
-%Up to 140~V, when \Vind{} increases, the anodic current (blue line) goes up, the top3 current (yellow line) approaches to zero, and their sum (orange line) is constant.
+%Up to 140~V, when \Vind{} increases, the anodic current (blue line) goes up, the top3 current (yellow 
+%line) approaches to zero, and their sum (orange line) is constant.
 This simply means that the stronger is the electric field in the induction region, the greater is 
-the fraction of secondary electrons collected at the anode.
+the fraction of secondary electrons collected at the anode and lower is the fraction of the 
+electrones collected by the top3 electrode.
 %Up to 140~V, the sum of anode and top3 currents (orange line) is constant, so the 
 %The total number of secondary electrons, 
 %The sum of anode and top3 currents is constant 
 %; in particular, for \Vind{} greater than about 30~V most electrons
 %This means that when the electric field in the induction region is weak, most of the electrons produced by multiplication are collected at the top3 electrode and only a few reaches the anode.
-For \Vind{} greater than 140~V, the TNC increases: this behaviour can be explained considering 
-that, when the voltage is high enough, the multiplication region extends out of the THGEM holes, 
-expanding in the induction region (see Fig.~\ref{fig:induction_FULLTHGEM_30mbar_other_VTHGEM}
-for a more evident effect.).
-For values of \Vind{} equal to 220~V, the top3 current becomes positive, This could be explained
-supposing that a fraction of the positive ions produced in  are collected by the top3 electrode.
-In these conditions, the chosen operational value is \Vind{} is 120~V, this value ensure that a 
-large fraction of the electron is collected on the anode and that the multiplication is
-mainly confined on the THGEM holes.
+For \Vind{} greater than 140~V, the TNC increases: this behaviour can be explained assuming that, 
+when the voltage is high enough, the multiplication region extends out of the THGEM holes, 
+expanding in the induction region (see Fig.~\ref{fig:induction_FULLTHGEM_30mbar_other_VTHGEM} for a 
+more evident effect.). For values of \Vind{} still higher, the top3 current becomes positive (see 
+Fig.~\ref{fig:induction_FULLTHGEM_other_pressure} b)). That is, a fraction of the positive ions 
+produced in the induction region is cannot flow through the THGEM holes instead is directly 
+collected by the top3 electrode.\\
 
-At the pressure of 30 mbar the scan was repeated with two different values of \Vthgem{}: namely 200 
-and 230 V (see Fig~\ref{fig:induction_FULLTHGEM_30mbar_other_VTHGEM_a,fig:induction_FULLTHGEM_30mbar_other_VTHGEM_b}.
+An operational value of \Vind{}=120~V have been choosen, this value ensure that a large fraction of 
+the electron is collected on the anode and that the multiplication is mainly confined on the THGEM 
+holes.
+
+The scan was repeated for two different values of \Vthgem{}: namely 200 and 230 V (see 
+Fig~\ref{fig:induction_FULLTHGEM_30mbar_other_VTHGEM}) and for two different pressures 10 and 20 
+mbar Fig.~\ref{fig:induction_FULLTHGEM_other_pressure}.
+
 \begin{figure}[!htb]
 	\centering
-	\subfigure[]{ \label{fig:induction_FULLTHGEM_30mbar_other_VTHGEM_a} \includegraphics[width=0.96\textwidth]{Immagini/inductionScan_THGEM10_30mbar_bis.pdf}}
-	\subfigure[]{ 	\label{fig:induction_FULLTHGEM_30mbar_other_VTHGEM_b} \includegraphics[width=0.96\textwidth]{Immagini/inductionScan_THGEM10_30mbar_tris.pdf}}
-	\caption{Currents measured during the scan on the voltage \Vind{} across the induction region at 30~mbar: in (a) for \Vthgem~=~200~V, in (b) for \Vthgem~=~230~V. In a) the bot1 current fluctuations are due to the lower accuracy of the corresponding PICO channel.
-}
+	\subfigure[]{ 
+	  \label{fig:induction_FULLTHGEM_30mbar_other_VTHGEM_a} 
+	  \includegraphics[width=0.96\textwidth]{Immagini/inductionScan_THGEM10_30mbar_bis.pdf}}
+	\subfigure[]{ 	
+	  \label{fig:induction_FULLTHGEM_30mbar_other_VTHGEM_b} 
+	  \includegraphics[width=0.96\textwidth]{Immagini/inductionScan_THGEM10_30mbar_tris.pdf}}
+	\caption{Currents measured during the scan on the voltage \Vind{} across the induction region at 
+	  30~mbar: in (a) for \Vthgem~=~200~V, in (b) for \Vthgem~=~230~V. In a) the bot1 current 
+	  fluctuations are due to the lower accuracy of the corresponding PICO channel.}
 	\label{fig:induction_FULLTHGEM_30mbar_other_VTHGEM}
 \end{figure}
 
-The scans at 20 and 11 mbar shown in Figure~\ref{fig:induction_FULLTHGEM_20mbar} and~\ref{fig:induction_FULLTHGEM_11mbar}.
-
 \begin{figure}[!htb]
 	\centering
-	\subfigure[]{ \label{fig:induction_FULLTHGEM_20mbar} \includegraphics[width=0.97\textwidth]{Immagini/inductionScan_THGEM10_20mbar.pdf}}
-	\subfigure[]{ \label{fig:induction_FULLTHGEM_11mbar} \includegraphics[width=0.97\textwidth]{Immagini/InductionScan_THGEM10_10mbar_tris.pdf}}
-	\caption{Currents measured during the scan on the voltage \Vind{} across the induction region: in (a) at 20~mbar, in (b) at 11~mbar.}
+	\subfigure[]{ 
+	  \label{fig:induction_FULLTHGEM_20mbar} 
+	  \includegraphics[width=0.97\textwidth]{Immagini/inductionScan_THGEM10_20mbar.pdf}}
+	\subfigure[]{ 
+	  \label{fig:induction_FULLTHGEM_11mbar} 
+	  \includegraphics[width=0.97\textwidth]{Immagini/InductionScan_THGEM10_10mbar_tris.pdf}}
+	\caption{Currents measured during the scan on the voltage \Vind{} across the induction region: in 
+	(a) at 20~mbar, in (b) at 11~mbar.}
 	\label{fig:induction_FULLTHGEM_other_pressure}
 \end{figure}
 
+
+A comparison of anode and top3 current at three different pressures are shown in Fig. 
+\ref{fig:induction_pressure_comp}.
+\begin{figure}[!htb]
+	\centering
+	  \includegraphics[width=0.97\textwidth]{Immagini/InductionScan_FULL_AnodeComp_2.pdf}
+	\caption{Comparison of the anode and top3 currents at pressure of 10, 20, 30 mbar.}
+	\label{fig:induction_FULLTHGEM_other_pressure}
+\end{figure}
 %Also in these two measurements, when \Vind{} increases, the anodic current increases, while the top3 current decreases. The crossing point of these two currents is still at around 32~V. After a certain value the sum of the anode and top3 current varies rapidly.
 
 %The effects seen for \Vthgem~=~220~V appear as well in these two cases.
@@ -331,51 +403,49 @@ The scans at 20 and 11 mbar shown in Figure~\ref{fig:induction_FULLTHGEM_20mbar}
 %as expected, increasing \Vind{} the fraction of electrons collected at the anode
 %this plot displays some of the most important features
 
-
-
 %\subsubsection*{Scan on induction voltage at 30 mbar}
 %To find the optimal value for the induction voltage, a scan on this parameter has been done. The measured currents obtained for a pressure of 30~mbar and for \Vthgem~=~220~V and \Vdrift~=~1000~V are shown in Figure~\ref{fig:induction_FULLTHGEM_30mbar}. In each plot, bot2/top1 and bot3/top2 currents are not shown because their values do not change during the measurement. In Figure~\ref{fig:induction_FULLTHGEM_30mbar} is shown the sum of the anode and top3 currents. This curve has a plateau zone in the range 110$\div$130~V, so the optimal value for the \Vind is 120~V. The induction scan was repeated with \Vthgem~=~200~V and \Vthgem~=~230~V, but there was no visible plateau. In each induction scan, when the set voltage exceeds a certain value (different in the three cases), the sum of anode and top3 currents increases. This behaviour can be explained because the multiplication region extends out of the hole of the THGEM. The electric field gives a further multiplication and some ions reach the THGEM.
-
 \clearpage
 
 \subsubsection{Scan on \Vthgem}
-
-The scan of \Vthgem{} have been performed keeping fix the \Vind{} and \Vdrift{}. 
+In this section the scan of \Vthgem{} are shown. The the \Vind{} and \Vdrift{} values were kept 
+fix 
 %In order to study the multiplication factor of the FULL THGEM in different conditions, a series of measurements was conducted varying the voltage \Vthgem, while pressure, \Vind{} and \Vdrift{} were set to fixed values.
 %The explored range of \Vthgem{} was determined in thi/inductionScan_THGEM10_10mbar_tris.pdf}s way: the lower extreme is the minimum value at which a variation of the measured currents is visible, while the higher extreme is the discharge value.
 %The explored range of \Vthgem{} was determined in this way: the lower extreme is the minimum value at which, when opening the shutter, we see a variation of the measured currents; the higher extreme is the discharge value.
-The \Vthgem{} was explored from 0 to a maximum value before the discharge occurs at step of 5/10 V. 
+while the \Vthgem{} was ranging from 0 to a maximum value, corresponding to the discharge,at step of 5/10 V. 
 %for P~=~30 mbar it was from 180 to 235~V, for P~=~20~mbar it was from 150 to 215~V, and for P~=~11~mbar a it was from 130 to 210~V.
 %The increments were ranging from 5 to 10~V.
-Table~\ref{tab:FULLTHGEM_vthgem} shows the configurations of the scans.
-
+Table~\ref{tab:FULLTHGEM_vthgem} shows a scheme of the configurations explored in the scans.
 \begin{table} [!h]
 	\begin{center}
 		\renewcommand{\arraystretch}{1.2}
-		\begin{tabular} {ccccccc}
-			P (mbar) & & \Vind{} (V) & & \Vdrift{} (V) & & \Vthgem{} range (V)\\
+		\begin{tabular} {ccccccccc}
+			P (mbar) & & \Vind{} (V) & & \Vdrift{} (V) & & \Vthgem{} (V) & & run\\
 			\toprule[0.1em]
 			%\hline
-			30	& &	120	& &	1000	& & 180$\div$235 \\
-			20	& &	100	& & 1000	& & 150$\div$215 \\
-			11	& & 70	& & 600		& & 130$\div$210 \\
-			
+			30	& &	120	& &	1000	& & 180$\div$235 & & 29-39 \\
+			20	& &	100	& & 1000	& & 150$\div$215 & & 112-123 \\
+			11	& & 70	& & 600		& & 130$\div$210 & & 169-183 \\		
+			9.3 & & 50  & & 400     & &              & & 440-444 \\   
 			\bottomrule[0.1em]
 		\end{tabular}
 	\end{center}
-	\caption{P, \Vind{}, \Vdrift{} and the explored \Vthgem{} range used in the \Vthgem{} scans.} \label{tab:FULLTHGEM_vthgem}
+	\caption{P, \Vind{}, \Vdrift{} and the explored \Vthgem{} range used in the \Vthgem{} scans.} 
+	\label{tab:FULLTHGEM_vthgem}
 \end{table}
-
-Figure~\ref{fig:thgem_FULLTHGEM_30mbar}, \ref{fig:thgem_FULLTHGEM_20mbar} \ref{fig:thgem_FULLTHGEM_10mbar}show the currents vs \Vthgem{} plot for pressure of 30 20 and 10 mbar respectively.
-A typical exponential trend for increasing \Vthgem is evident in all the plot.
-
+Figure~\ref{fig:thgem_FULLTHGEM_30mbar}, \ref{fig:thgem_FULLTHGEM_20mbar} and 
+\ref{fig:thgem_FULLTHGEM_10mbar} show the currents vs \Vthgem{} plot for pressure of 30 20 and 10 
+mbar respectively. A typical exponential trend for increasing \Vthgem is evident in all the 
+plot\footnote{The exponential bheaviour for the anode is confirmed looking at the Multiplication 
+Factor plot in the following.}.
 \begin{figure}[!t]
 	\centering
 	\includegraphics[width=\textwidth]{Immagini/thgemScan_THGEM10_30mbar.pdf}
-	\caption{Currents measured during the scan on the voltage \Vthgem{} across each FULL THGEM at 30~mbar.}
+	\caption{Currents measured during the scan on the voltage \Vthgem{} across each FULL THGEM 
+	at 30~mbar.}
 	\label{fig:thgem_FULLTHGEM_30mbar}
 \end{figure}
-
 %%% DOPO AGGIUNTA NUOVI RUN 20/02/2020
 %The results for P~=~20~mbar and P~=~11~mbar are respectively shown in Figure~\ref{fig:thgem_FULLTHGEM_20mbar} and~\ref{fig:thgem_FULLTHGEM_10mbar}.
 %In both cases, the measured currents exhibit an exponential behaviour.
@@ -401,25 +471,55 @@ A typical exponential trend for increasing \Vthgem is evident in all the plot.
 
 \begin{figure}[!htb]
 	\centering
-	\subfigure[]{ \label{fig:thgem_FULLTHGEM_20mbar} \includegraphics[width=0.96\textwidth]{Immagini/thgemScan_THGEM10_20mbar.pdf}}
-	\subfigure[]{ 	\label{fig:thgem_FULLTHGEM_10mbar} \includegraphics[width=0.96\textwidth]{Immagini/thgemScan_THGEM10_10mbar.pdf}}
-	\caption{Currents measured during the scan on the voltage \Vthgem{} across each FULL THGEM: in (a) with P~=~20~mbar, \Vind~=~100~V and \Vdrift~=~1000~V, in (b) with P~=~11~mbar, \Vind~=~70~V and \Vdrift~=~600~V.}
+	\subfigure[]{ 
+	  \label{fig:thgem_FULLTHGEM_20mbar} 
+	  \includegraphics[width=0.96\textwidth]{Immagini/thgemScan_THGEM10_20mbar.pdf}}
+	\subfigure[]{ 	
+	  \label{fig:thgem_FULLTHGEM_10mbar} 
+	  \includegraphics[width=0.96\textwidth]{Immagini/thgemScan_THGEM10_10mbar.pdf}}
+        \caption{Currents measured during the scan on the voltage \Vthgem{} across each FULL THGEM: 
+        in (a) with P~=~20~mbar, \Vind~=~100~V and \Vdrift~=~1000~V, in (b) with P~=~11~mbar, 
+        \Vind~=~70~V and \Vdrift~=~600~V.}
 	\label{fig:thgem_FULLTHGEM_20and10mbar}
 \end{figure}
 
 %\textcolor{red}{Aggiungere qui il discorso sul fattore di moltiplicazione?}
 
-From these measurements, the multiplication factors (MFs) were evaluated as a function of \Vthgem{} and pressure.
-The results of the calculations are shown in Figure~\ref{fig:multiplication_factor_FULL}: in the three cases the growth of the electron number in the avalanche follows with good approximation an exponential behaviour.
-For a fixed value of \Vthgem, the MF decreases with increasing the pressure.
-This is clearly understood, because when the pressure increases the reduced electric field decreases.
-{\it explain how the multiplication factor have been calculated!!!}
+From these measurements, the multiplication factors (MFs) were evaluated as a function of \Vthgem{} 
+for different pressures.
+The MF have been calculated in the following way. Knowing the energy of the incident particles 
+($\alpha$ at 5.485 MeV) the pressure of the gas and the length of the track it is possible
+to calculate the energy lost by $\alpha$ in the gas. From this, knowing the mean energy for
+ion-electron pair creation, it is possible to calculate the number of primary electron produced
+per particle. Knowing the number of $\alpha$-particle enetering the detector per second
+is possible to have an estimate of the total number of primary electron produced per second.
+From this value and the anodic current is straightforward to get the MF.
 
+The MFs are show	n in Figure~\ref{fig:multiplication_factor_FULL}, the curves seems to follow
+an exponential law in good approximation.
+For a fixed value of \Vthgem, the MF decreases with increasing the pressure as expected.
 \begin{figure}[!t]
 	\centering
-	\includegraphics[width=\textwidth]{Immagini/MFvsTHGEM_FULL.pdf}
-	\caption{The multiplication factors evaluated for the FULL THGEM as a function of \Vthgem{} and pressure.}
+	\includegraphics[width=\textwidth]{Immagini/MF_FULL_THGEM_noBeam.pdf}
+	\caption{The multiplication factors evaluated for the FULL THGEM as a function of \Vthgem{} 
+	and pressure.}
 	\label{fig:multiplication_factor_FULL}
+\end{figure}
+The maximum values of the \Vthgem reachable depends obviously on the gas pressure but 
+seems not to follow a simple decreasing law.
+
+Plotting the MF as a function of the reduced electric field\footnote{Some clarification on how
+the reduced electric field was calculated. Obviously make no sense to speak about a value of the
+electric field inside the THGEM since the electric field is not uniform there. We make a very
+strong approximation cthat is calculate the electric field as it was uniform that is V/d} do 
+not help Fig. \ref{}
+ \ref{fig:multiplication_factor_FULL_F}
+\begin{figure}[!t]
+	\centering
+	\includegraphics[width=\textwidth]{Immagini/MF_FULL_THGEM_noBeam_F.pdf}
+	\caption{The multiplication factors evaluated for the FULL THGEM as a function of reduced
+	eletric field.}
+	\label{fig:multiplication_factor_FULL_F}
 \end{figure}
 
 
@@ -427,16 +527,17 @@ This is clearly understood, because when the pressure increases the reduced elec
 
 %\subsubsection*{Scan on THGEM voltage  at 30 mbar}
 %To find the optimal value for the THGEM voltage until discharge, a scan on this parameter has been done. The measured currents obtained for a pressure of 30~mbar and for \Vind~=~120~V and \Vdrift~=~1000~V are shown in Figure~\ref{fig:thgem_FULLTHGEM_30mbar}. \Vthgem~=~180~V is the minimum voltage at which anode current is measurable. At \Vthgem~=~230~V there was discharges, but we do not know if it came from THGEM. The anode current has the typical exponential behaviour.
-
 \clearpage
 
 \subsubsection{Scan on \Vdrift}
-
-To fully characterize the tracker response, a study was conducted varying the potential difference \Vdrift{} across the drift region, while pressure, \Vind{} and \Vthgem{} were kept fixed.
-The explored range goes from 0~V (or 100~V in the case with P~=~20~mbar) to the discharge voltage, which depends on the gas pressure: for P~=~30~mbar it was 1600~V, for P~=~20~mbar it was 1200~V, and for P~=~11~mbar it was 800~V.
-The increments were of 50~V for P~=~11~mbar, while in the other two cases it was of 100~V.
-In Table~\ref{tab:FULLTHGEM_vdrift} the adopted value of pressure, \Vind{} and \Vthgem{} are shown.
-
+In this section the behaviour of the prototype as a function of \Vdrift{} have been studied.
+As in previous case, while pressure, \Vind{} and \Vthgem{} were kept fixed, \Vdrift{} was varied 
+from 0~V (or 100~V) to the discharge voltage\footnote{Discharge is most probably due to the 
+"effetto punta" between conductor elements at the same potential of the cathode with the ground.}, 
+which depends on the gas pressure; in fact for P~=~30~mbar it was 1600~V, for P~=~20~mbar it was 
+1200~V, and for P~=~11~mbar it was 800~V.
+The \Vdrift step was 50~V for P~=~11~mbar, and 100~V for the other cases.
+In Table~\ref{tab:FULLTHGEM_vdrift} a scheme of the configuration of the  prototype is shown.
 \begin{table} [!h]
 	\begin{center}
 		\renewcommand{\arraystretch}{1.2}
@@ -448,58 +549,87 @@ In Table~\ref{tab:FULLTHGEM_vdrift} the adopted value of pressure, \Vind{} and \
 			20	& &	100	& & 205 \\
 			11	& & 70	& & 190 \\
 			11	& & 70	& & 170 \\
-			
 			\bottomrule[0.1em]
 		\end{tabular}
 	\end{center}
-	\caption{The values of pressure (P), \Vind{} and \Vthgem{} adopted for the study on \Vdrift.} \label{tab:FULLTHGEM_vdrift}
+	\caption{The values of pressure (P), \Vind{} and \Vthgem{} adopted for the study on \Vdrift.} 
+	\label{tab:FULLTHGEM_vdrift}
 \end{table}
 
-The result of the scan at 30~mbar is displayed in Figure~\ref{fig:drift_FULLTHGEM_30mbar}. 
-All the measured currents are saturated at 100~V.
-In order to better understand the THGEM response at low drift voltage, further measurements were done with \Vdrift~=~5~V, 10~V, 20~V, and 30~V.
-The result of this measurement, shown in Figure~\textcolor{red}{aggiungere la figura zoomata}, is that currents are saturated already at 5~V.
-This means that either the magnitude of the electric field at \Vdrift~=~0~V is much lower than $5/20\; \mbox{(V/cm)}= 250 \; \mbox{(mV/cm)}$ or the value measured by PICO actually is not zero.
+The result of the scan at 30~mbar is shown in Figure~\ref{fig:drift_FULLTHGEM_30mbar}. 
+
+The anodic current seems not be dependent on the values of the \Vdrift. In fact the value of the 
+anodic current is basically constant but for the point at \Vdrift=0V where, surprisingly, a 
+value  of the anodic current different from zero is observed. For the sake of curiosity further 
+measurements were done to investigate the behaviour of the prototype at very low \Vdrift~=~30~V, 
+20~V, 20~V, and 5~V. Till so small values\footnote{for \Vdrift=5V the elctric field in the drift region
+is about $5/20\; \mbox{(V/cm)}= 250 \; \mbox{(mV/cm)}$.} the anodic current is still constant and do not 
+decreases, for a magnified view see Figure~\textcolor{red}.
+
+Conclusion are that the \Vdrift at so small rate of event do not affects the collection of the
+prmary electron even at very small \Vdrift. Concerning the fact that at \Vdrift=0V we still
+see the anodic current we suspect that the PICO picoammeter or the CAEN power supply
+introduce some very small \Vdrift that is enough to collect a large fraction of the primary
+electron\footnote{Some simulation could be very usefull to understand such phenomena.}.
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=\textwidth]{Immagini/driftScan_THGEM10_30mbar.pdf}
+	\includegraphics[width=\textwidth]{Immagini/driftScan_FULL_30mbar_r40-60.pdf}
 	\caption{Currents measured during the scan on the voltage \Vdrift{} across the drift region at 30~mbar.}
 	\label{fig:drift_FULLTHGEM_30mbar}
 \end{figure}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{Immagini/driftScan_FULL_30mbar_r40-60_zoom1.pdf}
+	\caption{Magnification of Fig. \ref{fig:drift_FULLTHGEM_30mbar}.}
+	\label{fig:drift_FULLTHGEM_30mbar_mag}
+\end{figure}
 
-In Figure~\ref{fig:drift_FULLTHGEM_30mbar} the orange line represents, in this case, the sum of the cathode and bot1 currents.
-This quantity is important to estimate the ion backflow. 
+In Figure~\ref{fig:drift_FULLTHGEM_30mbar} the orange line represents, in this case, the sum of the cathode 
+and bot1 currents. This quantity is important to estimate the Ion Backflow (IB). 
 %\textcolor{red}{Aggiungere spiegazione ion backflow}.
 %\textcolor{red}{Fare un grafico con l'ion backflow o inserire dei valori di riferimento?}
 
-
-
-The results of the tests at 20 and 11~mbar are shown, respectively, in Figure~\ref{fig:drift_FULLTHGEM_20mbar} and~\ref{fig:drift_FULLTHGEM_11mbar}.
-Also in these cases the saturation voltage is 100~V.
-
-
-
+The scans at 20 and 11~mbar are shown, respectively, in Figure~\ref{fig:drift_FULLTHGEM_20mbar} and~\ref{fig:drift_FULLTHGEM_11mbar}.
 \begin{figure}[!htb]
 	\centering
-	\subfigure[]{ \label{fig:drift_FULLTHGEM_20mbar} \includegraphics[width=0.96\textwidth]{Immagini/driftScan_THGEM10_20mbar.pdf}}
-	\subfigure[]{ 	\label{fig:drift_FULLTHGEM_11mbar} \includegraphics[width=0.96\textwidth]{Immagini/driftScan_THGEM10_10mbar.pdf}}
-	\caption{Currents measured during the scan on the voltage \Vdrift{} across the drift region: in (a) at 20~mbar, in (b) at 11~mbar.}
+	\subfigure[]{ \label{fig:drift_FULLTHGEM_20mbar} 
+	  \includegraphics[width=0.96\textwidth]{Immagini/driftScan_THGEM10_20mbar.pdf}}
+	\subfigure[]{ 	\label{fig:drift_FULLTHGEM_11mbar}
+	  \includegraphics[width=0.96\textwidth]{Immagini/driftScan_THGEM10_10mbar.pdf}}
+	\caption{Currents measured during the scan on the voltage \Vdrift{} across the drift region: in 
+	(a) at 20~mbar, in (b) at 11~mbar.}
 	\label{fig:drift_FULLTHGEM_other_pressure}
 \end{figure}
-
-
-
 %\textcolor{red}{Aggiungere plot sul backflow}
-From these measurements, the ion backflow of the FULL THGEM was evaluated as a function of \Vdrift{} and pressure.
-The results of the calculation are shown in Figure~\ref{fig:ion_backflow_FULL}: the ion backflow linearly increases at increasing \Vdrift{} and is approximately independent from pressure.
+The IB, defined of the ration between the current flowing in the cathode and the TNC that is the sum
+of current flowing in the anode and in the top3, have been also plotted as a function of the \Vdrift.
+
+In Figure~\ref{fig:ion_backflow_FULL} is evident the trend of the ion backflow that increases, almost
+linearly for increasing \Vdrift{}. Its value seems not be depending on the pressure.
+In Figure~\ref{fig:ion_backflow_FULL_F} The IBF for three different ressure is shown as a function of
+the reduced electric field E/p.
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=\textwidth]{Immagini/IBFvsDrift_FULLonly.pdf}
+	\includegraphics[width=\textwidth]{Immagini/IBF_FULL_Comparison_nobeam.pdf}
 	\caption{The ion backflow as a function of \Vdrift{} for the three examined pressures.}
 	\label{fig:ion_backflow_FULL}
 \end{figure}
-
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{Immagini/IBF_FULL_Comparison_nobeam_F.pdf}
+	\caption{As Fig. \ref{fig:ion_backflow_FULL} but as a function of the reduced electric field
+	instead of voltage.}
+	\label{fig:ion_backflow_FULL_F}
+\end{figure}
+%\subsubsection{}
+%
+%\begin{figure}[htbp]
+%	\centering
+%	\includegraphics[width=\textwidth]{Immagini/PosNeg_ROW_r124-138.pdf}
+%	\caption{The TNC and TPC are compared shown in .}
+%	\label{fig:ion_backflow_FULL}
+%\end{figure}
 
 
 %\subsubsection*{Scan on drift voltage  at 30 mbar}
@@ -517,25 +647,19 @@ The results of the calculation are shown in Figure~\ref{fig:ion_backflow_FULL}: 
 \clearpage
 
 \subsection{ROW THGEM}
-The same studies perfomed on the FULL THGEM have been repeated on the ROW THGEM.
-We shortly recall the main difference between the two THGEM types \ldots
-
-Due to the lower number of holes we expect that the currents on the ROW THGEM
-are smaller compared to those of the FULL THGEM.
-
+The same studies perfomed on the FULL THGEM have been repeated on the ROW THGEM. We shortly recall 
+that the main difference respect to the FULL THGEM is the significantly lower number of holes.
+Therefore we expect that, for similar condition, the currents on the ROW THGEM are smaller compared 
+to those of the FULL THGEM. Moreover this make difficult to estimate the MF since we do not know 
+the actual number of primary electrons that reach the multiplication stage (the holes). In fact, 
+part of the electron reach the no-hole region and therefore are not multiplied while an unknown 
+fraction of primary electron is funneled through the holes and therefore multiplied.
 
 \subsubsection{Scan on \Vind}
-
-%In the experimental setup employing the ROW THGEM 
-
-%The tracker configuration employing the ROW THGEM was 
-
-%The characterization of the ROW THGEM-based tracker 
-%The ROW THGEM-based tracker 
-
-The effects of the variation of the potential difference \Vind{} on the measured currents was studied also for the ROW THGEM-based tracker.
-These measurements were done fixing three different pressure (P) and setting suitable values of \Vthgem{} and \Vdrift.
-A summary scheme of the adopted configurations is shown in Table~\ref{tab:ROWTHGEM_vind}.
+The \Vind{} scan have been done fixing pressure,\Vthgem{} and \Vdrift{}\ and changing the \Vind{} 
+at step 10/20~V from 0~V to the discharge value  that was 110 V fot  P~=~20,30~mbar and 180 V at 
+P~=~40~mbar.
+A summary scheme of the configurations used in the test is shown in Table~\ref{tab:ROWTHGEM_vind}.
 \begin{table} [htbp]
 	\begin{center}
 		\renewcommand{\arraystretch}{1.2}
@@ -546,46 +670,35 @@ A summary scheme of the adopted configurations is shown in Table~\ref{tab:ROWTHG
 			20	& &	220	& &	800 \\
 			20	& & 210	& & 800 \\
 			30	& &	240	& &	800 \\
-			40	& &	260	& &	700 \\
-			
+			40	& &	260	& &	700 \\		
 			\bottomrule[0.1em]
 		\end{tabular}
 	\end{center}
-	\caption{The values of pressure (P), \Vthgem{} and \Vdrift{} adopted for the study on \Vind.} \label{tab:ROWTHGEM_vind}
+	\caption{The values of pressure (P), \Vthgem{} and \Vdrift{} adopted for the study on \Vind.} 
+	\label{tab:ROWTHGEM_vind}
 \end{table}
-The \Vind{} scans were carried out starting from 0~V and increasing the voltage by 10 or 20~V per run, until the discharge value is reached.
-This value is dependent on the gas pressure and on the values set for \Vthgem{} and \Vdrift: for P~=~20~mbar it was 110~V, for P~=~30~mbar it was 110~V, and for P~=~40~mbar it was 180~V.
-
-
-
-
-The result of the two scans at 20~mbar are shown, respectively, in Figure~\ref{fig:induction_ROWTHGEM_20mbar} and~\ref{fig:induction_ROWTHGEM_20mbar_bis}: also with ROW THGEM it is apparent that by raising the value of \Vind{}, the anodic current (blue line) increases, while the top3 current (yellow line) approaches to zero.
-%\begin{figure}[htbp]
-%	\centering
-%	\includegraphics[width=\textwidth]{Immagini/InductionScan_ROW_THGEM_20mbar.pdf}
-%	\caption{Currents measured during the scan on the voltage \Vind{} across the induction region at 30~mbar and with \Vthgem{}~=~220~V.}
-%	\label{fig:induction_ROWTHGEM_20mbar}
-%\end{figure}
+The two scans at 20~mbar are shown in Figure~\ref{fig:induction_ROWTHGEM_20mbar} 
+and~\ref{fig:induction_ROWTHGEM_20mbar_bis}. The ROW THGEM behaviour is similar to that of the Full 
+THGEM: i.e. raising the value of \Vind{}, the anodic current (blue line) increases, while the top3 
+current (yellow line) approaches to zero. One difference respect to the Full THGEM is that the 
+orange curve (TNC) here is slowly growing, while for the full THGEM there was a region where it was constant (a plateau) and after a given value of \Vind{} started to grow. Anyway since the TNC is 
+growing for increasing value of \Vind, the expansion of the multiplication region out of the THGEM 
+holes is most probably occurring also for the ROW THGEM.
 \begin{figure}[!htb]
 	\centering
-	\subfigure[]{ \label{fig:induction_ROWTHGEM_20mbar} \includegraphics[width=0.96\textwidth]{Immagini/InductionScan_ROW_THGEM_20mbar.pdf}}
-	\subfigure[]{ 	\label{fig:induction_ROWTHGEM_20mbar_bis} \includegraphics[width=0.96\textwidth]{Immagini/InductionScan_ROW_THGEM_20mbar_bis.pdf}}
-	\caption{Currents measured during the scan on the voltage \Vind{} across the induction region at 20~mbar: in (a) \Vthgem{} is at 220~V, in (b) it is at 210~V.}
+	\subfigure[]{ \label{fig:induction_ROWTHGEM_20mbar} 
+	\includegraphics[width=0.96\textwidth]{Immagini/InductionScan_ROW_THGEM_20mbar.pdf}}
+	\subfigure[]{ 	\label{fig:induction_ROWTHGEM_20mbar_bis} 
+	\includegraphics[width=0.96\textwidth]{Immagini/InductionScan_ROW_THGEM_20mbar_bis.pdf}}
+	\caption{Currents measured during the scan on the voltage \Vind{} across the induction region at 
+	20~mbar: in (a) \Vthgem{} is at 220~V, in (b) it is at 210~V.}
 	\label{fig:induction_ROWTHGEM_20mbar_both}
 \end{figure}
-Little discharges were observed up to 50~V, while in the range 60$\div$110~V big discharges affected bot1 and top3 currents.
-In the case with \Vthgem~=~220~V there is a plateau region from 30 to 70~V, while in that with \Vthgem~=~210~V it is from 30 to 80~V.
-\textcolor{red}{giusto?}.
-In the former case the optimal value is 50~V, in the latter it is 60~V.
+Little discharges were observed up to 50~V, while in the range 60$\div$110~V big discharges affected 
+bot1 and top3 currents.  or the Row THGEM at 20 mbar we choose as operational value  50~V or 60~V.
 
-
-
-The result of the tests at 30 and 40~mbar are, respectively, shown in Figure~\ref{fig:induction_ROWTHGEM_30mbar} and~\ref{fig:induction_ROWTHGEM_40mbar}.
-In the former case the plateau region is clearly visible from 10 to 100~V, so the optimal value is 90~V.
-For P~=~40~mbar the plateau region ranges from 20 to 70~V, so the optimal value is 60~V.
-
-%In all the cases the phenomenon of the multiplication 
-As for the FULL THGEM, when \Vind{} reaches sufficiently high values, the sum of anode and top3 currents increases, so that the phenomenon of the extension of the multiplication region out of the THGEM holes appears also for the ROW THGEM.
+The plot at 30 and 40~mbar are shown in Figure~\ref{fig:induction_ROWTHGEM_30mbar} and~\ref{fig:induction_ROWTHGEM_40mbar}, 
+we choose operational values of \Vind= 90 and 60 respectively.
 
 \begin{figure}[!htb]
 	\centering
@@ -605,17 +718,12 @@ As for the FULL THGEM, when \Vind{} reaches sufficiently high values, the sum of
 
 %\subsubsection*{Scan at 20 mbar}
 %The induction and THGEM scan where repeated at 20~mbar for ROW THGEM and the currents curve show the same behaviour as shown in Figure~\ref{fig:induction_ROWTHGEM_20mbar}. In \Vind~scan, \Vthgem~=~220~V and \Vdrift~=~800~V but plateau is absent. Little discharges were visible up to \Vind~50V while big discharges in the range 60-110V affected bot1 and top3 currents. The optimal value is 50V. In \Vthgem~scan, \Vind~=~50~V and \Vdrift~=~800~V and the last measurable signal was at 180~V. At 225~V there were big discharges, so the optimal \Vthgem~value is 210~V. We do not know if this value is the right one because no drift scan was made. 
-
-
 \clearpage
 
 \subsubsection{Scan on \Vthgem}
-
-In order to study the multiplication factor of the ROW THGEM in different conditions, a series of measurements was conducted varying the voltage \Vthgem, while pressure, \Vind{} and \Vdrift{} were set to fixed values.
-The chosen values of pressure, \Vind{} and \Vdrift{} are shown in Table~\ref{tab:ROWTHGEM_vthgem}.
-The \Vthgem{} explored range depends on the selected pressure and on \Vind{} and \Vdrift: for the sake of simplicity these ranges are summarized in Table~\ref{tab:ROWTHGEM_vthgem}.
-The increments were ranging from 5 to 10~V.
-
+The scan of \Vthgem have been done at fixed values of pressure, \Vind{} and \Vdrift{} and 
+changing the \Vthgem at steps of 5/10~V.
+A scheme of the different configuration used for the tes t is shown in Tab. \ref{tab:ROWTHGEM_vthgem}
 
 \begin{table} [htbp]
 	\begin{center}
@@ -630,128 +738,140 @@ The increments were ranging from 5 to 10~V.
 			30	& &	70	& & 800 & & 180$\div$240 \\
 			32	& & 70	& &	400	& & 170$\div$245 \\
 			42	& & 80	& & 700 & & 220$\div$270 \\
-
-			
 			\bottomrule[0.1em]
 		\end{tabular}
 	\end{center}
-	\caption{The values of pressure, \Vind{} and \Vdrift{} adopted for the study on \Vthgem{} and the explored \Vthgem{} range.} \label{tab:ROWTHGEM_vthgem}
+	\caption{The values of pressure, \Vind{} and \Vdrift{} adopted for the study on \Vthgem{} and the 
+	explored \Vthgem{} range.} \label{tab:ROWTHGEM_vthgem}
 \end{table}
-
-%\textcolor{red}{Visto che i grafici sarebbero tanti, sarebbe meglio metterne soltanto due o tre pi\F9 esemplificativi?}
-
-The results of the scans at 10 and 32~mbar are shown, respectively, in Figure~\ref{fig:thgem_ROWTHGEM_10mbar} and~\ref{fig:thgem_ROWTHGEM_30mbar_bis}: the typical exponential growth of the currents is verified also for the ROW THGEM.
+The scans at 10 and 32~mbar are shown, respectively, in Figure~\ref{fig:thgem_ROWTHGEM_10mbar} 
+and~\ref{fig:thgem_ROWTHGEM_30mbar_bis}: Also in this case the currents follow an exponential law 
+as a function of the increasing \Vthgem.
  
-
 \begin{figure}[!htb]
 	\centering
-	\subfigure[]{ \label{fig:thgem_ROWTHGEM_10mbar} \includegraphics[width=0.96\textwidth]{Immagini/thgemScan_ROW_THGEM_10mbar.pdf}}
-	\subfigure[]{ 	\label{fig:thgem_ROWTHGEM_30mbar_bis} \includegraphics[width=0.96\textwidth]{Immagini/thgemScan_ROW_THGEM_30mbar_bis.pdf}}
-	\caption{Currents measured during the scan on the voltage \Vthgem{} across each ROW THGEM: in (a) at 10~mbar, in (b) at 32~mbar.}
+	\subfigure[]{ \label{fig:thgem_ROWTHGEM_10mbar} 
+	\includegraphics[width=0.96\textwidth]{Immagini/thgemScan_ROW_THGEM_10mbar.pdf}}
+	\subfigure[]{ 	\label{fig:thgem_ROWTHGEM_30mbar_bis} 
+	\includegraphics[width=0.96\textwidth]{Immagini/thgemScan_ROW_THGEM_30mbar_bis.pdf}}
+	\caption{Currents measured during the scan on the voltage \Vthgem{} across each ROW THGEM: in (a)
+	at 10~mbar, in (b) at 32~mbar.}
 	\label{fig:thgem_ROWTHGEM}
 \end{figure}
 
-
-From these measurements, the multiplication factors of the ROW THGEM were evaluated as a function of \Vthgem{} and pressure. 
-
-
-
+From these measurements, the multiplication factors of the ROW THGEM were evaluated as a function 
+of \Vthgem{} and pressure Fig. \ref{fig:multiplication_factor_ROW}. Some clarification on the 
+way the MF was measured is required. 
+In fact due to the peculiar geometry of the ROW THGEM just a fraction of the primary elctrons
+reach the holes while the remaining fraction of the electrons reach a inhert region of the 
+THGEM. Therefore in order to correctly determine the multiplication factor we need to know the 
+fraction of primary electrons that reach the holes.
+Since we do not know this fraction we assume that it is 1. This assumptions has the effect 
+to underestimate the MF.
+\begin{figure}[!t]
+	\centering
+	\includegraphics[width=\textwidth]{Immagini/MF_ROW_THGEM_noBeam.pdf}
+	\caption{Multiplication factors evaluated for the ROW THGEM for different pressures.}
+	\label{fig:multiplication_factor_ROW}
+\end{figure}
+In Fig. \ref{fig:multiplication_factor_FULLandROW} the comparison of the MF of the
+two kind of THGEM is shown. As said before it is not possibe to make a direct
+comparison between the two THGEM.
 
 \begin{figure}[!t]
 	\centering
-	\includegraphics[width=\textwidth]{Immagini/MFvsTHGEM_FULLandROW_bis.pdf}
-	\caption{Comparison between the multiplication factors evaluated for the ROW THGEM (square) and those for the FULL THGEM (circle) as a function of \Vthgem{} and pressure.}
+	\includegraphics[width=\textwidth]{Immagini/MF_ALL_THGEM_noBeam.pdf}
+	\caption{Comparison between the multiplication factors evaluated for the ROW THGEM (square) and 
+	those for the FULL THGEM (circle) as a function of \Vthgem{} and pressure.}
 	\label{fig:multiplication_factor_FULLandROW}
 \end{figure}
-
-
-
-
-
-
-
-
 
 
 \clearpage
 
 \subsubsection{Scan on \Vdrift}
-
-To fully characterize the tracker response, a study was conducted varying the potential difference \Vdrift{} across the drift region, while pressure, \Vind{} and \Vthgem{} were kept fixed.
-The explored range goes from 0~V (or 100~V in the case with P~=~20~mbar) to the discharge voltage, which depends on the gas pressure: for P~=~30~mbar it was 1400~V, for P~=~20~mbar it was 1000~V, and for P~=~11~mbar it was 800~V.
-The increments were of 100~V for all the cases, but for P~=~11~mbar the first 400~V were scanned in step of 30~V.
-In Table~\ref{tab:ROWTHGEM_vdrift} the adopted value of pressure, \Vind{} and \Vthgem{} are shown.
-
-
+The scan of \Vdrift have been done at fixed values of pressure, \Vind{} and \Vthgem{}.
+The explored range goes from 0~V\footnote{or 100~V in the case with P~=~20~mbar} to the discharge voltage,
+%which depends on the gas pressure: for P~=~30~mbar it was 1400~V, for P~=~20~mbar it was 1000~V, and for P~=~11~mbar it was 800~V.
+%The increments were of 100~V for all the cases, but for P~=~11~mbar the first 400~V were scanned in step of 30~V.
+A scheme of the different configuration used for the tes t is shown in Tab. \ref{tab:ROWTHGEM_vdrift}
 \begin{table} [!h]
 	\begin{center}
 		\renewcommand{\arraystretch}{1.2}
-		\begin{tabular} {ccccc}
-			P (mbar) & & \Vind{} (V) & & \Vthgem{} (V)\\
+		\begin{tabular} {ccccccc}
+			P (mbar) & & \Vind{} (V) & & \Vthgem{} (V)& & \Vdrift\\
 			\toprule[0.1em]
 			%\hline
-			30	& &	70	& &	240 \\
-			30	& &	70	& & 230 \\
-			20	& & 80	& & 210 \\
-			10	& & 50	& & 180 \\
-			
+			30	& &	70	& &	240 & & 0-1400\\
+			30	& &	70	& & 230 & & 0-1400\\
+			20	& & 80	& & 210 & & 100-1000\\
+			10	& & 50	& & 180 & & 0-800\\
 			\bottomrule[0.1em]
 		\end{tabular}
 	\end{center}
 	\caption{The values of pressure (P), \Vind{} and \Vthgem{} adopted for the study on \Vdrift.} \label{tab:ROWTHGEM_vdrift}
 \end{table}
 
-
-The result of the two scans at 30~mbar are shown in Figure~\ref{fig:drift_ROWTHGEM_30mbar_both}: in both cases the measured currents increase rapidly up to 200~V, then they decrease and reach a saturation value. 
-\textcolor{red}{Perchè?}
-
-
+The scan of the currents ceersus \Vdrift at 30~mbar are shown in Figure~\ref{fig:drift_ROWTHGEM_30mbar_both}.
+The behaviour of the anodic e cathodic current is very peculiar. The currents initially 
+increases\footnote{at \Vdrift=0 they are all 0, that is a different behaviour respect to the 
+FullTHGEM.}, then reach a maximum value and then decrease again reaching a flat region. It is 
+difficult to give a correct explanation of this bheaviour without a simulation of the electric 
+field in the prototype. Anyway we can give a tentative and qualitative explanation. 
+It is hardly difficult that this behaviour is due to a change of the multiplication factor of the 
+THGEM since there is no evident reason why it should change so much and with different slopes 
+increasing the \Vdrift. Most probably the effect is due to the fact that the change in \Vdrift, 
+modify the shape of the electric field in the drift region and therefore change the fraction of the 
+primary electron that reach the holes and are multiplied.\\
+In fact the geometry of the Row THGEM make the electric field in the drift region not homogeneous 
+since part of the field line that start from the cathode will be funneled in the hole while part of 
+them will reach the inert region of the THGEM, i.e. that one without hole. Such ratio is modified 
+by the applied \Vdrift therefore affecting the number for primary electron that reach the hole 
+region and are effectively multiplied.
 \begin{figure}[!htb]
 	\centering
-	\subfigure[]{ \label{fig:drift_ROWTHGEM_30mbar} \includegraphics[width=0.96\textwidth]{Immagini/DriftScan_ROW_THGEM_30mbar.pdf}}
-	\subfigure[]{ 	\label{fig:drift_ROWTHGEM_30mbar_bis} \includegraphics[width=0.96\textwidth]{Immagini/DriftScan_ROW_THGEM_30mbar_bis.pdf}}
-	\caption{Currents measured during the scan on the voltage \Vdrift{} across the drift region at 20~mbar: in (a) \Vthgem{} is at 240~V, in (b) it is at 230~V.}
+	\subfigure[]{ \label{fig:drift_ROWTHGEM_30mbar} \includegraphics[width=0.96\textwidth]
+	{Immagini/DriftScan_ROW_THGEM_30mbar.pdf}}
+	\subfigure[]{ 	\label{fig:drift_ROWTHGEM_30mbar_bis} \includegraphics[width=0.96\textwidth]
+	{Immagini/DriftScan_ROW_THGEM_30mbar_bis.pdf}}
+	\caption{Currents measured during the scan on the voltage \Vdrift{} across the drift region at 
+	20~mbar: in (a) \Vthgem{} is at 240~V, in (b) it is at 230~V.}
 	\label{fig:drift_ROWTHGEM_30mbar_both}
 \end{figure}
-
-The same phenomenon appears also in the scans at 20 and 10~mbar, respectively shown in Figure~\ref{fig:drift_ROWTHGEM_20mbar} and~\ref{fig:drift_ROWTHGEM_10mbar}.
-
+The same phenomenon appears also in the scans at 20 and 10~mbar, respectively shown in 
+Figure~\ref{fig:drift_ROWTHGEM_20mbar} and~\ref{fig:drift_ROWTHGEM_10mbar}.
 \begin{figure}[!htb]
 	\centering
-	\subfigure[]{ \label{fig:drift_ROWTHGEM_20mbar} \includegraphics[width=0.96\textwidth]{Immagini/DriftScan_ROW_THGEM_20mbar.pdf}}
-	\subfigure[]{ 	\label{fig:drift_ROWTHGEM_10mbar} \includegraphics[width=0.96\textwidth]{Immagini/DriftScan_ROW_THGEM_10mbar.pdf}}
-	\caption{Currents measured during the scan on the voltage \Vdrift{} across the drift region: in (a) at 20~mbar, in (b) at 10~mbar.}
+	\subfigure[]{ \label{fig:drift_ROWTHGEM_20mbar} 
+	\includegraphics[width=0.96\textwidth]{Immagini/DriftScan_ROW_THGEM_20mbar.pdf}}
+	\subfigure[]{ 	\label{fig:drift_ROWTHGEM_10mbar} 
+	\includegraphics[width=0.96\textwidth]{Immagini/DriftScan_ROW_THGEM_10mbar.pdf}}
+	\caption{Currents measured during the scan on the voltage \Vdrift{} across the drift region: in 
+	(a) at 20~mbar, in (b) at 10~mbar.}
 	\label{fig:drift_ROWTHGEM_20and10_mbar}
 \end{figure}
-
-
-
-From these measurements, the ion backflow of the ROW THGEM was evaluated as a function of \Vdrift{} and pressure.
-The results of the calculation are shown in Figure~\ref{fig:ion_backflow_FULLandROW}: the ion backflow rapidly increases at increasing \Vdrift{} and is much bigger than that of the FULL THGEM.
-
-
-
-
-
+From these measurements, the ion backflow of the ROW THGEM was evaluated as a function of \Vdrift{} 
+for different pressures. The IBFs are shown in Figure~\ref{fig:ion_backflow_FULLandROW}.
+In the same figure are shown for comparison also the IBF calculated for the Full THGEM.
+It is evident that the IBF of the Row THGEM is much higher than that of the Full THGEM reaching 
+values above 70\%.
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=\textwidth]{Immagini/IBFvsDrift_FULLandROW.pdf}
-	\caption{Comparison between the ion backflows evaluated for the ROW THGEM (square) and those for the FULL THGEM (circle) as a function of \Vdrift{} and pressure.}
+	\caption{Comparison between the ion backflows evaluated for the ROW THGEM (square) and those 
+	for the FULL THGEM (circle) as a function of \Vdrift{} for different pressure.}
 	\label{fig:ion_backflow_FULLandROW}
 \end{figure}
 
-
-
-
-
-
-
 \clearpage
 
-\subsection{New test with $\alpha$ source} \label{sec:new_test_alpha}
-
-%%% PARTE AGGIUNTA DA IRENE 27/02/2020
-On February 20 2020 another test with $\alpha$ source was done in the same condition of test with beam (see Section~\ref{sec:test_beam}). 
+%\subsection{New test with $\alpha$ source} \label{sec:new_test_alpha}
+%
+%\textcolor{red}{RIMUOVERE questo paragrafo. Aggiungere la nuova curva di figura 
+%\ref{fig:thgem_FULLTHGEM_10mbar} in figura \ref{fig:multiplication_factor_FULLandROW}}
+%
+%%%% PARTE AGGIUNTA DA IRENE 27/02/2020
+%On February 20 2020 another test with $\alpha$ source was done in the same condition of test with beam (see Section~\ref{sec:test_beam}). 
 
 \subsubsection{Scan on \Vthgem}
 
@@ -778,31 +898,84 @@ The MF behaviour is comparable to the measurement done in similar conditions.
 	\label{fig:multiplication_factor_FULL_bis}
 \end{figure}
 
-
-
-
 \clearpage
 
 \subsubsection{Scan on \Vdrift}
-
-%The currents measured during \Vdrift{} scan have the same behavior (almost constant) of previous test. The difference is the current values, a clear example can be anodic current: ~0.5 nA fixing \Vind{} = 50 V and \Vthgem{} = 160 V and ~11 nA fixing \Vind{} = 70 V and \Vthgem{} = 190 V.
+\textcolor{red}{Rimuovere}
+The currents measured during \Vdrift{} scan have the same behavior (almost constant) of previous 
+test. The difference is the current values, a clear example can be anodic current: ~0.5 nA fixing 
+\Vind{} = 50 V and \Vthgem{} = 160 V and ~11 nA fixing \Vind{} = 70 V and \Vthgem{} = 190 V.
 
 The new scan on \Vdrift{} was conducted fixing P~=~9.3~mbar, \Vind{} = 50 V and \Vthgem{} = 160 V.
-%The measured currents have the same behaviour (almost constant) of the previous tests. 
-Comparing this scan with a previous one done in similar conditions (P~=~11~mbar, \Vind{} = 70 V, \Vdrift{} = 600 V), which is shown in Figure~\ref{fig:drift_FULLTHGEM_11mbar}, the measured currents exhibit the same behaviour (almost constant).
-
+The measured currents have the same behaviour (almost constant) of the previous tests. 
+Comparing this scan with a previous one done in similar conditions (P~=~11~mbar, \Vind{} = 70 V, 
+\Vdrift{} = 600 V), which is shown in Figure~\ref{fig:drift_FULLTHGEM_11mbar}, the measured 
+currents exhibit the same behaviour (almost constant).
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=\textwidth]{Immagini/driftScan_THGEM10_alpha_10mbar.pdf}
-	\caption{Currents measured during the scan on the voltage \Vdrift{} across the drift region at 10~mbar.}
+    \includegraphics[width=\textwidth]{Immagini/driftScan_THGEM10_alpha_10mbar.pdf}
+	\caption{Currents measured during the scan on the voltage \Vdrift{} across the drift region at 
+	10~mbar.}
 	\label{fig:driftScan_THGEM10_alpha_10mbar}
 \end{figure}
 
 
+\clearpage
+\subsubsection{Test in asymm configuration}
+This section is dedicated to some test performed with an asymmetric configuration of the THGEM bias.
 
 
+A first test have been done using the THGEM ROW, keeping fix the value of the THGEM 1 and 2 (i.e. 
+those closest to chatode) at 195 Volt each one. Increasing just the V THGEM3 the change in the 
+gain of the MTHGEM is exponential as usual
 
+\begin{figure}[htbp]
+	\centering
+    \includegraphics[width=\textwidth]{Immagini/gainVSVTHGEM_Asym.pdf}
+	\caption{Gain as a function of the \Vthgem{}3.}
+	\label{fig:THGEMScanAsym}
+\end{figure}
+
+In fig. \ref{fig:IBF_THGEMROW_asym_10mbar} the IBF using an asymmetric configuration is compared 
+with the IBF obtained using a symmetric configuration.
+In order to compare two different confgurations they should have the same gain.
+In other words to understand if an asymmetric configuration has a lower IBF than a symmetric configuration
+we should compare two configurations with same gain since we know that the IBF depends on the gain.
+In practice it is very difficult and time consuming to look for an asymmetric configuration with
+the same gain of a simmetric one.
+In order to avoid this, we decide to compare the IBF data of a whole THGEM scan (orange points in
+fig. \ref{fig:IBF_THGEMROW_asym_10mbar}) with those of an asymmetric scan in the plot
+IBF vs Gain Fig. \ref{fig:IBF_THGEMROW_asym_10mbar}. 
+
+From the plot is evident that there is no difference between a symmetric and an asymmetric
+configuration using the ROW THGEM. This is true both at high \Vdrift V=700 and at low \Vdrift V=200.
+
+Two asymmetric configurations have been tested at \Vdrift=200. In the first configuration
+the \Vthgem$_3$ was V=195 while the value of the other two THEGEM were decresed.
+In the second configuration \Vthgem$_1$ was V=195 while the other two were slowly decreased.
+No difference was observed in the symmetric and in the two asymmetric configuration.
+\begin{figure}[htbp]
+	\centering
+    \includegraphics[width=\textwidth]{Immagini/THGEM_ROW_IBFwithAsymmConfig.pdf}
+	\caption{IBF as a function of the gain for asymmetric and symmetric configurations.}
+	\label{fig:IBF_THGEMROW_asym_10mbar}
+\end{figure}
+
+
+Same test have been performed with FULL THEGEM. In this case seems that a small effect on the 
+IBF appears for the lower values of the gain.
+We observed that in this case the (elettrodi intermedi) measure a positive current that is not
+neglegible. \textcolor{red}{E necessaria una indagine più approfondita e sistematica
+sulle correnti lette dagli elettrodi intermedi che sono stati fino ad ora (colpevolmente) 
+ignorati.}
+
+\begin{figure}[htbp]
+	\centering
+    \includegraphics[width=\textwidth]{Immagini/THGEM_THGEM10_IBFwithAsymmConfig.pdf}
+	\caption{IBF as a function of the gain for asymmetric and symmetric configurations.}
+	\label{fig:IBF_THGEM10_asym_10mbar}
+\end{figure}
 
 
 
@@ -811,19 +984,21 @@ Comparing this scan with a previous one done in similar conditions (P~=~11~mbar,
 
 \subsection{First test with beam} \label{sec:test_beam}
 
-The first test with beam was done on February 19 2020. 
-The prototype have been tested in the TeBe gas chamber that has an angle of 30$^{\circ}$ 
-respect to the beam line direction (0$^{\circ}$). 
-A beam of $^{18}$O at an energy of 16.5 MeV have been sent on a target of $^{116}$Cd xxx $\mu$.
-Due to the high energy of the beam the number of particles reaching the tracker prototype
-(that is a 30$^{\circ}$ respect to the beam direction),their mass charge and energy is not known.
-The only information we have is the current read on the faraday cup FC4 that is 
-along the TeBe beam line before the beam line gate valve. Therefore we can study how
-the behaviour of the tracker scale with the current but we do not have 
-a clear way to compare such results with the information coming from test with the $\alpha$-source.
+A first test with beam was performed on 19/02/2020. 
 
-One way to compare such results with the alpha's is to compare directly the 
-anodic current.
+A beam of $^{18}$O at an energy of 16.5 AMeV have been sent on a target of $^{116}$Cd xxx $\mu$
+The reaction products enter the scattering chamber housing the prototype that is located at an 
+angle of 30$^{\circ}$ respect to the beam direction. The pressure of isobutane inside the gas
+ chamber was 9.4 mbar.
+Since at this energy the elastic cross section for the tracker prototype is not Rutherford It is 
+not possible to know the number and the kind of particles entering the prototype. The only 
+information on the flux comes from the faraday cup FC4 that is placed along the TeBe beam line 
+before the beam line gate valve. Therefore we have relative just relative information
+that allows to compare run with different beam currents but is not possible to extract
+absolute information on the particle rate entering the prototype, or make a comparison with
+$\alpha$ run.\\
+One possible way to compare such results with the alpha's is to compare directly the 
+anodic current even if it is not fully correct.
 Being equal all the parameters of the tracker (that is: P, \Vthgem{}, \Vind{}, \Vdrift{}),
 it should manifest the same behaviour if the total charge produced is the same, even if the 
 rate of particles entering the tracker is different.
@@ -856,7 +1031,7 @@ during which we take the average of the current and among one measurements and t
 Therefore the plot with beam are less precise and suffers the effect of the fluctuation.
 Unfortunately such uncertainty are not easy to extimate.
 
-The pressure of isobutane was 9.4 mbar.
+
 
 \subsubsection{Scan on \Vthgem}
 
@@ -864,14 +1039,19 @@ The measurement was done at \Vind{} = 50~V and \Vdrift{} = 400~V with I$_{beam}$
 The plots of the currents vs \Vthgem are shown in Figure~\ref{fig:thgemScan_THGEM10_beam_10mbar}.
 The plots show have the same behaviour of the scan on \Vthgem{} with $\alpha$ source (see Figure~\ref{fig:thgem_FULLTHGEM_10mbar_bis}). 
 
-The discharge occurred at \Vthgem{} = 190 V with both beam intensities, to be compared with \Vthgem{} = 210~V for the $\alpha$ case. 
-%Another important difference is the maximum achievable anodic current: $\sim -$20 nA with $\alpha$ source, $\sim$120 nA with \ibeam = 60 pA and $\sim -$280 nA with \ibeam = 400 pA.
+The discharge occurred at \Vthgem{} = 190 V with both beam intensities, to be compared with 
+\Vthgem{} = 210~V for the $\alpha$ case. 
+%Another important difference is the maximum achievable anodic current: $\sim -$20 nA with 
+%$\alpha$ source, $\sim$120 nA with \ibeam = 60 pA and $\sim -$280 nA with \ibeam = 400 pA.
 
 \begin{figure}[!htb]
 	\centering
-	\subfigure[]{ \label{fig:thgemScan_THGEM10_60pA_10mbar} \includegraphics[width=0.96\textwidth]{Immagini/thgemScan_THGEM10_60pA_10mbar.pdf}}
-	\subfigure[]{ 	\label{fig:thgemScan_THGEM10_400pA_10mbar} \includegraphics[width=0.96\textwidth]{Immagini/thgemScan_THGEM10_400pA_10mbar.pdf}}
-	\caption{Currents measured during the scan on the voltage \Vthgem{} across each FULL THGEM fixing \Vind{} = 50 V and \Vdrift{} = 400 V: in (a) at 60 pA, in (b) at 400 pA.}
+	\subfigure[]{ \label{fig:thgemScan_THGEM10_60pA_10mbar} 
+	\includegraphics[width=0.96\textwidth]{Immagini/thgemScan_THGEM10_60pA_10mbar.pdf}}
+	\subfigure[]{ 	\label{fig:thgemScan_THGEM10_400pA_10mbar} 
+	\includegraphics[width=0.96\textwidth]{Immagini/thgemScan_THGEM10_400pA_10mbar.pdf}}
+	\caption{Currents measured during the scan on the voltage \Vthgem{} across each FULL THGEM fixing 
+	\Vind{} = 50 V and \Vdrift{} = 400 V: in (a) at 60 pA, in (b) at 400 pA.}
 	\label{fig:thgemScan_THGEM10_beam_10mbar}
 \end{figure}
 
@@ -980,6 +1160,163 @@ Therefore the scaling of the rate from the first tow points to the second two is
 	\label{fig:IbeamScan_THGEM10_10mbar_average}
 \end{figure}
 
+\clearpage
+\section{Second test with beam} 
+
+The test was performed in march 2020.
+A beam of $^{18}$O at 145 MeV was sent on two gold targets 0.972 and 9.6 mg/cm$^2$ thick.
+The beam intensity was measured by mean of two faraday cups: one upstream the target
+(TBFC1) and a second downstram the target (TBFC2) that has a lower sensitivity.
+The tracker prototype is located a 30$^{\circ}$ respect to the beam direction, at this energy 
+the elastic scattering is Rutherford therefore it is possible to calculate the number of 
+$^{18}$O particles entering the detector.
+The solid angle\footnote{Distance from the target 470mm and area 108$\times$120 mm$^2$} of the 
+prototype was about 6$\cdot$10$^{-2}$ sr while the angular range covered is 30$^{\circ} \pm$ 
+6.6$^{\circ}$. Also a charged particle detector was placed downstream the 
+prototype. It was a silicon photodiode 1$\times$1cm$^2$ covering a solid angle\footnote{Distance 
+from the target 470+130mm} of 3$\cdot$10$^{-4}$, while the anglar range covered is 30$^{\circ} \pm$ 0.47$^{\circ}$.
+
+The rate of particle entering the prototype was estimated when possible in two independent
+ways: Assuming Rutherford scattering knowing target thickness and beam current\footnote{Since,
+in same case the current read by TBFC2 was below the its sensitivity the faraday cup 
+TBFC1 was used t stmate the current on the target after a scaling.}; 
+scaling the counting rate in the photodiode to the solid angle of the tracker prototype.
+
+In Table \ref{} a scheme of the currents and relative rates used in the test.
+
+
+\subsection{FULL THGEM}
+
+  \subsubsection{THGEM scan}
+  The two scans of the \Vthgem{} done at low rate xx and high rate xx are shown in Fig.
+  \ref{fig:driftScan_withBeam_H}.
+  \begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{Immagini/thgemScan_THGEM10_20mbar-Vdrift1000V-2020-03-09.pdf}
+	\caption{\Vthgem{} scan for the highest beam intensity 3400 pps. }
+	\label{fig:driftScan_withbeam_H}
+  \end{figure}
+%  \begin{figure}[htbp]
+%	\centering
+%	\includegraphics[width=\textwidth]{}
+%	\caption{\Vthgem{} scan for the lowest beam intensity 87pps.}
+%	\label{fig:driftScan_withbeam_L}
+%  \end{figure}
+ 
+  In Fig. \ref{fig:MF_FULL_beam} a comparison of the multiplication factor obtained with
+  $\alpha$ source at different pressures and thise for the beam at 20 mbar. The MF curves for 
+  the beam do not correspond to those for $\alpha$ at the same gas pressure.
+  
+  \begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{Immagini/MF_FULL_THGEM_withBeam.pdf}
+	\caption{MF for the FULL THGEM as a function of the \Vthgem{}. Run with $\alpha$-source
+	and $^{18}$O beam are compared. }
+	\label{fig:MF_FULL_beam}
+  \end{figure}
+  
+  \clearpage
+  \subsubsection{Drift scan}
+  
+  
+  \begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{Immagini/IBF_FULL_Comparison_F.pdf}
+	\caption{IBF for the FULL THGEM as a function of the reduced electric field. Run with 
+	$\alpha$-source	and $^{18}$O beam are compared.}
+	\label{fig:IBF_FULL_beam_F}
+  \end{figure}
+ 
+
+
+
+  \subsubsection{Rate scan}
+
+
+
+  \clearpage
+\subsection{ROW THGEM}
+
+  \subsubsection{THGEM scan}
+    The two scans of the \Vthgem{} done at low rate xx and high rate xx are shown in Fig.
+  \ref{fig:driftScan_withBeam_H}.
+  \begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{Immagini/thgemScan_THGEM10_20mbar-Vdrift1000V-2020-03-09.pdf}
+	\caption{\Vthgem{} scan for the highest beam intensity 3400 pps. }
+	\label{fig:driftScan_withbeam_H}
+  \end{figure}
+%  \begin{figure}[htbp]
+%	\centering
+%	\includegraphics[width=\textwidth]{}
+%	\caption{\Vthgem{} scan for the lowest beam intensity 87pps.}
+%	\label{fig:driftScan_withbeam_L}
+ % \end{figure}
+ 
+  In Fig. \ref{fig:MF_ROW_beam} a comparison of the multiplication factor obtained with
+  $\alpha$ source at different pressures and thise for the beam at 20 mbar. The MF curves for 
+  the beam perfectly superimpose those for $\alpha$ at the same gas pressure.
+  
+  \begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{Immagini/MF_ROW_THGEM_withBeam.pdf}
+	\caption{MF for the ROW THGEM as a function of the \Vthgem{}. Run with $\alpha$-source
+	and $^{18}$O beam are compared. }
+	\label{fig:MF_ROW_beam}
+  \end{figure}
+  In Fig. \ref{fig:MF_ALL_beam} A comparison of all the MF for ROW and FULL THGEM including
+  run with $\alpha$-source and with beam.
+  \begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{Immagini/MF_ALL_THGEM_withBeam.pdf}
+	\caption{MF for the ROW and FULL THGEM as a function of the \Vthgem{}. Run with $\alpha$-source
+	and $^{18}$O beam are compared. }
+	\label{fig:MF_ALL_beam}
+  \end{figure}
+  
+  \clearpage
+
+  \subsubsection{Drift scan}
+  We compare the \Vdrift{} scan get with $\alpha$-source and with beam.
+  If we plot them as a function of the reduced electric field Fig. \ref{fig:driftScan_withbeam_F} 
+  we see that the behaviour is the same for all the run. 
+  %If we plot the same data as a function  of the voltage \Vdrift{} the behaviour 
+  %\ref{fig:IbeamScan_THGEM10_10mbar_average}
+  \begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{Immagini/driftScan_ROW_THGEM_comp.pdf}
+	\caption{Current of the anode as a function of the voltage \Vdrift{} for the ROW
+	THGEM. }
+	\label{fig:driftScan_withbeam}
+  \end{figure}
+  
+  \begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{Immagini/driftScan_ROW_THGEM_comp_F.pdf}
+	\caption{Current of the anode as a function of the reduced electrc field E/p for the 
+	ROW THGEM.}
+	\label{fig:fig:driftScan_withbeam_F}
+  \end{figure}
+
+  IBF
+  \begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{Immagini/IBF_ROW_Comparison_F_1.pdf}
+	\caption{IBF for the ROW THGEM as a function of the reduced electric field. Run with 
+	$\alpha$-source	and $^{18}$O beam are compared.}
+	\label{fig:IBF_ROW_beam_F}
+  \end{figure}
+  
+  \begin{figure}[htbp]
+	\centering
+	\includegraphics[width=\textwidth]{Immagini/IBF_ROW_Comparison_1.pdf}
+	\caption{IBF for the ROW THGEM as a function of the \Vdrift. Run with 
+	$\alpha$-source	and $^{18}$O beam are compared.}
+	\label{fig:IBF_ROW_beam}
+  \end{figure}
+  
+  \subsubsection{Rate scan}  
+  
 %\section*{Notes}
 
 %partiamo dalle full thgem:
@@ -1021,6 +1358,17 @@ Therefore the scaling of the rate from the first tow points to the second two is
 
 %\section{Conclusioni}
 
+\clearpage
+
+\appendix
+\section{$^{241}$Am}
+$\alpha$-decay 100\%    (spontaneous fission 3.6$\times$10$^{-12}$.\\
+$ ^{241}Am\rightarrow^{237}Np+^4He+\gamma$\\
+$\alpha$-particles energy: 5.485 MeV (84.8\%); 5.443 MeV (13.1\%); 5.338 (2\%)\\
+$\gamma$-ray 59.5 () 26.3 keV\\
+X-ray (L  X-rays  from  Np) 20.7,  17.7,  16.9  and  13.9  keV\\
+
+\section{Geometria del rivelatore}
 
 
 
